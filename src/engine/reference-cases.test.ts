@@ -44,11 +44,11 @@ function toBuild({ slots, cursed = [], sockets, coins }: Case): Build {
 }
 
 describe('reference cases', () => {
-  test('covers the 59 calibration cases and the two screenshots', () => {
+  test('covers the 59 calibration cases and the four screenshots', () => {
     const bySource = Object.groupBy(cases, (c) => c.source);
     expect(bySource.inherited).toHaveLength(9);
     expect(bySource.observation).toHaveLength(50);
-    expect(bySource.screenshot).toHaveLength(2);
+    expect(bySource.screenshot).toHaveLength(4);
   });
 
   test.each(cases)('$name', (fixture) => {

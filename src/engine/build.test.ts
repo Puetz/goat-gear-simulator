@@ -159,23 +159,50 @@ describe('cursed HP penalty', () => {
   });
 });
 
-describe('not calculated', () => {
-  test('ranged damage scales with tags and stays separate from Base DPS', () => {
+describe('ranged damage', () => {
+  test('scales with tags and applies to Base DPS', () => {
     const slots = { mainHand: 'poison_kunai' };
     const plain = simulate(build(slots), catalog);
     const withSharp = simulate(build(slots, { sharp: 2 }), catalog);
 
     expect(plain.panel.ranged_damage).toBe(3);
     expect(withSharp.panel.ranged_damage).toBe(9);
-    expect(withSharp.panel.base_dps).toBe(plain.panel.base_dps);
+    expect(plain.panel.base_dps).toBe(50);
+    expect(withSharp.panel.base_dps).toBe(52.7);
+    expect(withSharp.panel.poison).toBe(22);
     expect(withSharp.effects.contributions.ranged_damage).toMatchObject([
       { value: 9, detail: { kind: 'perTag', tag: 'sharp', tagCount: 3 } },
     ]);
-    expect(withSharp.effects.notCalculated).toContainEqual(
+    expect(withSharp.effects.notCalculated).not.toContainEqual(
       expect.objectContaining({ slot: 'mainHand', reason: 'damageModifier' }),
     );
   });
 
+  test.each([
+    ['beginners_dagger', false, 73.6, 77.3],
+    ['kunai', true, 82.6, 86.4],
+    ['demonic_jewel', true, 80.9, 85],
+  ] as const)(
+    'an off-hand Poison Kunai buffs %s only if it is ranged',
+    (mainHand, ranged, plainDps, withSharpDps) => {
+      const slots = { mainHand, offHand: 'poison_kunai' };
+      const plain = simulate(build(slots), catalog);
+      const withSharp = simulate(build(slots, { sharp: 2 }), catalog);
+      const mainWeapon = plain.weapons[0];
+      const buffedWeapon = withSharp.weapons[0];
+      if (!mainWeapon || !buffedWeapon) throw new Error('Expected a main-hand weapon');
+
+      expect(plain.panel.base_dps).toBe(plainDps);
+      expect(withSharp.panel.base_dps).toBe(withSharpDps);
+      expect(mainWeapon.rangedDamagePercent).toBe(ranged ? 6 : 0);
+      expect(buffedWeapon.rangedDamagePercent).toBe(ranged ? 12 : 0);
+      if (ranged) expect(buffedWeapon.dps).toBeGreaterThan(mainWeapon.dps);
+      else expect(buffedWeapon.dps).toBe(mainWeapon.dps);
+    },
+  );
+});
+
+describe('not calculated', () => {
   test('lists missing-HP, combat, damage and before-battle effects, not the cursed penalty', () => {
     const { effects } = simulate(
       build({

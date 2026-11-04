@@ -117,11 +117,7 @@ function notCalculatedReason(effect: Effect): NotCalculatedReason | null {
     case 'stat_per_property':
     case 'stat_per_currency':
       // Shown as a stat total, but how it changes damage hasn't been calibrated.
-      return effect.stat === 'damage' ||
-        effect.stat === 'melee_damage' ||
-        effect.stat === 'ranged_damage'
-        ? 'damageModifier'
-        : null;
+      return effect.stat === 'damage' || effect.stat === 'melee_damage' ? 'damageModifier' : null;
     case 'extra_attack_on_hit':
     case 'loot_on_hit':
     case 'property_count_multiplier':

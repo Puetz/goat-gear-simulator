@@ -4,9 +4,9 @@ The game mechanics the simulator implements, measured in the live game (GOAT Ste
 demo 0.5.6) and read from item screenshots. Formulas are empirical unless stated
 otherwise; §7 lists what the measurements don't cover.
 
-The model reproduces **61 reference cases** measured in the game: 59 stat panels
-from Normal and Hard runs, plus two screenshots (a cursed item in §3 and a run with
-attributes above 2000 in §4). They run as the test suite in
+The model reproduces **63 reference cases** measured in the game: 59 stat panels
+from Normal and Hard runs, plus four screenshots (a cursed item in §3, a run with
+attributes above 2000 in §4, and two Poison Kunai runs in §6). They run as the test suite in
 `src/engine/reference-cases.test.ts`. Expected values there are always what the game
 showed, never what the engine computed. The cases don't establish every combat
 interaction or future game version.
@@ -107,8 +107,9 @@ Jester's Guard makes grant cycles and chains possible: its two grants feed each
 other, and RED → WHITE → LEATHER chains with GOAT Hood. The model is the single
 pass above: every grant reads `baseTags`, never tags added by another grant, so
 it stays finite. Example: Jester's Guard with Bloody Belt (MAIL, RED) has RED 2
-and WHITE 1 before grants and RED 3, WHITE 3 after. This is an assumption, not
-measured; applying the grants one after another would give different counts.
+and WHITE 1 before grants and RED 3, WHITE 3 after. This order fits the run
+screenshots, including the Poison Kunai builds in §6, but wasn't independently
+isolated; applying the grants one after another would give different counts.
 
 Aggregate socket counts suffice for this global model; their location does not
 affect the calculation. Each item holds at most one socket, so a build has at most
@@ -116,6 +117,8 @@ eight. Sockets can carry every tag except CURSED. Observed gem mapping: ruby = R
 crimson round = UNHOLY, white web = CLOTH, amber = ORANGE. The 2026-11-02 run
 screenshot (§4) adds white faceted = WHITE and red spiky = SHARP. That was not read
 from a tooltip: it is the only socket set that reproduces that run's Stamina and Agility.
+The two Poison Kunai runs supplied 2026-11-04 use the same icons: six WHITE and
+two SHARP with Scarlet Vest, three WHITE and five SHARP with Vampire Garments.
 
 CURSED occurs on no catalog item. It comes from cursed item variants, not from
 sockets.
@@ -238,8 +241,9 @@ For each equipped weapon, read its own `scalingStat`:
 
 ```text
 bonus = trunc(fround(weapon.speed) * (15 + 3*E(S[weapon.scalingStat])))
-hitMin = max(0, roundEven((weapon.damage.min + bonus) * C))
-hitMax = max(0, roundEven((weapon.damage.max + bonus) * C))
+R = weapon.ranged ? 1 + S.ranged_damage / 100 : 1
+hitMin = max(0, roundEven((weapon.damage.min + bonus) * C * R))
+hitMax = max(0, roundEven((weapon.damage.max + bonus) * C * R))
 weaponDps = (hitMin + hitMax) / (2 * weapon.speed)
 
 BaseDps = sum(weaponDps for both hands)
@@ -252,7 +256,8 @@ decimal speed in the divisor. This is an empirical precision model, not a readin
 of game internals. Speed is seconds between attacks.
 
 Do not round individual weapon DPS before summing. Apply chromatic multiplication
-and integer rounding to each damage endpoint, not final DPS. The same coefficient
+and the ranged-damage multiplier before integer rounding each damage endpoint,
+not to final DPS. The same coefficient
 3 applies to Strength, Agility, and Intelligence weapons, including the tested
 ranged Demonic Jewel. Devil's Fork scales with Intelligence despite its appearance.
 
@@ -262,6 +267,23 @@ Simple decimal multiplication before truncation misses these values. At Agility
 -9, Forearm Blade's bonus -7.2 truncates to -7. Beginner's Dagger contributed zero
 when its resulting damage was negative. A zero floor on damage fits; mixed-sign
 endpoint ordering remains unisolated.
+
+Two Poison Kunai run panels supplied 2026-11-04 calibrate ranged damage. The
+catalog matches its tooltip: 36–38 ranged damage, 1.1 speed, Agility scaling,
++22 Poison, and +3% Ranged Dmg. per SHARP. Both runs are trichromatic (C=1.35):
+
+- Reigngames, seed 85266, run 92, Scarlet Vest: SHARP 10 gives +30% ranged
+  damage. Agility 1243 gives E=719 and bonus 2389. Damage endpoints become
+  4256 and 4259, giving **3870.5 Base DPS**, as shown.
+- Tammo, seed 87395, run 36, Vampire Garments: SHARP 16 gives +48% ranged
+  damage. Agility 2420 gives E=912 and bonus 3026. Damage endpoints become
+  6118 and 6122, giving **5563.6 Base DPS**, as shown. Multiplying DPS after
+  endpoint rounding would instead give 5563.5.
+
+Both builds also reproduce every other visible numeric stat. Their ranged-damage
+percentages are derived from tags and the item tooltip, not separately displayed
+on those run panels. Apply the global bonus to weapons labeled `ranged`, in either
+hand; its interaction with a second weapon hasn't been measured independently.
 
 Base DPS is the displayed base weapon rate, not expected combat damage. Do not
 fold crits, procs, poison, or uncalibrated `damage`/`melee_damage` effects into it
@@ -304,11 +326,15 @@ are outside the stat model.
   weren't measured separately.
 - Battle Mage Belt's source/destination multipliers weren't isolated; it uses the
   grant order measured with the other grants. Grant cycles and chains (Jester's
-  Guard, also with GOAT Hood) use the single pass from §3 without a measurement.
+  Guard, also with GOAT Hood) use the single pass from §3; run screenshots fit it,
+  but its order hasn't been independently isolated.
 - Binary32 speed is a fit to observed output. Damage endpoint half-ties, mixed-sign
   endpoints, and one-decimal DPS ties weren't isolated.
 - Negative attributes are tested, but extreme negatives and an HP floor are not.
   Whether item stars change stats wasn't tested.
+- Ranged damage is calibrated on two single-weapon Poison Kunai panels; applying
+  it to other ranged weapons and mixed or dual-wield builds follows the tooltip
+  classification, without an independent in-game measurement.
 - Not modeled: combat (proc timing, crits above 100%, block caps, projectile
   damage, extra slow, other damage modifiers), missing-HP effects (§1), and damage
   taken before battles (Dutch Clogs); the panel shows max HP.

@@ -72,6 +72,11 @@ describe('catalog', () => {
       /^fur_pants .* › effects\[0\]\.stat:/m,
     ],
     [
+      'a flat unit on ranged damage',
+      set('poison_kunai', ['effects', 1, 'unit'], 'flat'),
+      /^poison_kunai .* › effects\[1\]\.stat:/m,
+    ],
+    [
       'weapon stats on armour',
       set('goat_hood', ['weapon'], estoque.weapon),
       /^goat_hood .* › weapon:/m,

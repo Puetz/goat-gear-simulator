@@ -69,7 +69,14 @@ export function simulate(build: Build, catalog: CatalogIndex): SimulationResult 
   const chromatic = chromaticStatus(tags.final);
   const weapons = equipped.flatMap((entry) =>
     entry.item.slot === 'weapon'
-      ? [weaponResult({ ...entry, item: entry.item }, attributes, chromatic.multiplier)]
+      ? [
+          weaponResult(
+            { ...entry, item: entry.item },
+            attributes,
+            chromatic.multiplier,
+            total('ranged_damage'),
+          ),
+        ]
       : [],
   );
   const cursedItems = equipped.filter((entry) => entry.cursed).length;

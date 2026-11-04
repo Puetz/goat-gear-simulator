@@ -90,6 +90,8 @@ function DpsReceipt({ result }: { result: SimulationResult }) {
               <>
                 {weapon.hitMin}–{weapon.hitMax} per hit, every {weapon.speed.toFixed(1)} s.{' '}
                 <AttributeName attribute={weapon.scalingStat} /> adds {formatNumber(weapon.bonus)}
+                {weapon.rangedDamagePercent !== 0 &&
+                  `. Ranged damage ${formatSigned(weapon.rangedDamagePercent)}%`}
               </>
             }
             value={formatNumber(roundTo1(weapon.dps))}

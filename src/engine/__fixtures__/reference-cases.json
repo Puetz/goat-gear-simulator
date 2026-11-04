@@ -1,5 +1,5 @@
 {
-  "$comment": "Measured in-game values only, never engine output (see RULES.md). 59 stat panels from Normal and Hard runs (9 earlier screenshots and 50 own observations), plus two screenshots: a cursed variant and a 2026-11-02 run with attributes above 2000 (its sockets are the only set that reproduces its Stamina and Agility). panel lists every value the stat panel showed, plus hidden stats read as zero.",
+  "$comment": "Measured in-game values only, never engine output (see RULES.md). 59 stat panels from Normal and Hard runs (9 earlier screenshots and 50 own observations), plus four screenshots: a cursed variant, a 2026-11-02 run with attributes above 2000 (its sockets are the only set that reproduces its Stamina and Agility), and two Poison Kunai runs supplied 2026-11-04. Poison Kunai sockets follow the visible white faceted / red spiky icons; ranged-damage totals are derived, not shown on those panels. panel lists measured values, plus hidden stats read as zero.",
   "cases": [
     {
       "name": "first screenshot (Normal)",
@@ -1721,6 +1721,71 @@
         "regeneration": 1,
         "life_steal": 5,
         "extra_attacks": 2,
+        "loot_gold": 10,
+        "item_luck": 5
+      }
+    },
+    {
+      "name": "Poison Kunai with Scarlet Vest (Reigngames, hard, seed 85266, run 92)",
+      "source": "screenshot",
+      "slots": {
+        "mainHand": "poison_kunai",
+        "offHand": "jesters_guard",
+        "chest": "scarlet_vest",
+        "head": "goatmares_legacy",
+        "legs": "goat_pants",
+        "waist": "red_sash_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {
+        "white": 6,
+        "sharp": 2
+      },
+      "coins": 0,
+      "panel": {
+        "hp": 8294,
+        "base_dps": 3870.5,
+        "stamina": 870,
+        "strength": 14,
+        "agility": 1243,
+        "critical_chance": 719,
+        "critical_damage": 439,
+        "block": 65,
+        "extra_attacks": 2,
+        "poison": 22,
+        "loot_gold": 10,
+        "item_luck": 5
+      }
+    },
+    {
+      "name": "Poison Kunai with Vampire Garments (Tammo, hard, seed 87395, run 36)",
+      "source": "screenshot",
+      "slots": {
+        "mainHand": "poison_kunai",
+        "offHand": "jesters_guard",
+        "chest": "vampire_garments",
+        "head": "goatmares_legacy",
+        "legs": "goat_pants",
+        "waist": "red_sash_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {
+        "white": 3,
+        "sharp": 5
+      },
+      "coins": 0,
+      "panel": {
+        "hp": 11421,
+        "base_dps": 5563.6,
+        "stamina": 1841,
+        "agility": 2420,
+        "critical_chance": 912,
+        "block": 65,
+        "life_steal": 5,
+        "extra_attacks": 2,
+        "poison": 22,
         "loot_gold": 10,
         "item_luck": 5
       }

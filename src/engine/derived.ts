@@ -64,21 +64,26 @@ export interface WeaponResult extends ItemSource {
   readonly speed: number;
   /** Damage added to each hit by the scaling attribute. */
   readonly bonus: number;
+  /** Global ranged-damage bonus in percent; zero for melee weapons. */
+  readonly rangedDamagePercent: number;
   readonly hitMin: number;
   readonly hitMax: number;
   /** Not rounded: the panel rounds the sum of both hands. */
   readonly dps: number;
 }
 
-/** RULES.md §6: each damage endpoint gets C and is rounded on its own, floored at 0. */
+/** RULES.md §6: chromatic and ranged bonuses precede endpoint rounding and the zero floor. */
 export function weaponResult(
   source: Equipped & { readonly item: WeaponItem },
   attributes: Attributes,
   chromaticMultiplier: number,
+  rangedDamagePercent = 0,
 ): WeaponResult {
   const { damage, speed, scalingStat } = source.item.weapon;
   const bonus = weaponBonus(speed, attributes[scalingStat].effective);
-  const hit = (base: number) => Math.max(0, roundEven((base + bonus) * chromaticMultiplier));
+  const rangedDamage = source.item.weapon.ranged ? rangedDamagePercent : 0;
+  const multiplier = chromaticMultiplier * (1 + rangedDamage / 100);
+  const hit = (base: number) => Math.max(0, roundEven((base + bonus) * multiplier));
   const hitMin = hit(damage.min);
   const hitMax = hit(damage.max);
   return {
@@ -86,6 +91,7 @@ export function weaponResult(
     scalingStat,
     speed,
     bonus,
+    rangedDamagePercent: rangedDamage,
     hitMin,
     hitMax,
     // The catalog's decimal speed, not the binary32 one used for the bonus (RULES.md §6).
