@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.local
+*.tsbuildinfo
+.vite/
+coverage/
+*.log
+.env
+.env.*
+.DS_Store
+Thumbs.db
+/gear_images/
+# Socket gem art, kept locally until the app uses it
+/public/gems/

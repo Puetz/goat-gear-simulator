@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+/* Design tokens. */
+@theme {
+  --font-sans: "Fredoka Variable", system-ui, sans-serif;
+  --font-display: "Lilita One", "Fredoka Variable", sans-serif;
+
+  /* Small UI text. Display type (headings, big numbers) uses one-off sizes. */
+  --text-micro: 11.5px;
+  --text-caption: 12.5px;
+  --text-note: 13px;
+  --text-body: 13.5px;
+  --text-row: 14.5px;
+  --text-control: 15px;
+
+  --color-stage: #2a1d4e;
+  --color-sheet: #b7afea;
+  --color-sheet-edge: #9c92dc;
+  --color-well: #edeafd;
+  --color-well-2: #f8f6ff;
+  --color-head: #6e62c9;
+  --color-ink: #1f1535;
+  --color-ink-2: #463c6b;
+  --color-ink-3: #5f5788;
+  --color-orange: #f47b3b;
+  --color-orange-hi: #ffa067;
+  --color-gold: #f8c53a;
+  --color-gold-hi: #ffe184;
+  --color-gain: #0f7a35;
+  --color-gain-bg: #cdefd6;
+  --color-loss: #bf1e34;
+  --color-loss-bg: #fadce1;
+  --color-curse: #a3203a;
+  --color-curse-bg: #f6dce2;
+  --color-curse-text: #7e1529;
+  --color-focus: #ffd84a;
+  --color-tip: #1e2c33;
+  --color-tip-text: #eef2f4;
+  --color-tip-muted: #94a6ae;
+  --color-now: #7cf07c;
+  --color-count: #a8f59a;
+  --color-tip-dim: #a9bac1;
+  --color-empty: #ece9fb;
+  --color-curse-hi: #e0405c;
+  --color-curse-pale: #ff8fa2;
+
+  --color-stamina: #2b8fb0;
+  --color-strength: #e08a22;
+  --color-agility: #2e9e5b;
+  --color-intelligence: #8a3fd1;
+  --color-stamina-text: #176c89;
+  --color-strength-text: #9a5307;
+  --color-agility-text: #1b7040;
+  --color-intelligence-text: #6a26ad;
+  --color-stamina-light: #5ccbeb;
+  --color-strength-light: #f5a94f;
+  --color-agility-light: #55d98c;
+  --color-intelligence-light: #be8bf5;
+
+  --shadow-ink-sm: 0 2px 0 var(--color-ink);
+  --shadow-ink: 0 3px 0 var(--color-ink);
+  --shadow-ink-md: 0 4px 0 var(--color-ink);
+  --shadow-ink-lg: 0 6px 0 var(--color-ink);
+
+  --animate-slide-in: slide-in 0.18s ease-out;
+  --animate-pop: pop 0.4s ease-out;
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(-14px);
+      opacity: 0.4;
+    }
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.85);
+    }
+    60% {
+      transform: scale(1.06);
+    }
+    100% {
+      transform: none;
+    }
+  }
+}
+
+/* White display text with the game's thick ink outline. */
+@utility text-outline {
+  color: #fff;
+  text-shadow:
+    0 2px 0 var(--color-ink),
+    2px 0 0 var(--color-ink),
+    -2px 0 0 var(--color-ink),
+    0 -2px 0 var(--color-ink),
+    1.5px 1.5px 0 var(--color-ink),
+    -1.5px 1.5px 0 var(--color-ink),
+    1.5px -1.5px 0 var(--color-ink),
+    -1.5px -1.5px 0 var(--color-ink),
+    0 3px 0 var(--color-ink);
+}
+
+/* Thin outline for white text on the orange buttons and the cursed slot label. */
+@utility text-outline-thin {
+  text-shadow:
+    -1px 0 0 rgb(31 21 53 / 0.75),
+    1px 0 0 rgb(31 21 53 / 0.75),
+    0 -1px 0 rgb(31 21 53 / 0.75),
+    0 1px 0 rgb(31 21 53 / 0.75);
+}
+
+/* A thin scrollbar with a themed thumb, e.g. scrollbar-thin-ink-3. */
+@utility scrollbar-thin-* {
+  scrollbar-width: thin;
+  scrollbar-color: --value(--color-*) transparent;
+}
+
+@utility clip-hex {
+  clip-path: polygon(24% 0, 76% 0, 100% 50%, 76% 100%, 24% 100%, 0 50%);
+}
+
+/* The rarity-colored sunburst behind a slot card. Reads --rarity from the element. */
+@utility sunburst {
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -70px;
+    top: -70px;
+    width: 230px;
+    height: 230px;
+    z-index: -1;
+    background: repeating-conic-gradient(from 4deg, var(--rarity) 0 8deg, transparent 8deg 20deg);
+    mask: radial-gradient(circle, #000 16%, transparent 62%);
+    opacity: 0.7;
+  }
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    min-width: 1024px;
+    color: var(--color-ink);
+    font-weight: 500;
+    font-stretch: 92%;
+    font-size: 15px;
+    line-height: 1.3;
+    background-color: var(--color-stage);
+    background-image:
+      radial-gradient(ellipse 55% 60% at 33% -10%, rgb(176 156 255 / 0.22), transparent 70%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cg fill='none' stroke='%23362961' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M18 50c0-15 12-27 27-27s25 11 25 24c0 10-8 18-18 18s-16-7-16-15c0-7 6-12 12-12'/%3E%3Cpath d='M132 125c0-15-12-27-27-27s-25 11-25 24c0 10 8 18 18 18s16-7 16-15c0-7-6-12-12-12'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus-ring, var(--color-focus));
+    outline-offset: 2px;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      /* biome-ignore lint/complexity/noImportantStyles: reduced motion must win over every component animation */
+      animation-duration: 0s !important;
+      /* biome-ignore lint/complexity/noImportantStyles: same as above */
+      transition-duration: 0s !important;
+    }
+  }
+}

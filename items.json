@@ -1,0 +1,7069 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "adventurers_cap",
+      "name": "Adventurer's Cap",
+      "slot": "head",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Agility"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "adventurers_pants",
+      "name": "Adventurer's Pants",
+      "slot": "legs",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Agility"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "adventurers_robe",
+      "name": "Adventurer's Robe",
+      "slot": "chest",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "adventurers_sword",
+      "name": "Adventurer's Sword",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "metal",
+        "sharp",
+        "violet"
+      ],
+      "weapon": {
+        "type": "sword",
+        "damage": {
+          "min": 7,
+          "max": 9
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 8,
+        "scalingStat": "strength"
+      },
+      "effects": [],
+      "flavorText": null
+    },
+    {
+      "id": "arcane_belt",
+      "name": "Arcane Belt",
+      "slot": "waist",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "enchanted",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Regeneration"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "arcane_boots",
+      "name": "Arcane Boots",
+      "slot": "feet",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "enchanted",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 8,
+          "unit": "flat",
+          "text": "+8 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Regeneration"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "enchanted",
+          "multiplier": 2,
+          "text": "Each ENCHANTED on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "arcane_hat",
+      "name": "Arcane Hat",
+      "slot": "head",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "enchanted",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Critical Chance"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Regeneration"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 2,
+          "unit": "flat",
+          "property": "enchanted",
+          "text": "+2 Int. for each worn ENCHANTED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "arcane_mantle",
+      "name": "Arcane Mantle",
+      "slot": "shoulders",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "enchanted",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 2,
+          "unit": "flat",
+          "property": "blue",
+          "text": "+2 Int. for each worn BLUE."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "cloth",
+          "multiplier": 2,
+          "text": "Each CLOTH on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "arcane_robe",
+      "name": "Arcane Robe",
+      "slot": "chest",
+      "rarity": "epic",
+      "properties": [
+        "cloth",
+        "enchanted",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Regeneration"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 2,
+          "unit": "flat",
+          "property": "cloth",
+          "text": "+2 Int. for each worn CLOTH."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "arcane_shield",
+      "name": "Arcane Shield",
+      "slot": "shield",
+      "rarity": "rare",
+      "properties": [
+        "enchanted"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 40,
+          "unit": "percent",
+          "text": "+40% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 2,
+          "unit": "flat",
+          "property": "metal",
+          "text": "+2 Stamina for each worn METAL."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 2,
+          "unit": "flat",
+          "property": "enchanted",
+          "text": "+2 Int. for each worn ENCHANTED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "arcane_staff",
+      "name": "Arcane Staff",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "enchanted"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 15,
+          "max": 19
+        },
+        "ranged": true,
+        "speed": 1.1,
+        "displayedDps": 15.5,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Intelligence"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "arcane_vestments",
+      "name": "Arcane Vestments",
+      "slot": "legs",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "enchanted",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Regeneration"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "archangels_crown",
+      "name": "Archangel's Crown",
+      "slot": "head",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "sharp",
+        "holy"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 25,
+          "unit": "percent",
+          "text": "+25% Critical Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "armor_of_justice",
+      "name": "Armor of Justice",
+      "slot": "chest",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "holy",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 3,
+          "unit": "percent",
+          "text": "+3% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 3,
+          "unit": "flat",
+          "property": "holy",
+          "text": "+3 Strength for each worn HOLY."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "property": "mail",
+          "text": "+3 Int. for each worn MAIL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "army_knife",
+      "name": "Army Knife",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "metal",
+        "sharp",
+        "green"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 8,
+          "max": 10
+        },
+        "ranged": false,
+        "speed": 0.6,
+        "displayedDps": 15,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "battle_axe",
+      "name": "Battle Axe",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "metal",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "axe",
+        "damage": {
+          "min": 4,
+          "max": 11
+        },
+        "ranged": false,
+        "speed": 1.5,
+        "displayedDps": 5,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 1,
+          "unit": "flat",
+          "property": "wooden",
+          "text": "+1 Strength for each worn WOODEN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "battle_mage_belt",
+      "name": "Battle Mage Belt",
+      "slot": "waist",
+      "rarity": "uncommon",
+      "properties": [
+        "bone",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Stamina"
+        },
+        {
+          "kind": "property_grant",
+          "sourceProperty": "blue",
+          "grantedProperty": "violet",
+          "count": 1,
+          "text": "Each BLUE also adds 1 VIOLET."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "beginner_pants",
+      "name": "Beginner Pants",
+      "slot": "legs",
+      "rarity": "common",
+      "properties": [
+        "leather"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "beginner_robe",
+      "name": "Beginner Robe",
+      "slot": "chest",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "beginners_dagger",
+      "name": "Beginner's Dagger",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "metal",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 1,
+          "max": 1
+        },
+        "ranged": false,
+        "speed": 0.5,
+        "displayedDps": 2,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Agility"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "beginners_sword",
+      "name": "Beginner's Sword",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "metal",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "sword",
+        "damage": {
+          "min": 1,
+          "max": 2
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 1.5,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Strength"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "beginners_wand",
+      "name": "Beginner's Wand",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "violet"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 1,
+          "max": 2
+        },
+        "ranged": true,
+        "speed": 1,
+        "displayedDps": 1.5,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Intelligence"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "beret",
+      "name": "Beret",
+      "slot": "head",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "brown",
+        "french"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Intelligence"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "red",
+          "multiplier": 2,
+          "text": "Each RED on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "berserker_chest",
+      "name": "Berserker Chest",
+      "slot": "chest",
+      "rarity": "uncommon",
+      "properties": [
+        "mail",
+        "sharp",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 3,
+          "unit": "percent",
+          "text": "+3% Critical Chance"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "berserker_hat",
+      "name": "Berserker Hat",
+      "slot": "head",
+      "rarity": "uncommon",
+      "properties": [
+        "mail",
+        "sharp",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Agility"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "berserker_pants",
+      "name": "Berserker Pants",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "mail",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Critical Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "berserker_shoulder_pads",
+      "name": "Berserker Shoulder Pads",
+      "slot": "shoulders",
+      "rarity": "uncommon",
+      "properties": [
+        "mail",
+        "sharp",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Agility"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "big_bad_attire",
+      "name": "Big Bad Attire",
+      "slot": "chest",
+      "rarity": "uncommon",
+      "properties": [
+        "furry",
+        "blue",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 11,
+          "unit": "flat",
+          "text": "+11 Stamina"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "furry",
+          "multiplier": 3,
+          "text": "Each FURRY on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "big_bad_hood",
+      "name": "Big Bad Hood",
+      "slot": "head",
+      "rarity": "rare",
+      "properties": [
+        "furry",
+        "blue",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "property": "cringe",
+          "text": "+5 Strength for each worn CRINGE."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stun_chance",
+          "value": 15,
+          "unit": "percent",
+          "text": "+15% chance to Stun."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "big_bad_pants",
+      "name": "Big Bad Pants",
+      "slot": "legs",
+      "rarity": "rare",
+      "properties": [
+        "furry",
+        "blue",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 3,
+          "unit": "flat",
+          "property": "furry",
+          "text": "+3 Strength for each worn FURRY."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "cringe",
+          "text": "+3 Stamina for each worn CRINGE."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stun_chance",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% chance to Stun."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "big_bad_paws",
+      "name": "Big Bad Paws",
+      "slot": "feet",
+      "rarity": "rare",
+      "properties": [
+        "furry",
+        "blue",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 12,
+          "unit": "flat",
+          "text": "+12 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 4,
+          "unit": "flat",
+          "property": "furry",
+          "text": "+4 Strength for each worn FURRY."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stun_chance",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% chance to Stun."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "big_bad_shoulder_pads",
+      "name": "Big Bad Shoulder Pads",
+      "slot": "shoulders",
+      "rarity": "rare",
+      "properties": [
+        "furry",
+        "blue",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "cringe",
+          "multiplier": 2,
+          "text": "Each CRINGE on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "furry",
+          "multiplier": 2,
+          "text": "Each FURRY on items counts 2 times."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stun_chance",
+          "value": 8,
+          "unit": "percent",
+          "text": "+8% chance to Stun."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "black_talon_belt",
+      "name": "Black Talon Belt",
+      "slot": "waist",
+      "rarity": "uncommon",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 6,
+          "unit": "flat",
+          "text": "+6 Agility"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_damage",
+          "value": 3,
+          "unit": "percent",
+          "property": "dark",
+          "text": "+3% Crit. Dmg. for each worn DARK."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "black_talon_boots",
+      "name": "Black Talon Boots",
+      "slot": "feet",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 12,
+          "unit": "percent",
+          "text": "+12% Critical Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "black_talon_guard",
+      "name": "Black Talon Guard",
+      "slot": "shield",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "brown",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 66,
+          "unit": "percent",
+          "text": "+66% Block"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "sneak_attack",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Sneak Attack"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "black_talon_hood",
+      "name": "Black Talon Hood",
+      "slot": "head",
+      "rarity": "epic",
+      "properties": [
+        "cloth",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_damage",
+          "value": 7,
+          "unit": "percent",
+          "property": "dark",
+          "text": "+7% Crit. Dmg. for each worn DARK."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "leather",
+          "multiplier": 2,
+          "text": "Each LEATHER on items counts 2 times."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "sneak_attack",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Sneak Attack"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "black_talon_leggings",
+      "name": "Black Talon Leggings",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Agility"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_damage",
+          "value": 4,
+          "unit": "percent",
+          "property": "cloth",
+          "text": "+4% Crit. Dmg. for each worn CLOTH."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "black_talon_robe",
+      "name": "Black Talon Robe",
+      "slot": "chest",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 9,
+          "unit": "flat",
+          "text": "+9 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Critical Damage"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "leather",
+          "multiplier": 2,
+          "text": "Each LEATHER on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "black_talon_shoulder_guards",
+      "name": "Black Talon Shoulder Guards",
+      "slot": "shoulders",
+      "rarity": "uncommon",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Critical Damage"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "property": "dark",
+          "text": "+2 Agility for each worn DARK."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "blackveil_cap",
+      "name": "Blackveil Cap",
+      "slot": "head",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "dark",
+        "french"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "life_steal",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Life Steal"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "property": "red",
+          "text": "+2 Agility for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "bloodspark_wand",
+      "name": "Bloodspark Wand",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "wooden",
+        "enchanted",
+        "red"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 9,
+          "max": 13
+        },
+        "ranged": true,
+        "speed": 1,
+        "displayedDps": 11,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "life_steal",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Life Steal"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "bloody_belt",
+      "name": "Bloody Belt",
+      "slot": "waist",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "agility",
+          "value": 1,
+          "unit": "flat",
+          "healthPercentStep": 5,
+          "text": "+1 Agility per 5% missing Hp."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "bone_armor",
+      "name": "Bone Armor",
+      "slot": "chest",
+      "rarity": "common",
+      "properties": [
+        "bone",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 8,
+          "unit": "flat",
+          "text": "+8 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "reflected_damage",
+          "value": 25,
+          "unit": "flat",
+          "text": "+25 Reflect Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "bone_barrier",
+      "name": "Bone Barrier",
+      "slot": "shield",
+      "rarity": "common",
+      "properties": [
+        "bone",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 60,
+          "unit": "percent",
+          "text": "+60% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "white",
+          "text": "+3 Stamina for each worn WHITE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "bone_belt",
+      "name": "Bone Belt",
+      "slot": "waist",
+      "rarity": "common",
+      "properties": [
+        "bone",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "bone",
+          "multiplier": 2,
+          "text": "Each BONE on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "bone_helmet",
+      "name": "Bone Helmet",
+      "slot": "head",
+      "rarity": "common",
+      "properties": [
+        "bone",
+        "sharp",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 6,
+          "unit": "flat",
+          "text": "+6 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "reflected_damage",
+          "value": 13,
+          "unit": "flat",
+          "property": "brown",
+          "text": "+13 Refl. Dmg. for each worn BROWN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "bone_shoulder_pads",
+      "name": "Bone Shoulder Pads",
+      "slot": "shoulders",
+      "rarity": "uncommon",
+      "properties": [
+        "bone",
+        "sharp",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 2,
+          "unit": "flat",
+          "property": "sharp",
+          "text": "+2 Stamina for each worn SHARP."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "white",
+          "multiplier": 2,
+          "text": "Each WHITE on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "sharp",
+          "multiplier": 2,
+          "text": "Each SHARP on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "bone_sword",
+      "name": "Bone Sword",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "bone",
+        "blunt",
+        "brown"
+      ],
+      "weapon": {
+        "type": "sword",
+        "damage": {
+          "min": 16,
+          "max": 18
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 17,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "reflected_damage",
+          "value": 5,
+          "unit": "flat",
+          "property": "bone",
+          "text": "+5 Refl. Dmg. for each worn BONE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "boots_of_performance",
+      "name": "Boots of Performance",
+      "slot": "feet",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "red",
+        "french"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Intelligence"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "boxing_glove",
+      "name": "Boxing Glove",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "leather",
+        "blunt",
+        "red"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 18,
+          "max": 22
+        },
+        "ranged": false,
+        "speed": 0.7,
+        "displayedDps": 28.6,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "extra_attack_on_hit",
+          "chancePercent": 5,
+          "text": "+5% chance for an Extra Attack on hit."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stun_chance",
+          "value": 15,
+          "unit": "percent",
+          "text": "+15% chance to Stun."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "buckler",
+      "name": "Buckler",
+      "slot": "shield",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 20,
+          "unit": "percent",
+          "text": "+20% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 2,
+          "unit": "flat",
+          "property": "brown",
+          "text": "+2 Stamina for each worn BROWN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "burning_kris",
+      "name": "Burning Kris",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "sharp",
+        "hot"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 4,
+          "max": 5
+        },
+        "ranged": false,
+        "speed": 0.6,
+        "displayedDps": 7.5,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "property": "hot",
+          "text": "+2 Agility for each worn HOT."
+        },
+        {
+          "kind": "projectile_chance",
+          "chancePercent": 15,
+          "projectile": "fireball",
+          "text": "15% chance to launch a Fireball projectile."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "cardboard_armor",
+      "name": "Cardboard Armor",
+      "slot": "chest",
+      "rarity": "rare",
+      "properties": [
+        "paper",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "critical_chance",
+          "value": 5,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "+5% Critical Chance per 5% missing Hp."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "paper",
+          "text": "+3 Stamina for each worn PAPER."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "brown",
+          "multiplier": 2,
+          "text": "Each BROWN on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "cardboard_boots",
+      "name": "Cardboard Boots",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "paper",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "critical_chance",
+          "value": 2,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "+2% Critical Chance per 5% missing Hp."
+        },
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "critical_damage",
+          "value": 5,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "+5% Critical Damage per 5% missing Hp."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "cardboard_helmet",
+      "name": "Cardboard Helmet",
+      "slot": "head",
+      "rarity": "rare",
+      "properties": [
+        "paper",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "critical_chance",
+          "value": 7,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "+7% Critical Chance per 5% missing Hp."
+        },
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "critical_damage",
+          "value": 2,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "+2% Critical Damage per 5% missing Hp."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "cardboard_pants",
+      "name": "Cardboard Pants",
+      "slot": "legs",
+      "rarity": "epic",
+      "properties": [
+        "paper",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "critical_damage",
+          "value": 5,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "+5% Critical Damage per 5% missing Hp."
+        },
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "critical_chance",
+          "value": 5,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "+5% Critical Chance per 5% missing Hp."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "paper",
+          "multiplier": 2,
+          "text": "Each PAPER on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "cardboard_shield",
+      "name": "Cardboard Shield",
+      "slot": "shield",
+      "rarity": "epic",
+      "properties": [
+        "paper",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 80,
+          "unit": "percent",
+          "text": "+80% Block"
+        },
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "block",
+          "value": -10,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "-10% Block per 5% missing Hp."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "cardboard_shoulder_pads",
+      "name": "Cardboard Shoulder Pads",
+      "slot": "shoulders",
+      "rarity": "uncommon",
+      "properties": [
+        "paper",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "critical_damage",
+          "value": 10,
+          "unit": "percent",
+          "healthPercentStep": 5,
+          "text": "+10% Critical Damage per 5% missing Hp."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "ceremonial_dagger",
+      "name": "Ceremonial Dagger",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "bone",
+        "sharp",
+        "unholy"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 15,
+          "max": 17
+        },
+        "ranged": false,
+        "speed": 0.6,
+        "displayedDps": 26.7,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 4,
+          "unit": "flat",
+          "property": "bone",
+          "text": "+4 Agility for each worn BONE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "champions_belt",
+      "name": "Champion's Belt",
+      "slot": "waist",
+      "rarity": "uncommon",
+      "properties": [
+        "leather",
+        "orange",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 4,
+          "unit": "flat",
+          "property": "mail",
+          "text": "+4 Strength for each worn MAIL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "coldblood_robe",
+      "name": "Coldblood Robe",
+      "slot": "chest",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "cold",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_damage",
+          "value": 5,
+          "unit": "percent",
+          "property": "cold",
+          "text": "+5% Crit. Dmg. for each worn COLD."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "cold",
+          "multiplier": 3,
+          "text": "Each COLD on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "comically_large_spoon",
+      "name": "Comically Large Spoon",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "metal",
+        "blunt"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 6,
+          "max": 9
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 7.5,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "enchanted",
+          "multiplier": 2,
+          "text": "Each ENCHANTED on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "concept_edge",
+      "name": "Concept Edge",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "paper",
+        "white"
+      ],
+      "weapon": {
+        "type": "sword",
+        "damage": {
+          "min": 5,
+          "max": 6
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 5.5,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "property": "white",
+          "text": "+1 Stamina for each worn WHITE."
+        }
+      ],
+      "flavorText": "// TODO: Needs color."
+    },
+    {
+      "id": "conveyor_belt",
+      "name": "Conveyor Belt",
+      "slot": "waist",
+      "rarity": "epic",
+      "properties": [
+        "metal",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "property_grant",
+          "sourceProperty": "metal",
+          "grantedProperty": "sharp",
+          "count": 1,
+          "text": "Each METAL also adds 1 SHARP."
+        },
+        {
+          "kind": "property_grant",
+          "sourceProperty": "metal",
+          "grantedProperty": "mail",
+          "count": 1,
+          "text": "Each METAL also adds 1 MAIL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "crocs",
+      "name": "Crocs",
+      "slot": "feet",
+      "rarity": "rare",
+      "properties": [
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": -10,
+          "unit": "flat",
+          "text": "-10 Agility"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 6,
+          "unit": "flat",
+          "property": "blue",
+          "text": "+6 Stamina for each worn BLUE."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "item_luck",
+          "value": 3,
+          "unit": "percent",
+          "property": "green",
+          "text": "+3% Item Luck for each worn GREEN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "crown_of_thorns",
+      "name": "Crown of Thorns",
+      "slot": "head",
+      "rarity": "common",
+      "properties": [
+        "sharp",
+        "holy",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_chance",
+          "value": 5,
+          "unit": "percent",
+          "property": "holy",
+          "text": "+5% Crit. Chance. for each worn HOLY."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "crunchy_baguette",
+      "name": "Crunchy Baguette",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "blunt",
+        "brown",
+        "french"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 25,
+          "max": 35
+        },
+        "ranged": false,
+        "speed": 2,
+        "displayedDps": 15,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_chance",
+          "value": 6,
+          "unit": "percent",
+          "property": "french",
+          "text": "+6% Crit. Chance. for each worn FRENCH."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "cute_fur_boots",
+      "name": "Cute Fur Boots",
+      "slot": "feet",
+      "rarity": "epic",
+      "properties": [
+        "furry",
+        "hot",
+        "pink"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "property": "hot",
+          "text": "+5 Stamina for each worn HOT."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "hot",
+          "multiplier": 3,
+          "text": "Each HOT on items counts 3 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "pink",
+          "multiplier": 3,
+          "text": "Each PINK on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "cutting_board",
+      "name": "Cutting Board",
+      "slot": "shield",
+      "rarity": "rare",
+      "properties": [
+        "wooden",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 6,
+          "unit": "flat",
+          "text": "+6 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 48,
+          "unit": "percent",
+          "text": "+48% Block"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "french",
+          "multiplier": 2,
+          "text": "Each FRENCH on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "daedric_dagger",
+      "name": "Daedric Dagger",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "unholy",
+        "red"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 20,
+          "max": 22
+        },
+        "ranged": false,
+        "speed": 0.7,
+        "displayedDps": 30,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "property": "unholy",
+          "text": "+1 Stamina for each worn UNHOLY."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "unholy",
+          "multiplier": 2,
+          "text": "Each UNHOLY on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "dagger_belt",
+      "name": "Dagger Belt",
+      "slot": "waist",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "melee_damage",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Melee Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "darksteel_girdle",
+      "name": "Darksteel Girdle",
+      "slot": "waist",
+      "rarity": "common",
+      "properties": [
+        "mail",
+        "blue",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Stamina"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "metal",
+          "multiplier": 2,
+          "text": "Each METAL on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "demonic_jewel",
+      "name": "Demonic Jewel",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "sharp",
+        "enchanted",
+        "unholy"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 13,
+          "max": 17
+        },
+        "ranged": true,
+        "speed": 1.1,
+        "displayedDps": 13.6,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "unholy",
+          "multiplier": 2,
+          "text": "Each UNHOLY on items counts 2 times."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "sneak_attack",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Sneak Attack"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "devils_fork",
+      "name": "Devil's Fork",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "sharp",
+        "unholy",
+        "red"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 60,
+          "max": 66
+        },
+        "ranged": false,
+        "speed": 1.7,
+        "displayedDps": 37.1,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 5,
+          "unit": "flat",
+          "property": "cursed",
+          "text": "+5 Int. for each worn CURSED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "devils_garments",
+      "name": "Devil's Garments",
+      "slot": "chest",
+      "rarity": "epic",
+      "properties": [
+        "cloth",
+        "unholy",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 66,
+          "unit": "flat",
+          "text": "+66 Intelligence"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "cursed",
+          "multiplier": 2,
+          "text": "Each CURSED on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "devils_girdle",
+      "name": "Devil's Girdle",
+      "slot": "waist",
+      "rarity": "uncommon",
+      "properties": [
+        "sharp",
+        "unholy",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 13,
+          "unit": "flat",
+          "text": "+13 Intelligence"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "unholy",
+          "multiplier": 3,
+          "text": "Each UNHOLY on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "devils_guard",
+      "name": "Devil's Guard",
+      "slot": "shield",
+      "rarity": "epic",
+      "properties": [
+        "sharp",
+        "unholy",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 66,
+          "unit": "percent",
+          "text": "+66% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "red",
+          "text": "+3 Stamina for each worn RED."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "cursed",
+          "multiplier": 2,
+          "text": "Each CURSED on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "devils_horns",
+      "name": "Devil's Horns",
+      "slot": "head",
+      "rarity": "uncommon",
+      "properties": [
+        "sharp",
+        "unholy",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 16,
+          "unit": "flat",
+          "text": "+16 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "reflected_damage",
+          "value": 16,
+          "unit": "flat",
+          "text": "+16 Reflect Damage"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 5,
+          "unit": "flat",
+          "property": "red",
+          "text": "+5 Int. for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "devils_mantle",
+      "name": "Devil's Mantle",
+      "slot": "shoulders",
+      "rarity": "uncommon",
+      "properties": [
+        "dark",
+        "gothic",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "red",
+          "multiplier": 2,
+          "text": "Each RED on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "unholy",
+          "multiplier": 2,
+          "text": "Each UNHOLY on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "devils_pants",
+      "name": "Devil's Pants",
+      "slot": "legs",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "unholy",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 5,
+          "unit": "flat",
+          "property": "cursed",
+          "text": "+5 Int. for each worn CURSED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "devils_shoes",
+      "name": "Devil's Shoes",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "unholy",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 4,
+          "unit": "flat",
+          "property": "unholy",
+          "text": "+4 Int. for each worn UNHOLY."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "property": "red",
+          "text": "+5 Stamina for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "diamond_sword",
+      "name": "Diamond Sword",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "green",
+        "cringe"
+      ],
+      "weapon": {
+        "type": "sword",
+        "damage": {
+          "min": 24,
+          "max": 28
+        },
+        "ranged": false,
+        "speed": 1.4,
+        "displayedDps": 18.6,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "green",
+          "multiplier": 2,
+          "text": "Each GREEN on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "brown",
+          "multiplier": 2,
+          "text": "Each BROWN on items counts 2 times."
+        }
+      ],
+      "flavorText": "GOATCRAFT"
+    },
+    {
+      "id": "dutch_clogs",
+      "name": "Dutch Clogs",
+      "slot": "feet",
+      "rarity": "epic",
+      "properties": [
+        "wooden",
+        "yellow",
+        "dutch"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_currency",
+          "stat": "intelligence",
+          "value": 4,
+          "unit": "flat",
+          "maxBonus": 40,
+          "text": "+4 Intelligence per 5 coins owned (max. 40).",
+          "currency": "coin",
+          "currencyStep": 5
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "blunt",
+          "multiplier": 3,
+          "text": "Each BLUNT on items counts 3 times."
+        },
+        {
+          "kind": "damage_before_battle",
+          "amount": 20,
+          "text": "Walking hurts. Take 20 damage before battles."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "el_gansos_red_boots",
+      "name": "El Ganso's Red Boots",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "leather",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 13,
+          "unit": "flat",
+          "text": "+13 Agility"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "cringe",
+          "multiplier": 2,
+          "text": "Each CRINGE on items counts 2 times."
+        },
+        {
+          "kind": "extra_attack_on_hit",
+          "chancePercent": 5,
+          "text": "+5% chance for an Extra Attack on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "el_matadors_hat",
+      "name": "El Matador's Hat",
+      "slot": "head",
+      "rarity": "epic",
+      "properties": [
+        "leather",
+        "brown",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 9,
+          "unit": "flat",
+          "text": "+9 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 9,
+          "unit": "percent",
+          "text": "+9% Block"
+        },
+        {
+          "kind": "extra_attack_on_hit",
+          "chancePercent": 8,
+          "text": "+8% chance for an Extra Attack on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "el_matadors_pauldrons",
+      "name": "El Matador's Pauldrons",
+      "slot": "shoulders",
+      "rarity": "uncommon",
+      "properties": [
+        "red",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 11,
+          "unit": "flat",
+          "text": "+11 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 11,
+          "unit": "flat",
+          "text": "+11 Stamina"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "cloth",
+          "multiplier": 2,
+          "text": "Each CLOTH on items counts 2 times."
+        },
+        {
+          "kind": "extra_attack_on_hit",
+          "chancePercent": 3,
+          "text": "+3% chance for an Extra Attack on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "el_matadors_robe",
+      "name": "El Matador's Robe",
+      "slot": "chest",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "orange",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 9,
+          "unit": "flat",
+          "text": "+9 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Block"
+        },
+        {
+          "kind": "extra_attack_on_hit",
+          "chancePercent": 5,
+          "text": "+5% chance for an Extra Attack on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "el_matadors_trousers",
+      "name": "El Matador's Trousers",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "orange",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 10,
+          "unit": "flat",
+          "text": "+10 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 3,
+          "unit": "percent",
+          "text": "+3% Block"
+        },
+        {
+          "kind": "extra_attack_on_hit",
+          "chancePercent": 5,
+          "text": "+5% chance for an Extra Attack on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "estoque",
+      "name": "Estoque",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "metal",
+        "sharp",
+        "elegant"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 55,
+          "max": 60
+        },
+        "ranged": false,
+        "speed": 1.6,
+        "displayedDps": 35.9,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 5,
+          "unit": "flat",
+          "property": "red",
+          "text": "+5 Agility for each worn RED."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 5,
+          "unit": "flat",
+          "property": "cloth",
+          "text": "+5 Agility for each worn CLOTH."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "fiery_striders",
+      "name": "Fiery Striders",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "hot",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 1,
+          "unit": "flat",
+          "property": "red",
+          "text": "+1 Agility for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "fiery_warglaive",
+      "name": "Fiery Warglaive",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "enchanted",
+        "hot",
+        "orange"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 4,
+          "max": 6
+        },
+        "ranged": false,
+        "speed": 0.5,
+        "displayedDps": 10,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "property": "orange",
+          "text": "+2 Agility for each worn ORANGE."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "property": "red",
+          "text": "+1 Stamina for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "forearm_blade",
+      "name": "Forearm Blade",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "metal",
+        "leather",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 18,
+          "max": 20
+        },
+        "ranged": false,
+        "speed": 0.6,
+        "displayedDps": 31.7,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 30,
+          "unit": "percent",
+          "text": "+30% Critical Damage"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "leather",
+          "multiplier": 3,
+          "text": "Each LEATHER on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "formal_belt",
+      "name": "Formal Belt",
+      "slot": "waist",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "dark",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "property": "elegant",
+          "text": "+5 Strength for each worn ELEGANT."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "metal",
+          "multiplier": 3,
+          "text": "Each METAL on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "formal_jacket",
+      "name": "Formal Jacket",
+      "slot": "chest",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "dark",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Item Luck"
+        },
+        {
+          "kind": "stat_per_currency",
+          "stat": "strength",
+          "value": 6,
+          "unit": "flat",
+          "maxBonus": 60,
+          "text": "+6 Strength per 5 coins owned (max. 60).",
+          "currency": "coin",
+          "currencyStep": 5
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "formal_oxfords",
+      "name": "Formal Oxfords",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "leather",
+        "brown",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_currency",
+          "stat": "strength",
+          "value": 2,
+          "unit": "flat",
+          "maxBonus": 20,
+          "text": "+2 Strength per 5 coins owned (max. 20).",
+          "currency": "coin",
+          "currencyStep": 5
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "property": "elegant",
+          "text": "+5 Strength for each worn ELEGANT."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "formal_pants",
+      "name": "Formal Pants",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "dark",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_currency",
+          "stat": "strength",
+          "value": 6,
+          "unit": "flat",
+          "maxBonus": 60,
+          "text": "+6 Strength per 5 coins owned (max. 60).",
+          "currency": "coin",
+          "currencyStep": 5
+        },
+        {
+          "kind": "loot_on_hit",
+          "chancePercent": 5,
+          "amount": 1,
+          "currency": "coin",
+          "text": "+5% chance to loot 1 Coin on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "fringed_shoulder_pads",
+      "name": "Fringed Shoulder Pads",
+      "slot": "shoulders",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "violet",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 10,
+          "unit": "flat",
+          "text": "+10 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Item Luck"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "elegant",
+          "text": "+3 Stamina for each worn ELEGANT."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "frostbite",
+      "name": "Frostbite",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "wooden",
+        "metal",
+        "cold"
+      ],
+      "weapon": {
+        "type": "axe",
+        "damage": {
+          "min": 29,
+          "max": 66
+        },
+        "ranged": false,
+        "speed": 2,
+        "displayedDps": 23.8,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_damage",
+          "value": 5,
+          "unit": "percent",
+          "property": "cold",
+          "text": "+5% Crit. Dmg. for each worn COLD."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "frostweave_belt",
+      "name": "Frostweave Belt",
+      "slot": "waist",
+      "rarity": "rare",
+      "properties": [
+        "leather",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 17,
+          "unit": "percent",
+          "text": "+17% Critical Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "frostweave_leggings",
+      "name": "Frostweave Leggings",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "cold",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 15,
+          "unit": "percent",
+          "text": "+15% Critical Damage"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "blue",
+          "text": "+3 Stamina for each worn BLUE."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "violet",
+          "multiplier": 3,
+          "text": "Each VIOLET on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "frostweave_shoulderguards",
+      "name": "Frostweave Shoulderguards",
+      "slot": "shoulders",
+      "rarity": "uncommon",
+      "properties": [
+        "mail",
+        "cold",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 3,
+          "unit": "flat",
+          "property": "blue",
+          "text": "+3 Strength for each worn BLUE."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 4,
+          "unit": "flat",
+          "property": "blue",
+          "text": "+4 Int. for each worn BLUE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "fur_boots",
+      "name": "Fur Boots",
+      "slot": "feet",
+      "rarity": "common",
+      "properties": [
+        "furry",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "property": "white",
+          "text": "+1 Stamina for each worn WHITE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "fur_pants",
+      "name": "Fur Pants",
+      "slot": "legs",
+      "rarity": "common",
+      "properties": [
+        "furry",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "reflected_damage",
+          "value": 30,
+          "unit": "flat",
+          "text": "+30 Reflect Damage"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "property": "white",
+          "text": "+1 Stamina for each worn WHITE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "glass_orb",
+      "name": "Glass Orb",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "cold",
+        "blue"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 52,
+          "max": 64
+        },
+        "ranged": true,
+        "speed": 1.6,
+        "displayedDps": 36.3,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 5,
+          "unit": "flat",
+          "property": "cold",
+          "text": "+5 Int. for each worn COLD."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "cold",
+          "multiplier": 2,
+          "text": "Each COLD on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goat_attire",
+      "name": "GOAT Attire",
+      "slot": "chest",
+      "rarity": "rare",
+      "properties": [
+        "leather",
+        "furry",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 20,
+          "unit": "flat",
+          "text": "+20 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 6,
+          "unit": "flat",
+          "property": "white",
+          "text": "+6 Strength for each worn WHITE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goat_hood",
+      "name": "GOAT Hood",
+      "slot": "head",
+      "rarity": "epic",
+      "properties": [
+        "furry",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "property": "leather",
+          "text": "+5 Strength for each worn LEATHER."
+        },
+        {
+          "kind": "property_grant",
+          "sourceProperty": "white",
+          "grantedProperty": "leather",
+          "count": 1,
+          "text": "Each WHITE also adds 1 LEATHER."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goat_hooves",
+      "name": "GOAT Hooves",
+      "slot": "feet",
+      "rarity": "epic",
+      "properties": [
+        "bone",
+        "furry",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 25,
+          "unit": "flat",
+          "text": "+25 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 6,
+          "unit": "flat",
+          "property": "leather",
+          "text": "+6 Strength for each worn LEATHER."
+        },
+        {
+          "kind": "property_grant",
+          "sourceProperty": "bone",
+          "grantedProperty": "leather",
+          "count": 1,
+          "text": "Each BONE also adds 1 LEATHER."
+        }
+      ],
+      "flavorText": "Worn by the devil?"
+    },
+    {
+      "id": "goat_pants",
+      "name": "GOAT Pants",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "furry",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "property": "leather",
+          "text": "+5 Strength for each worn LEATHER."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "property": "white",
+          "text": "+5 Stamina for each worn WHITE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goat_shoulder_pads",
+      "name": "GOAT Shoulder Pads",
+      "slot": "shoulders",
+      "rarity": "uncommon",
+      "properties": [
+        "furry",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 20,
+          "unit": "flat",
+          "text": "+20 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "property": "leather",
+          "text": "+5 Strength for each worn LEATHER."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goat_slayer",
+      "name": "GOAT Slayer",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "wooden",
+        "sharp",
+        "violet"
+      ],
+      "weapon": {
+        "type": "axe",
+        "damage": {
+          "min": 7,
+          "max": 17
+        },
+        "ranged": false,
+        "speed": 1.7,
+        "displayedDps": 7.1,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "sneak_attack",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Sneak Attack"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goathide_belt",
+      "name": "Goathide Belt",
+      "slot": "waist",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 8,
+          "unit": "flat",
+          "text": "+8 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Regeneration"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goathide_helmet",
+      "name": "Goathide Helmet",
+      "slot": "head",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Regeneration"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goatmares_hand",
+      "name": "Goatmare's Hand",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "bone",
+        "cold",
+        "blue"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 44,
+          "max": 48
+        },
+        "ranged": false,
+        "speed": 2.2,
+        "displayedDps": 20.9,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 3,
+          "unit": "flat",
+          "property": "cold",
+          "text": "+3 Agility for each worn COLD."
+        },
+        {
+          "kind": "extra_slow",
+          "text": "Extra slow."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "goatmares_legacy",
+      "name": "Goatmare's Legacy",
+      "slot": "head",
+      "rarity": "epic",
+      "properties": [
+        "bone",
+        "sharp",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_missing_health",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "healthPercentStep": 5,
+          "text": "+2 Agility per 5% missing Hp."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "bone",
+          "multiplier": 3,
+          "text": "Each BONE on items counts 3 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "white",
+          "multiplier": 3,
+          "text": "Each WHITE on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "golden_belt",
+      "name": "Golden Belt",
+      "slot": "waist",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_currency",
+          "stat": "strength",
+          "value": 2,
+          "unit": "flat",
+          "maxBonus": 20,
+          "text": "+2 Strength per 5 coins owned (max. 20).",
+          "currency": "coin",
+          "currencyStep": 5
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "green_emerald_dagger",
+      "name": "Green Emerald Dagger",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "sharp",
+        "enchanted",
+        "green"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 8,
+          "max": 11
+        },
+        "ranged": false,
+        "speed": 0.5,
+        "displayedDps": 19,
+        "scalingStat": "agility"
+      },
+      "effects": [],
+      "flavorText": null
+    },
+    {
+      "id": "hammer_pants",
+      "name": "Hammer Pants",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "pink"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 8,
+          "unit": "flat",
+          "text": "+8 Agility"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 3,
+          "unit": "flat",
+          "property": "pink",
+          "text": "+3 Agility for each worn PINK."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "hand_scythe",
+      "name": "Hand Scythe",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "metal",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 13,
+          "max": 14
+        },
+        "ranged": false,
+        "speed": 0.8,
+        "displayedDps": 16.9,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "property": "metal",
+          "text": "+2 Agility for each worn METAL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "heart_of_winter",
+      "name": "Heart Of Winter",
+      "slot": "shield",
+      "rarity": "rare",
+      "properties": [
+        "bone",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Critical Chance"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 15,
+          "unit": "percent",
+          "text": "+15% Critical Damage"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 35,
+          "unit": "percent",
+          "text": "+35% Block"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "helmet_of_justice",
+      "name": "Helmet of Justice",
+      "slot": "head",
+      "rarity": "rare",
+      "properties": [
+        "mail",
+        "holy",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 2,
+          "unit": "flat",
+          "property": "holy",
+          "text": "+2 Strength for each worn HOLY."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 2,
+          "unit": "flat",
+          "property": "mail",
+          "text": "+2 Int. for each worn MAIL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "high_heals",
+      "name": "High Heals",
+      "slot": "feet",
+      "rarity": "epic",
+      "properties": [
+        "hot",
+        "red",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "regeneration",
+          "value": 15,
+          "unit": "flat",
+          "property": "elegant",
+          "text": "+15 Regen. for each worn ELEGANT."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "elegant",
+          "multiplier": 2,
+          "text": "Each ELEGANT on items counts 2 times."
+        }
+      ],
+      "flavorText": "Worn by the devil?"
+    },
+    {
+      "id": "holy_cross",
+      "name": "Holy Cross",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "blunt",
+        "holy"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 3,
+          "max": 4
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 3.5,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Intelligence"
+        }
+      ],
+      "flavorText": "Holy moly."
+    },
+    {
+      "id": "holy_robe",
+      "name": "Holy Robe",
+      "slot": "chest",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "holy",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Intelligence"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "hook",
+      "name": "Hook",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "sharp",
+        "pirate"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 14,
+          "max": 16
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 15,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 3,
+          "unit": "flat",
+          "property": "pirate",
+          "text": "+3 Strength for each worn PIRATE."
+        },
+        {
+          "kind": "loot_on_hit",
+          "chancePercent": 13,
+          "amount": 1,
+          "currency": "coin",
+          "text": "+13% chance to loot 1 Coin on hit."
+        }
+      ],
+      "flavorText": "Not Saber."
+    },
+    {
+      "id": "icy_treads",
+      "name": "Icy Treads",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "leather",
+        "cold",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "green",
+          "multiplier": 3,
+          "text": "Each GREEN on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "ironcrypt_legguards",
+      "name": "Ironcrypt Legguards",
+      "slot": "legs",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 4,
+          "unit": "percent",
+          "text": "+4% Item Luck"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 3,
+          "unit": "flat",
+          "property": "dark",
+          "text": "+3 Strength for each worn DARK."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "ironcrypt_spaulders",
+      "name": "Ironcrypt Spaulders",
+      "slot": "shoulders",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "sharp",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 12,
+          "unit": "percent",
+          "text": "+12% Critical Chance"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Item Luck"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "dark",
+          "multiplier": 2,
+          "text": "Each DARK on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "jesters_cap",
+      "name": "Jester's Cap",
+      "slot": "head",
+      "rarity": "rare",
+      "properties": [
+        "red",
+        "white",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 4,
+          "unit": "flat",
+          "property": "white",
+          "text": "+4 Agility for each worn WHITE."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "property": "white",
+          "text": "+1 Stamina for each worn WHITE."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "white",
+          "multiplier": 2,
+          "text": "Each WHITE on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "jesters_guard",
+      "name": "Jester's Guard",
+      "slot": "shield",
+      "rarity": "epic",
+      "properties": [
+        "red",
+        "white",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 65,
+          "unit": "percent",
+          "text": "+65% Block"
+        },
+        {
+          "kind": "property_grant",
+          "sourceProperty": "red",
+          "grantedProperty": "white",
+          "count": 1,
+          "text": "Each RED also adds 1 WHITE."
+        },
+        {
+          "kind": "property_grant",
+          "sourceProperty": "white",
+          "grantedProperty": "red",
+          "count": 1,
+          "text": "Each WHITE also adds 1 RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "jesters_leggings",
+      "name": "Jester's Leggings",
+      "slot": "legs",
+      "rarity": "rare",
+      "properties": [
+        "red",
+        "white",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Item Luck"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 6,
+          "unit": "flat",
+          "property": "paper",
+          "text": "+6 Agility for each worn PAPER."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "red",
+          "multiplier": 2,
+          "text": "Each RED on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "jesters_mantle",
+      "name": "Jester's Mantle",
+      "slot": "shoulders",
+      "rarity": "epic",
+      "properties": [
+        "red",
+        "white",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Item Luck"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 6,
+          "unit": "flat",
+          "property": "paper",
+          "text": "+6 Agility for each worn PAPER."
+        },
+        {
+          "kind": "loot_on_hit",
+          "chancePercent": 5,
+          "amount": 1,
+          "currency": "coin",
+          "text": "+5% chance to loot 1 Coin on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "jesters_robe",
+      "name": "Jester's Robe",
+      "slot": "chest",
+      "rarity": "epic",
+      "properties": [
+        "red",
+        "white",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 15,
+          "unit": "percent",
+          "text": "+15% Item Luck"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "white",
+          "multiplier": 2,
+          "text": "Each WHITE on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "paper",
+          "multiplier": 2,
+          "text": "Each PAPER on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "jesters_shoes",
+      "name": "Jester's Shoes",
+      "slot": "feet",
+      "rarity": "rare",
+      "properties": [
+        "red",
+        "white",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Item Luck"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 6,
+          "unit": "flat",
+          "property": "red",
+          "text": "+6 Agility for each worn RED."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "white",
+          "multiplier": 2,
+          "text": "Each WHITE on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "jesters_waistband",
+      "name": "Jester's Waistband",
+      "slot": "waist",
+      "rarity": "uncommon",
+      "properties": [
+        "red",
+        "white",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Item Luck"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 6,
+          "unit": "flat",
+          "property": "paper",
+          "text": "+6 Agility for each worn PAPER."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "karambit",
+      "name": "Karambit",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "metal",
+        "sharp",
+        "red"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 11,
+          "max": 12
+        },
+        "ranged": false,
+        "speed": 0.5,
+        "displayedDps": 23,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 1,
+          "unit": "flat",
+          "property": "red",
+          "text": "+1 Agility for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "kris",
+      "name": "Kris",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "metal",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 4,
+          "max": 5
+        },
+        "ranged": false,
+        "speed": 0.6,
+        "displayedDps": 7.5,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 1,
+          "unit": "flat",
+          "property": "leather",
+          "text": "+1 Agility for each worn LEATHER."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "kunai",
+      "name": "Kunai",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "metal",
+        "sharp",
+        "dark"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 13,
+          "max": 14
+        },
+        "ranged": true,
+        "speed": 0.9,
+        "displayedDps": 15,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Critical Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "lavender_cap",
+      "name": "Lavender Cap",
+      "slot": "head",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "violet"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Intelligence"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "leather_belt",
+      "name": "Leather Belt",
+      "slot": "waist",
+      "rarity": "uncommon",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Agility"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "leather_shoulder_pads",
+      "name": "Leather Shoulder Pads",
+      "slot": "shoulders",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "melee_damage",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Melee Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "legguards_of_justice",
+      "name": "Legguards of Justice",
+      "slot": "legs",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "holy",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "holy",
+          "text": "+3 Stamina for each worn HOLY."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "yellow",
+          "multiplier": 2,
+          "text": "Each YELLOW on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "mail",
+          "multiplier": 2,
+          "text": "Each MAIL on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "lightsaber",
+      "name": "Lightsaber",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "hot",
+        "red",
+        "pink"
+      ],
+      "weapon": {
+        "type": "sword",
+        "damage": {
+          "min": 13,
+          "max": 15
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 14,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 6,
+          "unit": "flat",
+          "text": "+6 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "lucky_belt",
+      "name": "Lucky Belt",
+      "slot": "waist",
+      "rarity": "epic",
+      "properties": [
+        "leather",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "item_luck",
+          "value": 3,
+          "unit": "percent",
+          "property": "green",
+          "text": "+3% Item Luck for each worn GREEN."
+        }
+      ],
+      "flavorText": "Pretty lucky!"
+    },
+    {
+      "id": "magical_walkers",
+      "name": "Magical Walkers",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "violet"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 3,
+          "unit": "percent",
+          "text": "+3% Item Luck"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "property": "enchanted",
+          "text": "+3 Int. for each worn ENCHANTED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "mighty_mallet",
+      "name": "Mighty Mallet",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "red",
+        "white",
+        "cringe"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 1,
+          "max": 200
+        },
+        "ranged": false,
+        "speed": 2.6,
+        "displayedDps": 38.7,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stun_chance",
+          "value": 25,
+          "unit": "percent",
+          "text": "+25% chance to Stun."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "neon_belt",
+      "name": "Neon Belt",
+      "slot": "waist",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "orange",
+        "pink"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 4,
+          "unit": "flat",
+          "property": "orange",
+          "text": "+4 Stamina for each worn ORANGE."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "pink",
+          "multiplier": 2,
+          "text": "Each PINK on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "neon_boots",
+      "name": "Neon Boots",
+      "slot": "feet",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "damage",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Damage"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "orange",
+          "text": "+3 Stamina for each worn ORANGE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "neon_headgear",
+      "name": "Neon Headgear",
+      "slot": "head",
+      "rarity": "uncommon",
+      "properties": [
+        "furry",
+        "orange",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "orange",
+          "text": "+3 Stamina for each worn ORANGE."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "pink",
+          "text": "+3 Stamina for each worn PINK."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "neon_jacket",
+      "name": "Neon Jacket",
+      "slot": "chest",
+      "rarity": "common",
+      "properties": [
+        "orange",
+        "pink",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "damage",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "neon_leggings",
+      "name": "Neon Leggings",
+      "slot": "legs",
+      "rarity": "common",
+      "properties": [
+        "pink",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "damage",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "neon_shield",
+      "name": "Neon Shield",
+      "slot": "shield",
+      "rarity": "uncommon",
+      "properties": [
+        "orange",
+        "pink"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 50,
+          "unit": "percent",
+          "text": "+50% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "pink",
+          "text": "+3 Stamina for each worn PINK."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "neon_shoulder_armor",
+      "name": "Neon Shoulder Armor",
+      "slot": "shoulders",
+      "rarity": "common",
+      "properties": [
+        "metal",
+        "orange",
+        "pink"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "damage",
+          "value": 3,
+          "unit": "percent",
+          "text": "+3% Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "obi",
+      "name": "Obi",
+      "slot": "waist",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "pink",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Intelligence"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "orange_guard",
+      "name": "Orange Guard",
+      "slot": "shield",
+      "rarity": "uncommon",
+      "properties": [
+        "metal",
+        "orange"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 60,
+          "unit": "percent",
+          "text": "+60% Block"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "orange",
+          "multiplier": 3,
+          "text": "Each ORANGE on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "parry_dagger",
+      "name": "Parry Dagger",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "sharp",
+        "blue"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 7,
+          "max": 8
+        },
+        "ranged": false,
+        "speed": 0.4,
+        "displayedDps": 18.8,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 5,
+          "unit": "percent",
+          "text": "+5% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "life_steal",
+          "value": 1,
+          "unit": "flat",
+          "property": "blue",
+          "text": "+1 Life Steal for each worn BLUE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "pauldrons_of_justice",
+      "name": "Pauldrons of Justice",
+      "slot": "shoulders",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "holy",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 10,
+          "unit": "flat",
+          "text": "+10 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 3,
+          "unit": "percent",
+          "text": "+3% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 4,
+          "unit": "flat",
+          "property": "mail",
+          "text": "+4 Stamina for each worn MAIL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "pauldrons_of_the_archangel",
+      "name": "Pauldrons of the Archangel",
+      "slot": "shoulders",
+      "rarity": "rare",
+      "properties": [
+        "mail",
+        "holy",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 20,
+          "unit": "percent",
+          "text": "+20% Critical Damage"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "red",
+          "text": "+3 Stamina for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "pirate_hat",
+      "name": "Pirate Hat",
+      "slot": "head",
+      "rarity": "rare",
+      "properties": [
+        "red",
+        "dark",
+        "pirate"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "blue",
+          "multiplier": 2,
+          "text": "Each BLUE on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "sharp",
+          "multiplier": 2,
+          "text": "Each SHARP on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "pirate",
+          "multiplier": 2,
+          "text": "Each PIRATE on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "pirate_shield",
+      "name": "Pirate Shield",
+      "slot": "shield",
+      "rarity": "uncommon",
+      "properties": [
+        "wooden",
+        "pirate"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 40,
+          "unit": "percent",
+          "text": "+40% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 4,
+          "unit": "flat",
+          "property": "pirate",
+          "text": "+4 Stamina for each worn PIRATE."
+        },
+        {
+          "kind": "loot_on_hit",
+          "chancePercent": 10,
+          "amount": 1,
+          "currency": "coin",
+          "text": "+10% chance to loot 1 Coin on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "poison_cleaver",
+      "name": "Poison Cleaver",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "wooden",
+        "metal",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "axe",
+        "damage": {
+          "min": 14,
+          "max": 32
+        },
+        "ranged": false,
+        "speed": 1.8,
+        "displayedDps": 12.8,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "poison",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Poison"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 2,
+          "unit": "flat",
+          "property": "sharp",
+          "text": "+2 Strength for each worn SHARP."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "poison_kunai",
+      "name": "Poison Kunai",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "sharp",
+        "green"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 36,
+          "max": 38
+        },
+        "ranged": true,
+        "speed": 1.1,
+        "displayedDps": 33.6,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "poison",
+          "value": 22,
+          "unit": "flat",
+          "text": "+22 Poison"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "ranged_damage",
+          "value": 3,
+          "unit": "percent",
+          "property": "sharp",
+          "text": "+3% Ranged Dmg. for each worn SHARP."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "pro_gamer_knife",
+      "name": "Pro-Gamer Knife",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "metal",
+        "sharp",
+        "cringe"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 19,
+          "max": 21
+        },
+        "ranged": false,
+        "speed": 0.5,
+        "displayedDps": 40,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_currency",
+          "stat": "agility",
+          "value": 5,
+          "unit": "flat",
+          "currency": "coin",
+          "currencyStep": 5,
+          "maxBonus": 50,
+          "text": "+5 Agility per 5 coins owned (max. 50)."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "quick_dagger",
+      "name": "Quick Dagger",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "metal",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 3,
+          "max": 4
+        },
+        "ranged": false,
+        "speed": 0.5,
+        "displayedDps": 7,
+        "scalingStat": "agility"
+      },
+      "effects": [],
+      "flavorText": null
+    },
+    {
+      "id": "quick_shield",
+      "name": "Quick Shield",
+      "slot": "shield",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "metal",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 28,
+          "unit": "percent",
+          "text": "+28% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 1,
+          "unit": "flat",
+          "property": "cloth",
+          "text": "+1 Agility for each worn CLOTH."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "rag_club",
+      "name": "Rag Club",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "paper",
+        "blunt",
+        "white"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 55,
+          "max": 115
+        },
+        "ranged": false,
+        "speed": 2.7,
+        "displayedDps": 31.5,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "regeneration",
+          "value": 5,
+          "unit": "flat",
+          "property": "paper",
+          "text": "+5 Regen. for each worn PAPER."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "rag_hood",
+      "name": "Rag Hood",
+      "slot": "head",
+      "rarity": "uncommon",
+      "properties": [
+        "paper",
+        "unholy",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 13,
+          "unit": "flat",
+          "text": "+13 Regeneration"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "poison",
+          "value": 15,
+          "unit": "flat",
+          "text": "+15 Poison"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "property": "bone",
+          "text": "+5 Stamina for each worn BONE."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "paper",
+          "multiplier": 2,
+          "text": "Each PAPER on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "rag_legwraps",
+      "name": "Rag Legwraps",
+      "slot": "legs",
+      "rarity": "rare",
+      "properties": [
+        "paper",
+        "unholy",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Regeneration"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "poison",
+          "value": 12,
+          "unit": "flat",
+          "text": "+12 Poison"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "property": "bone",
+          "text": "+5 Stamina for each worn BONE."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "rag_treads",
+      "name": "Rag Treads",
+      "slot": "feet",
+      "rarity": "rare",
+      "properties": [
+        "paper",
+        "unholy",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 10,
+          "unit": "flat",
+          "text": "+10 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "poison",
+          "value": 20,
+          "unit": "flat",
+          "text": "+20 Poison"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "regeneration",
+          "value": 7,
+          "unit": "flat",
+          "property": "paper",
+          "text": "+7 Regen. for each worn PAPER."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "rag_tunic",
+      "name": "Rag Tunic",
+      "slot": "chest",
+      "rarity": "rare",
+      "properties": [
+        "paper",
+        "unholy",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 22,
+          "unit": "flat",
+          "text": "+22 Regeneration"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "poison",
+          "value": 15,
+          "unit": "flat",
+          "text": "+15 Poison"
+        },
+        {
+          "kind": "property_grant",
+          "sourceProperty": "bone",
+          "grantedProperty": "paper",
+          "count": 1,
+          "text": "Each BONE also adds 1 PAPER."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "rag_wraps",
+      "name": "Rag Wraps",
+      "slot": "shoulders",
+      "rarity": "rare",
+      "properties": [
+        "paper",
+        "unholy",
+        "white"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 15,
+          "unit": "flat",
+          "text": "+15 Regeneration"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "poison",
+          "value": 10,
+          "unit": "flat",
+          "text": "+10 Poison"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "property": "unholy",
+          "text": "+5 Stamina for each worn UNHOLY."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "red_sash_belt",
+      "name": "Red Sash Belt",
+      "slot": "waist",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "red",
+        "pirate"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 5,
+          "unit": "flat",
+          "property": "red",
+          "text": "+5 Agility for each worn RED."
+        },
+        {
+          "kind": "extra_attack_on_hit",
+          "chancePercent": 2,
+          "text": "+2% chance for an Extra Attack on hit."
+        },
+        {
+          "kind": "loot_on_hit",
+          "chancePercent": 10,
+          "amount": 1,
+          "currency": "coin",
+          "text": "+10% chance to loot 1 Coin on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "robe_of_the_bandit",
+      "name": "Robe of the Bandit",
+      "slot": "chest",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "violet"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 15,
+          "unit": "flat",
+          "text": "+15 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 15,
+          "unit": "percent",
+          "text": "+15% Critical Chance"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "robe_of_the_magus",
+      "name": "Robe of the Magus",
+      "slot": "chest",
+      "rarity": "common",
+      "properties": [
+        "cloth",
+        "violet",
+        "french"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Intelligence"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "robe_of_the_thief",
+      "name": "Robe of the Thief",
+      "slot": "chest",
+      "rarity": "uncommon",
+      "properties": [
+        "leather",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 4,
+          "unit": "percent",
+          "text": "+4% Critical Chance"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "round_shield",
+      "name": "Round Shield",
+      "slot": "shield",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "metal",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 28,
+          "unit": "percent",
+          "text": "+28% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 1,
+          "unit": "flat",
+          "property": "mail",
+          "text": "+1 Strength for each worn MAIL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "saber",
+      "name": "Saber",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "metal",
+        "sharp",
+        "pirate"
+      ],
+      "weapon": {
+        "type": "sword",
+        "damage": {
+          "min": 19,
+          "max": 21
+        },
+        "ranged": false,
+        "speed": 0.9,
+        "displayedDps": 22.2,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "pirate",
+          "multiplier": 2,
+          "text": "Each PIRATE on items counts 2 times."
+        }
+      ],
+      "flavorText": "Not Saber."
+    },
+    {
+      "id": "sawblade_axe",
+      "name": "Sawblade Axe",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "metal",
+        "sharp"
+      ],
+      "weapon": {
+        "type": "axe",
+        "damage": {
+          "min": 60,
+          "max": 75
+        },
+        "ranged": false,
+        "speed": 2.1,
+        "displayedDps": 32.1,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "property": "bone",
+          "text": "+5 Strength for each worn BONE."
+        },
+        {
+          "kind": "projectile_chance",
+          "chancePercent": 30,
+          "projectile": "sawblade",
+          "text": "30% chance to launch a Sawblade projectile."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "scarlet_vest",
+      "name": "Scarlet Vest",
+      "slot": "chest",
+      "rarity": "epic",
+      "properties": [
+        "cloth",
+        "red",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 14,
+          "unit": "flat",
+          "text": "+14 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 10,
+          "unit": "flat",
+          "text": "+10 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_damage",
+          "value": 3,
+          "unit": "percent",
+          "property": "red",
+          "text": "+3% Crit. Dmg. for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "sexy_belt",
+      "name": "Sexy Belt",
+      "slot": "waist",
+      "rarity": "rare",
+      "properties": [
+        "leather",
+        "hot",
+        "red"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_chance",
+          "value": 3,
+          "unit": "percent",
+          "property": "leather",
+          "text": "+3% Crit. Chance. for each worn LEATHER."
+        }
+      ],
+      "flavorText": "<3"
+    },
+    {
+      "id": "shield_of_justice",
+      "name": "Shield Of Justice",
+      "slot": "shield",
+      "rarity": "epic",
+      "properties": [
+        "mail",
+        "holy",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 62,
+          "unit": "percent",
+          "text": "+62% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "property": "mail",
+          "text": "+3 Int. for each worn MAIL."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "holy",
+          "text": "+3 Stamina for each worn HOLY."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "shoulder_guards",
+      "name": "Shoulder Guards",
+      "slot": "shoulders",
+      "rarity": "common",
+      "properties": [
+        "metal",
+        "mail"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "skull_shield",
+      "name": "Skull Shield",
+      "slot": "shield",
+      "rarity": "common",
+      "properties": [
+        "bone",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 48,
+          "unit": "percent",
+          "text": "+48% Block"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "sharp",
+          "multiplier": 2,
+          "text": "Each SHARP on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "sneak_attackers",
+      "name": "Sneak Attackers",
+      "slot": "feet",
+      "rarity": "rare",
+      "properties": [
+        "leather",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "property": "sharp",
+          "text": "+1 Stamina for each worn SHARP."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "sneak_attack",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Sneak Attack"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "sneakers",
+      "name": "Sneakers",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "sharp",
+        "hot"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 6,
+          "unit": "flat",
+          "property": "sharp",
+          "text": "+6 Agility for each worn SHARP."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "hot",
+          "multiplier": 2,
+          "text": "Each HOT on items counts 2 times."
+        }
+      ],
+      "flavorText": "Rizz."
+    },
+    {
+      "id": "staff_of_nature",
+      "name": "Staff Of Nature",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "enchanted",
+        "brown"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 33,
+          "max": 39
+        },
+        "ranged": true,
+        "speed": 1.4,
+        "displayedDps": 25.7,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Intelligence"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "property": "wooden",
+          "text": "+5 Stamina for each worn WOODEN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "steel_helmet",
+      "name": "Steel Helmet",
+      "slot": "head",
+      "rarity": "common",
+      "properties": [
+        "metal",
+        "mail",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "sticky_tape_belt",
+      "name": "Sticky Tape Belt",
+      "slot": "waist",
+      "rarity": "uncommon",
+      "properties": [
+        "paper",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "critical_damage",
+          "value": 7,
+          "unit": "percent",
+          "property": "paper",
+          "text": "+7% Crit. Dmg. for each worn PAPER."
+        }
+      ],
+      "flavorText": "Pretty lucky!"
+    },
+    {
+      "id": "stirdy_treads",
+      "name": "Stirdy Treads",
+      "slot": "feet",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "regeneration",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Regeneration"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "striped_jersey",
+      "name": "Striped Jersey",
+      "slot": "chest",
+      "rarity": "rare",
+      "properties": [
+        "red",
+        "white",
+        "french"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Intelligence"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "brown",
+          "multiplier": 2,
+          "text": "Each BROWN on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "striped_pants",
+      "name": "Striped Pants",
+      "slot": "legs",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "white",
+        "french"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 1,
+          "unit": "flat",
+          "property": "red",
+          "text": "+1 Int. for each worn RED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "sturdy_buckler",
+      "name": "Sturdy Buckler",
+      "slot": "shield",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 60,
+          "unit": "percent",
+          "text": "+60% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "property": "brown",
+          "text": "+5 Stamina for each worn BROWN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "swift_boots",
+      "name": "Swift-Boots",
+      "slot": "feet",
+      "rarity": "rare",
+      "properties": [
+        "leather",
+        "orange"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 40,
+          "unit": "percent",
+          "text": "+40% Critical Chance"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_damage",
+          "value": 30,
+          "unit": "percent",
+          "text": "+30% Critical Damage"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "sword_of_justice",
+      "name": "Sword Of Justice",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "sharp",
+        "holy"
+      ],
+      "weapon": {
+        "type": "sword",
+        "damage": {
+          "min": 21,
+          "max": 22
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 21.5,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "mail",
+          "multiplier": 3,
+          "text": "Each MAIL on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "the_protector",
+      "name": "The Protector",
+      "slot": "shield",
+      "rarity": "uncommon",
+      "properties": [
+        "metal",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 32,
+          "unit": "percent",
+          "text": "+32% Block"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "green",
+          "text": "+3 Stamina for each worn GREEN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "thong_belt",
+      "name": "Thong Belt",
+      "slot": "waist",
+      "rarity": "epic",
+      "properties": [
+        "cloth",
+        "hot",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "leather",
+          "multiplier": 2,
+          "text": "Each LEATHER on items counts 2 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "hot",
+          "multiplier": 2,
+          "text": "Each HOT on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "thorny_legguards",
+      "name": "Thorny Legguards",
+      "slot": "legs",
+      "rarity": "rare",
+      "properties": [
+        "cloth",
+        "green",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "reflected_damage",
+          "value": 10,
+          "unit": "flat",
+          "text": "+10 Reflect Damage"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "poison",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Poison"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "green",
+          "text": "+3 Stamina for each worn GREEN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "treads_of_justice",
+      "name": "Treads of Justice",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "mail",
+        "holy",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 8,
+          "unit": "flat",
+          "text": "+8 Strength"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "property": "mail",
+          "text": "+3 Int. for each worn MAIL."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "holy",
+          "multiplier": 2,
+          "text": "Each HOLY on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "unholy_cross",
+      "name": "Unholy Cross",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "wooden",
+        "blunt",
+        "unholy"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 17,
+          "max": 21
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 19,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "wooden",
+          "multiplier": 2,
+          "text": "Each WOODEN on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "unholy_robe",
+      "name": "Unholy Robe",
+      "slot": "chest",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "dark"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "property": "wooden",
+          "text": "+3 Int. for each worn WOODEN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vagrants_armor",
+      "name": "Vagrant's Armor",
+      "slot": "chest",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vagrants_belt",
+      "name": "Vagrant's Belt",
+      "slot": "waist",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Strength"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vagrants_boots",
+      "name": "Vagrant's Boots",
+      "slot": "feet",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Strength"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vagrants_hat",
+      "name": "Vagrant's Hat",
+      "slot": "head",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vagrants_pants",
+      "name": "Vagrant's Pants",
+      "slot": "legs",
+      "rarity": "common",
+      "properties": [
+        "leather",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Stamina"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vampire_boots",
+      "name": "Vampire Boots",
+      "slot": "feet",
+      "rarity": "uncommon",
+      "properties": [
+        "dark",
+        "gothic",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 9,
+          "unit": "flat",
+          "text": "+9 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "life_steal",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Life Steal"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 3,
+          "unit": "flat",
+          "property": "gothic",
+          "text": "+3 Agility for each worn GOTHIC."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vampire_garments",
+      "name": "Vampire Garments",
+      "slot": "chest",
+      "rarity": "rare",
+      "properties": [
+        "unholy",
+        "dark",
+        "gothic",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 9,
+          "unit": "flat",
+          "text": "+9 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "life_steal",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Life Steal"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 4,
+          "unit": "flat",
+          "property": "elegant",
+          "text": "+4 Int. for each worn ELEGANT."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "white",
+          "multiplier": 3,
+          "text": "Each WHITE on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vampire_hat",
+      "name": "Vampire Hat",
+      "slot": "head",
+      "rarity": "uncommon",
+      "properties": [
+        "dark",
+        "gothic",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 3,
+          "unit": "flat",
+          "property": "dark",
+          "text": "+3 Agility for each worn DARK."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "property": "cringe",
+          "text": "+3 Int. for each worn CRINGE."
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "life_steal",
+          "value": 4,
+          "unit": "flat",
+          "property": "gothic",
+          "text": "+4 Life Steal for each worn GOTHIC."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vampire_mantle",
+      "name": "Vampire Mantle",
+      "slot": "shoulders",
+      "rarity": "epic",
+      "properties": [
+        "dark",
+        "gothic",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "life_steal",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Life Steal"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "hp",
+          "value": -30,
+          "unit": "flat",
+          "property": "wooden",
+          "text": "-30 Hp for each worn WOODEN."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "gothic",
+          "multiplier": 3,
+          "text": "Each GOTHIC on items counts 3 times."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "dark",
+          "multiplier": 3,
+          "text": "Each DARK on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vampire_pants",
+      "name": "Vampire Pants",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "dark",
+        "gothic",
+        "cringe"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 7,
+          "unit": "flat",
+          "text": "+7 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "life_steal",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Life Steal"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "unholy",
+          "multiplier": 2,
+          "text": "Each UNHOLY on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vermillion_wand",
+      "name": "Vermillion Wand",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "hot",
+        "red"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 13,
+          "max": 15
+        },
+        "ranged": true,
+        "speed": 1,
+        "displayedDps": 14,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "property_count_multiplier",
+          "property": "hot",
+          "multiplier": 2,
+          "text": "Each HOT on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "vigor_hat",
+      "name": "Vigor Hat",
+      "slot": "head",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "strength",
+          "value": 1,
+          "unit": "flat",
+          "property": "brown",
+          "text": "+1 Strength for each worn BROWN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "violet_round_shield",
+      "name": "Violet Round Shield",
+      "slot": "shield",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "metal",
+        "violet"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 5,
+          "unit": "flat",
+          "text": "+5 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 6,
+          "unit": "flat",
+          "text": "+6 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 52,
+          "unit": "percent",
+          "text": "+52% Block"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "viperfang_pauldrons",
+      "name": "Viperfang Pauldrons",
+      "slot": "shoulders",
+      "rarity": "rare",
+      "properties": [
+        "mail",
+        "sharp",
+        "green"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "agility",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Agility"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Stamina"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 10,
+          "unit": "percent",
+          "text": "+10% Critical Chance"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "agility",
+          "value": 2,
+          "unit": "flat",
+          "property": "green",
+          "text": "+2 Agility for each worn GREEN."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "void_protector",
+      "name": "Void Protector",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "sharp",
+        "enchanted",
+        "violet"
+      ],
+      "weapon": {
+        "type": "dagger",
+        "damage": {
+          "min": 5,
+          "max": 6
+        },
+        "ranged": false,
+        "speed": 0.5,
+        "displayedDps": 11,
+        "scalingStat": "agility"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "violet",
+          "text": "+3 Stamina for each worn VIOLET."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "waistguard_of_justice",
+      "name": "Waistguard of Justice",
+      "slot": "waist",
+      "rarity": "rare",
+      "properties": [
+        "mail",
+        "holy",
+        "yellow"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 8,
+          "unit": "flat",
+          "text": "+8 Strength"
+        },
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "property": "mail",
+          "text": "+3 Int. for each worn MAIL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "wand_of_the_necromancer",
+      "name": "Wand Of The Necromancer",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "wooden",
+        "enchanted",
+        "green"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 34,
+          "max": 40
+        },
+        "ranged": true,
+        "speed": 1.3,
+        "displayedDps": 28.5,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 5,
+          "unit": "flat",
+          "property": "dark",
+          "text": "+5 Int. for each worn DARK."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "green",
+          "multiplier": 3,
+          "text": "Each GREEN on items counts 3 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "warlock_shoulder_pads",
+      "name": "Warlock Shoulder Pads",
+      "slot": "shoulders",
+      "rarity": "common",
+      "properties": [
+        "mail",
+        "sharp",
+        "violet"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "intelligence",
+          "value": 4,
+          "unit": "flat",
+          "text": "+4 Intelligence"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "critical_chance",
+          "value": 3,
+          "unit": "percent",
+          "text": "+3% Critical Chance"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "wee_remote",
+      "name": "Wee Remote",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "blunt",
+        "white"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 21,
+          "max": 25
+        },
+        "ranged": false,
+        "speed": 1,
+        "displayedDps": 23,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 1,
+          "unit": "flat",
+          "property": "white",
+          "text": "+1 Stamina for each worn WHITE."
+        },
+        {
+          "kind": "projectile_chance",
+          "chancePercent": 20,
+          "projectile": "remote",
+          "text": "20% chance to launch a Remote projectile."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "wizard_wand",
+      "name": "Wizard Wand",
+      "slot": "weapon",
+      "rarity": "uncommon",
+      "properties": [
+        "wooden",
+        "brown"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 36,
+          "max": 44
+        },
+        "ranged": true,
+        "speed": 1.4,
+        "displayedDps": 28.6,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 4,
+          "unit": "flat",
+          "property": "enchanted",
+          "text": "+4 Stamina for each worn ENCHANTED."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "wooden_club",
+      "name": "Wooden Club",
+      "slot": "weapon",
+      "rarity": "common",
+      "properties": [
+        "wooden",
+        "blunt",
+        "brown"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 13,
+          "max": 17
+        },
+        "ranged": false,
+        "speed": 1.7,
+        "displayedDps": 8.8,
+        "scalingStat": "strength"
+      },
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 2,
+          "unit": "flat",
+          "text": "+2 Strength"
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "wornhide_striders",
+      "name": "Wornhide Striders",
+      "slot": "legs",
+      "rarity": "uncommon",
+      "properties": [
+        "cloth",
+        "brown"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "text": "+3 Stamina"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "wooden",
+          "multiplier": 2,
+          "text": "Each WOODEN on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    }
+  ]
+}

@@ -1,0 +1,849 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "items": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/item"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "items"
+  ],
+  "additionalProperties": false,
+  "title": "GOAT Gear Item Catalog",
+  "description": "Item stats and typed effects. Percent values use 15 for 15%.",
+  "$defs": {
+    "item": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "rarity": {
+              "type": "string",
+              "enum": [
+                "common",
+                "uncommon",
+                "rare",
+                "epic"
+              ]
+            },
+            "properties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/tag"
+              },
+              "uniqueItems": true
+            },
+            "effects": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/effect"
+              }
+            },
+            "flavorText": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "slot": {
+              "type": "string",
+              "const": "weapon"
+            },
+            "weapon": {
+              "$ref": "#/$defs/weapon"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "rarity",
+            "properties",
+            "effects",
+            "flavorText",
+            "slot",
+            "weapon"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "rarity": {
+              "type": "string",
+              "enum": [
+                "common",
+                "uncommon",
+                "rare",
+                "epic"
+              ]
+            },
+            "properties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/tag"
+              },
+              "uniqueItems": true
+            },
+            "effects": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/effect"
+              }
+            },
+            "flavorText": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "slot": {
+              "type": "string",
+              "enum": [
+                "chest",
+                "feet",
+                "head",
+                "legs",
+                "shield",
+                "shoulders",
+                "waist"
+              ]
+            },
+            "weapon": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "rarity",
+            "properties",
+            "effects",
+            "flavorText",
+            "slot",
+            "weapon"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "tag": {
+      "type": "string",
+      "enum": [
+        "blue",
+        "blunt",
+        "bone",
+        "brown",
+        "cloth",
+        "cold",
+        "cringe",
+        "cursed",
+        "dark",
+        "dutch",
+        "elegant",
+        "enchanted",
+        "french",
+        "furry",
+        "gothic",
+        "green",
+        "holy",
+        "hot",
+        "leather",
+        "mail",
+        "metal",
+        "orange",
+        "paper",
+        "pink",
+        "pirate",
+        "red",
+        "sharp",
+        "unholy",
+        "violet",
+        "white",
+        "wooden",
+        "yellow"
+      ]
+    },
+    "effect": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/damage_before_battle"
+        },
+        {
+          "$ref": "#/$defs/extra_attack_on_hit"
+        },
+        {
+          "$ref": "#/$defs/extra_slow"
+        },
+        {
+          "$ref": "#/$defs/loot_on_hit"
+        },
+        {
+          "$ref": "#/$defs/projectile_chance"
+        },
+        {
+          "$ref": "#/$defs/property_count_multiplier"
+        },
+        {
+          "$ref": "#/$defs/property_grant"
+        },
+        {
+          "$ref": "#/$defs/stat_bonus"
+        },
+        {
+          "$ref": "#/$defs/stat_per_currency"
+        },
+        {
+          "$ref": "#/$defs/stat_per_missing_health"
+        },
+        {
+          "$ref": "#/$defs/stat_per_property"
+        }
+      ]
+    },
+    "damage_before_battle": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "damage_before_battle"
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "amount",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "extra_attack_on_hit": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "extra_attack_on_hit"
+        },
+        "chancePercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "chancePercent",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "extra_slow": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "extra_slow"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "loot_on_hit": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "loot_on_hit"
+        },
+        "chancePercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "currency": {
+          "type": "string",
+          "const": "coin"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "chancePercent",
+        "amount",
+        "currency",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "projectile_chance": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "projectile_chance"
+        },
+        "chancePercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "projectile": {
+          "type": "string",
+          "enum": [
+            "fireball",
+            "remote",
+            "sawblade"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "chancePercent",
+        "projectile",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "property_count_multiplier": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "property_count_multiplier"
+        },
+        "property": {
+          "$ref": "#/$defs/tag"
+        },
+        "multiplier": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "property",
+        "multiplier",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "property_grant": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "property_grant"
+        },
+        "sourceProperty": {
+          "$ref": "#/$defs/tag"
+        },
+        "grantedProperty": {
+          "$ref": "#/$defs/tag"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "sourceProperty",
+        "grantedProperty",
+        "count",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "stat_bonus": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "stat_bonus"
+            },
+            "stat": {
+              "$ref": "#/$defs/flatStat"
+            },
+            "unit": {
+              "type": "string",
+              "const": "flat"
+            },
+            "value": {
+              "type": "number"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "stat",
+            "unit",
+            "value",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "stat_bonus"
+            },
+            "stat": {
+              "$ref": "#/$defs/percentStat"
+            },
+            "unit": {
+              "type": "string",
+              "const": "percent"
+            },
+            "value": {
+              "type": "number"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "stat",
+            "unit",
+            "value",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "flatStat": {
+      "type": "string",
+      "enum": [
+        "agility",
+        "hp",
+        "intelligence",
+        "life_steal",
+        "poison",
+        "reflected_damage",
+        "regeneration",
+        "sneak_attack",
+        "stamina",
+        "strength"
+      ]
+    },
+    "percentStat": {
+      "type": "string",
+      "enum": [
+        "block",
+        "critical_chance",
+        "critical_damage",
+        "damage",
+        "item_luck",
+        "melee_damage",
+        "ranged_damage",
+        "stun_chance"
+      ]
+    },
+    "stat_per_currency": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "stat_per_currency"
+            },
+            "stat": {
+              "$ref": "#/$defs/flatStat"
+            },
+            "unit": {
+              "type": "string",
+              "const": "flat"
+            },
+            "value": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string",
+              "const": "coin"
+            },
+            "currencyStep": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "maxBonus": {
+              "type": "number",
+              "minimum": 0
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "stat",
+            "unit",
+            "value",
+            "currency",
+            "currencyStep",
+            "maxBonus",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "stat_per_currency"
+            },
+            "stat": {
+              "$ref": "#/$defs/percentStat"
+            },
+            "unit": {
+              "type": "string",
+              "const": "percent"
+            },
+            "value": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string",
+              "const": "coin"
+            },
+            "currencyStep": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "maxBonus": {
+              "type": "number",
+              "minimum": 0
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "stat",
+            "unit",
+            "value",
+            "currency",
+            "currencyStep",
+            "maxBonus",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "stat_per_missing_health": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "stat_per_missing_health"
+            },
+            "stat": {
+              "$ref": "#/$defs/flatStat"
+            },
+            "unit": {
+              "type": "string",
+              "const": "flat"
+            },
+            "value": {
+              "type": "number"
+            },
+            "healthPercentStep": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 100
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "stat",
+            "unit",
+            "value",
+            "healthPercentStep",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "stat_per_missing_health"
+            },
+            "stat": {
+              "$ref": "#/$defs/percentStat"
+            },
+            "unit": {
+              "type": "string",
+              "const": "percent"
+            },
+            "value": {
+              "type": "number"
+            },
+            "healthPercentStep": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 100
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "stat",
+            "unit",
+            "value",
+            "healthPercentStep",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "stat_per_property": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "stat_per_property"
+            },
+            "stat": {
+              "$ref": "#/$defs/flatStat"
+            },
+            "unit": {
+              "type": "string",
+              "const": "flat"
+            },
+            "value": {
+              "type": "number"
+            },
+            "property": {
+              "$ref": "#/$defs/tag"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "stat",
+            "unit",
+            "value",
+            "property",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "stat_per_property"
+            },
+            "stat": {
+              "$ref": "#/$defs/percentStat"
+            },
+            "unit": {
+              "type": "string",
+              "const": "percent"
+            },
+            "value": {
+              "type": "number"
+            },
+            "property": {
+              "$ref": "#/$defs/tag"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "stat",
+            "unit",
+            "value",
+            "property",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "weapon": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "axe",
+                "dagger",
+                "sword",
+                "wand"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Printed weapon subtype, or null when none is printed."
+        },
+        "damage": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number",
+              "minimum": 0
+            },
+            "max": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false
+        },
+        "ranged": {
+          "type": "boolean",
+          "description": "True when the tooltip explicitly labels damage as ranged."
+        },
+        "speed": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Seconds between attacks."
+        },
+        "displayedDps": {
+          "type": "number",
+          "minimum": 0,
+          "description": "DPS as displayed, retaining tooltip rounding."
+        },
+        "scalingStat": {
+          "type": "string",
+          "enum": [
+            "agility",
+            "intelligence",
+            "strength"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "damage",
+        "ranged",
+        "speed",
+        "displayedDps",
+        "scalingStat"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,1729 @@
+{
+  "$comment": "Measured in-game values only, never engine output (see RULES.md). 59 stat panels from Normal and Hard runs (9 earlier screenshots and 50 own observations), plus two screenshots: a cursed variant and a 2026-11-02 run with attributes above 2000 (its sockets are the only set that reproduces its Stamina and Agility). panel lists every value the stat panel showed, plus hidden stats read as zero.",
+  "cases": [
+    {
+      "name": "first screenshot (Normal)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "beginners_dagger",
+        "offHand": "goat_slayer",
+        "chest": "striped_jersey",
+        "head": "cardboard_helmet",
+        "legs": "cardboard_pants"
+      },
+      "sockets": {},
+      "coins": 0,
+      "panel": {
+        "hp": 90,
+        "base_dps": 41.8,
+        "stamina": 1,
+        "agility": 1,
+        "intelligence": 1,
+        "critical_chance": 1,
+        "sneak_attack": 1
+      },
+      "tags": {
+        "paper": 4,
+        "brown": 4,
+        "sharp": 2,
+        "wooden": 1,
+        "metal": 1,
+        "red": 1,
+        "violet": 1,
+        "white": 1,
+        "french": 1
+      }
+    },
+    {
+      "name": "calib A (Normal)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "beginners_dagger",
+        "chest": "beginner_robe",
+        "legs": "beginner_pants"
+      },
+      "sockets": {},
+      "coins": 0,
+      "panel": {
+        "hp": 100,
+        "base_dps": 20,
+        "stamina": 2,
+        "agility": 1,
+        "critical_chance": 1
+      }
+    },
+    {
+      "name": "calib B (Normal)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "beginners_dagger",
+        "offHand": "quick_dagger",
+        "chest": "beginner_robe",
+        "legs": "beginner_pants"
+      },
+      "sockets": {},
+      "coins": 0,
+      "panel": {
+        "hp": 100,
+        "base_dps": 45
+      }
+    },
+    {
+      "name": "calib B2 (Normal)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "beginners_dagger",
+        "offHand": "quick_dagger",
+        "chest": "beginner_robe",
+        "legs": "wornhide_striders"
+      },
+      "sockets": {},
+      "coins": 0,
+      "panel": {
+        "hp": 120,
+        "base_dps": 45,
+        "stamina": 4
+      }
+    },
+    {
+      "name": "calib C (Normal)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "goat_slayer",
+        "offHand": "quick_dagger",
+        "chest": "beginner_robe",
+        "legs": "wornhide_striders"
+      },
+      "sockets": {},
+      "coins": 0,
+      "panel": {
+        "hp": 120,
+        "base_dps": 42.8,
+        "stamina": 4,
+        "sneak_attack": 1
+      },
+      "tags": {
+        "wooden": 2
+      }
+    },
+    {
+      "name": "calib D (Normal)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "goat_slayer",
+        "offHand": "quick_dagger",
+        "chest": "adventurers_robe",
+        "legs": "wornhide_striders"
+      },
+      "sockets": {},
+      "coins": 0,
+      "panel": {
+        "hp": 120,
+        "base_dps": 48.8,
+        "stamina": 4,
+        "agility": 2,
+        "critical_chance": 2
+      }
+    },
+    {
+      "name": "calib E (Normal)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "goat_slayer",
+        "offHand": "quick_dagger",
+        "chest": "adventurers_robe",
+        "legs": "wornhide_striders",
+        "waist": "frostweave_belt"
+      },
+      "sockets": {},
+      "coins": 0,
+      "panel": {
+        "hp": 140,
+        "base_dps": 48.8,
+        "stamina": 6,
+        "agility": 2,
+        "intelligence": 4,
+        "critical_chance": 2,
+        "critical_damage": 117,
+        "regeneration": 1,
+        "sneak_attack": 1
+      }
+    },
+    {
+      "name": "leaderboard build A (Hard)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "estoque",
+        "offHand": "orange_guard",
+        "chest": "el_matadors_robe",
+        "head": "neon_headgear",
+        "legs": "el_matadors_trousers",
+        "waist": "neon_belt",
+        "shoulders": "el_matadors_pauldrons",
+        "feet": "swift_boots"
+      },
+      "sockets": {
+        "red": 3,
+        "cloth": 2,
+        "orange": 1
+      },
+      "coins": 0,
+      "panel": {
+        "hp": 1730,
+        "base_dps": 290.9,
+        "stamina": 181,
+        "agility": 80,
+        "critical_chance": 120,
+        "critical_damage": 130,
+        "block": 68,
+        "extra_attacks": 13
+      }
+    },
+    {
+      "name": "leaderboard build B (Hard)",
+      "source": "inherited",
+      "slots": {
+        "mainHand": "daedric_dagger",
+        "offHand": "demonic_jewel",
+        "chest": "devils_garments",
+        "head": "devils_horns",
+        "legs": "vampire_pants",
+        "waist": "devils_girdle",
+        "shoulders": "devils_mantle",
+        "feet": "devils_shoes"
+      },
+      "sockets": {
+        "unholy": 3,
+        "red": 2
+      },
+      "coins": 0,
+      "panel": {
+        "hp": 5462,
+        "base_dps": 3293.5,
+        "regeneration": 282,
+        "stamina": 518,
+        "agility": 7,
+        "intelligence": 1884,
+        "critical_chance": 7,
+        "life_steal": 3,
+        "reflected_damage": 16,
+        "sneak_attack": 1
+      }
+    },
+    {
+      "name": "prepared (normal, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "comically_large_spoon",
+        "offHand": "wooden_club",
+        "chest": "cardboard_armor",
+        "head": "berserker_hat",
+        "legs": "thorny_legguards",
+        "waist": "darksteel_girdle",
+        "shoulders": "cardboard_shoulder_pads",
+        "feet": "cardboard_boots"
+      },
+      "sockets": {},
+      "coins": 31,
+      "panel": {
+        "hp": 235,
+        "base_dps": 61.3,
+        "stamina": 15,
+        "strength": 5,
+        "agility": 2,
+        "critical_chance": 2,
+        "reflected_damage": 10,
+        "poison": 4
+      },
+      "tags": {
+        "brown": 8,
+        "paper": 3,
+        "metal": 2,
+        "mail": 2,
+        "blunt": 2,
+        "dark": 2,
+        "wooden": 1,
+        "cloth": 1,
+        "sharp": 1,
+        "red": 1,
+        "blue": 1,
+        "green": 1
+      }
+    },
+    {
+      "name": "E2-int0 (normal, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "comically_large_spoon",
+        "chest": "cardboard_armor",
+        "head": "berserker_hat",
+        "legs": "thorny_legguards",
+        "waist": "darksteel_girdle",
+        "shoulders": "cardboard_shoulder_pads",
+        "feet": "cardboard_boots"
+      },
+      "sockets": {},
+      "coins": 31,
+      "panel": {
+        "hp": 233,
+        "base_dps": 22.5,
+        "stamina": 15,
+        "strength": 3,
+        "agility": 2,
+        "critical_chance": 2,
+        "reflected_damage": 10,
+        "poison": 4,
+        "intelligence": 0,
+        "regeneration": 0
+      },
+      "tags": {}
+    },
+    {
+      "name": "E2-int2 (normal, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "comically_large_spoon",
+        "chest": "cardboard_armor",
+        "head": "lavender_cap",
+        "legs": "thorny_legguards",
+        "waist": "darksteel_girdle",
+        "shoulders": "cardboard_shoulder_pads",
+        "feet": "cardboard_boots"
+      },
+      "sockets": {},
+      "coins": 31,
+      "panel": {
+        "hp": 240,
+        "base_dps": 28.5,
+        "stamina": 16,
+        "intelligence": 2,
+        "reflected_damage": 10,
+        "poison": 4,
+        "strength": 0,
+        "agility": 0,
+        "critical_chance": 0,
+        "regeneration": 0
+      },
+      "tags": {}
+    },
+    {
+      "name": "E1-str2 (normal, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "wooden_club",
+        "chest": "cardboard_armor",
+        "head": "lavender_cap",
+        "legs": "thorny_legguards",
+        "waist": "darksteel_girdle",
+        "shoulders": "cardboard_shoulder_pads",
+        "feet": "cardboard_boots"
+      },
+      "sockets": {},
+      "coins": 31,
+      "panel": {
+        "hp": 242,
+        "base_dps": 29.4,
+        "stamina": 16,
+        "strength": 2,
+        "intelligence": 2,
+        "reflected_damage": 10,
+        "poison": 4,
+        "agility": 0,
+        "critical_chance": 0,
+        "regeneration": 0
+      },
+      "tags": {}
+    },
+    {
+      "name": "E1-str5 (normal, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "wooden_club",
+        "chest": "cardboard_armor",
+        "head": "berserker_hat",
+        "legs": "thorny_legguards",
+        "waist": "darksteel_girdle",
+        "shoulders": "cardboard_shoulder_pads",
+        "feet": "cardboard_boots"
+      },
+      "sockets": {},
+      "coins": 31,
+      "panel": {
+        "hp": 235,
+        "base_dps": 38.8,
+        "stamina": 15,
+        "strength": 5,
+        "agility": 2,
+        "critical_chance": 2,
+        "reflected_damage": 10,
+        "poison": 4,
+        "intelligence": 0,
+        "regeneration": 0
+      },
+      "tags": {}
+    },
+    {
+      "name": "E-agility2 (normal, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "kris",
+        "chest": "cardboard_armor",
+        "head": "berserker_hat",
+        "legs": "thorny_legguards",
+        "waist": "darksteel_girdle",
+        "shoulders": "cardboard_shoulder_pads",
+        "feet": "cardboard_boots"
+      },
+      "sockets": {},
+      "coins": 31,
+      "panel": {
+        "hp": 233,
+        "base_dps": 27.5,
+        "stamina": 15,
+        "strength": 3,
+        "agility": 2,
+        "critical_chance": 2,
+        "reflected_damage": 10,
+        "poison": 4
+      },
+      "tags": {}
+    },
+    {
+      "name": "E-agility13 (normal, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "kris",
+        "chest": "cardboard_armor",
+        "head": "berserker_hat",
+        "legs": "hammer_pants",
+        "waist": "darksteel_girdle",
+        "shoulders": "cardboard_shoulder_pads",
+        "feet": "cardboard_boots"
+      },
+      "sockets": {},
+      "coins": 31,
+      "panel": {
+        "hp": 203,
+        "base_dps": 60.8,
+        "stamina": 12,
+        "strength": 3,
+        "agility": 13,
+        "critical_chance": 13
+      },
+      "tags": {
+        "brown": 6,
+        "paper": 3,
+        "metal": 2,
+        "mail": 2,
+        "sharp": 2,
+        "cloth": 1,
+        "red": 1,
+        "pink": 1,
+        "blue": 1,
+        "dark": 1
+      }
+    },
+    {
+      "name": "E-agility11 (normal, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "kris",
+        "chest": "cardboard_armor",
+        "legs": "hammer_pants",
+        "waist": "darksteel_girdle",
+        "shoulders": "cardboard_shoulder_pads",
+        "feet": "cardboard_boots"
+      },
+      "sockets": {},
+      "coins": 31,
+      "panel": {
+        "hp": 200,
+        "base_dps": 54.2,
+        "stamina": 12,
+        "agility": 11,
+        "critical_chance": 11,
+        "strength": 0,
+        "intelligence": 0,
+        "regeneration": 0
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-prepared-II (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "devils_fork",
+        "offHand": "shield_of_justice",
+        "chest": "armor_of_justice",
+        "head": "helmet_of_justice",
+        "legs": "legguards_of_justice",
+        "waist": "waistguard_of_justice",
+        "shoulders": "pauldrons_of_justice",
+        "feet": "treads_of_justice"
+      },
+      "sockets": {
+        "mail": 1,
+        "holy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 2248,
+        "base_dps": 875.9,
+        "stamina": 160,
+        "strength": 106,
+        "intelligence": 224,
+        "block": 68,
+        "regeneration": 66
+      },
+      "tags": {
+        "mail": 16,
+        "holy": 16,
+        "yellow": 14,
+        "sharp": 1,
+        "unholy": 1,
+        "red": 1
+      }
+    },
+    {
+      "name": "H-prepared-III (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "offHand": "daedric_dagger",
+        "chest": "vampire_garments",
+        "head": "devils_horns",
+        "legs": "vampire_pants",
+        "waist": "devils_girdle",
+        "shoulders": "devils_mantle",
+        "feet": "devils_shoes"
+      },
+      "sockets": {
+        "unholy": 2,
+        "red": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 4938,
+        "base_dps": 3083.5,
+        "stamina": 459,
+        "agility": 7,
+        "intelligence": 1606,
+        "critical_chance": 7,
+        "regeneration": 263,
+        "life_steal": 8,
+        "reflected_damage": 16,
+        "sneak_attack": 1
+      },
+      "tags": {
+        "unholy": 384,
+        "red": 10,
+        "sharp": 3,
+        "dark": 3,
+        "gothic": 3,
+        "cringe": 3,
+        "metal": 1,
+        "cloth": 1,
+        "enchanted": 1
+      }
+    },
+    {
+      "name": "H-int636 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "chest": "vampire_garments",
+        "head": "devils_horns",
+        "legs": "vampire_pants",
+        "waist": "devils_girdle",
+        "shoulders": "devils_mantle",
+        "feet": "devils_shoes"
+      },
+      "sockets": {
+        "unholy": 1,
+        "red": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 730,
+        "base_dps": 1491.8,
+        "stamina": 65,
+        "agility": 7,
+        "intelligence": 636,
+        "critical_chance": 7,
+        "regeneration": 162,
+        "life_steal": 8,
+        "reflected_damage": 16,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int328 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "chest": "vampire_garments",
+        "head": "devils_horns",
+        "legs": "vampire_pants",
+        "waist": "devils_girdle",
+        "feet": "devils_shoes"
+      },
+      "sockets": {
+        "unholy": 1,
+        "red": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 530,
+        "base_dps": 874.5,
+        "stamina": 45,
+        "agility": 7,
+        "intelligence": 328,
+        "critical_chance": 7,
+        "regeneration": 94,
+        "life_steal": 8,
+        "reflected_damage": 16,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int35 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "chest": "vampire_garments",
+        "head": "devils_horns",
+        "legs": "vampire_pants",
+        "waist": "devils_girdle"
+      },
+      "sockets": {
+        "unholy": 1,
+        "red": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 330,
+        "base_dps": 133.6,
+        "stamina": 25,
+        "agility": 7,
+        "intelligence": 35,
+        "critical_chance": 7,
+        "regeneration": 11,
+        "life_steal": 8,
+        "reflected_damage": 16,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-stamina16 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "head": "devils_horns",
+        "legs": "vampire_pants",
+        "waist": "devils_girdle"
+      },
+      "sockets": {
+        "unholy": 1,
+        "red": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 240,
+        "base_dps": 133.6,
+        "stamina": 16,
+        "agility": 7,
+        "intelligence": 35,
+        "critical_chance": 7,
+        "regeneration": 11,
+        "life_steal": 3,
+        "reflected_damage": 16,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int20 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "legs": "vampire_pants",
+        "waist": "devils_girdle"
+      },
+      "sockets": {
+        "unholy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 80,
+        "base_dps": 88.2,
+        "agility": 7,
+        "intelligence": 20,
+        "critical_chance": 7,
+        "regeneration": 6,
+        "life_steal": 3,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int7 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "legs": "vampire_pants"
+      },
+      "sockets": {
+        "unholy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 80,
+        "base_dps": 49.1,
+        "agility": 7,
+        "intelligence": 7,
+        "critical_chance": 7,
+        "regeneration": 2,
+        "life_steal": 3,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int0 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel"
+      },
+      "sockets": {
+        "unholy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 80,
+        "base_dps": 28.2,
+        "sneak_attack": 1,
+        "stamina": 0,
+        "strength": 0,
+        "agility": 0,
+        "intelligence": 0,
+        "regeneration": 0
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int10 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "shoulders": "fringed_shoulder_pads"
+      },
+      "sockets": {
+        "unholy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 110,
+        "base_dps": 58.2,
+        "stamina": 3,
+        "intelligence": 10,
+        "regeneration": 3,
+        "sneak_attack": 1,
+        "item_luck": 5
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int4 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "shoulders": "warlock_shoulder_pads"
+      },
+      "sockets": {
+        "unholy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 80,
+        "base_dps": 40,
+        "intelligence": 4,
+        "critical_chance": 3,
+        "regeneration": 1,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int6 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "shoulders": "warlock_shoulder_pads",
+        "head": "lavender_cap"
+      },
+      "sockets": {
+        "unholy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 90,
+        "base_dps": 46.4,
+        "stamina": 1,
+        "intelligence": 6,
+        "critical_chance": 3,
+        "regeneration": 2,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-direct-regen (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "shoulders": "warlock_shoulder_pads",
+        "head": "lavender_cap",
+        "chest": "rag_tunic"
+      },
+      "sockets": {
+        "unholy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 90,
+        "base_dps": 46.4,
+        "stamina": 1,
+        "intelligence": 6,
+        "critical_chance": 3,
+        "regeneration": 24,
+        "sneak_attack": 1,
+        "poison": 15
+      },
+      "tags": {
+        "unholy": 6,
+        "sharp": 2,
+        "violet": 2,
+        "paper": 1,
+        "cloth": 1,
+        "mail": 1,
+        "enchanted": 1,
+        "white": 1
+      }
+    },
+    {
+      "name": "H-coins23 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "shoulders": "warlock_shoulder_pads",
+        "head": "lavender_cap",
+        "chest": "formal_jacket"
+      },
+      "sockets": {
+        "unholy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 114,
+        "base_dps": 46.4,
+        "stamina": 1,
+        "strength": 24,
+        "intelligence": 6,
+        "critical_chance": 3,
+        "regeneration": 2,
+        "sneak_attack": 1,
+        "item_luck": 10
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-int50 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "demonic_jewel",
+        "chest": "vampire_garments",
+        "head": "devils_horns",
+        "legs": "vampire_pants",
+        "waist": "devils_girdle",
+        "shoulders": "devils_mantle"
+      },
+      "sockets": {
+        "unholy": 1,
+        "red": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 330,
+        "base_dps": 178.2,
+        "stamina": 25,
+        "agility": 7,
+        "intelligence": 50,
+        "critical_chance": 7,
+        "regeneration": 16,
+        "life_steal": 8,
+        "reflected_damage": 16,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-str108 (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "wooden_club",
+        "offHand": "shield_of_justice",
+        "chest": "armor_of_justice",
+        "head": "helmet_of_justice",
+        "legs": "legguards_of_justice",
+        "waist": "waistguard_of_justice",
+        "shoulders": "pauldrons_of_justice",
+        "feet": "treads_of_justice"
+      },
+      "sockets": {
+        "mail": 1,
+        "holy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 2249,
+        "base_dps": 461.5,
+        "stamina": 160,
+        "strength": 108,
+        "intelligence": 224,
+        "block": 68,
+        "regeneration": 66
+      },
+      "tags": {}
+    },
+    {
+      "name": "H-str55-bichromatic (hard, seed 58115)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "wooden_club",
+        "offHand": "shield_of_justice",
+        "chest": "armor_of_justice",
+        "head": "helmet_of_justice",
+        "legs": "legguards_of_justice",
+        "waist": "waistguard_of_justice",
+        "shoulders": "pauldrons_of_justice"
+      },
+      "sockets": {
+        "mail": 1,
+        "holy": 1
+      },
+      "coins": 23,
+      "panel": {
+        "hp": 1394,
+        "base_dps": 236.2,
+        "stamina": 98,
+        "strength": 55,
+        "intelligence": 154,
+        "block": 68,
+        "regeneration": 47
+      },
+      "tags": {
+        "mail": 14,
+        "yellow": 12,
+        "holy": 7,
+        "wooden": 1,
+        "blunt": 1,
+        "brown": 1
+      }
+    },
+    {
+      "name": "G-coins73 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "chest": "formal_jacket"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 140,
+        "strength": 60,
+        "item_luck": 10,
+        "stamina": 0,
+        "agility": 0,
+        "intelligence": 0,
+        "regeneration": 0
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-rag-source (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "chest": "rag_tunic",
+        "shoulders": "bone_shoulder_pads"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 120,
+        "stamina": 4,
+        "regeneration": 22,
+        "poison": 15
+      },
+      "tags": {
+        "paper": 2,
+        "sharp": 2,
+        "white": 2,
+        "bone": 1,
+        "unholy": 1,
+        "brown": 1
+      }
+    },
+    {
+      "name": "G-rag-destination (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "chest": "rag_tunic",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "cardboard_pants"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 120,
+        "stamina": 4,
+        "regeneration": 22,
+        "poison": 15
+      },
+      "tags": {
+        "paper": 6,
+        "sharp": 2,
+        "brown": 2,
+        "white": 2,
+        "bone": 1,
+        "unholy": 1
+      }
+    },
+    {
+      "name": "G-goat-source (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "chest": "rag_tunic",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "cardboard_pants",
+        "head": "goat_hood"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 140,
+        "stamina": 4,
+        "strength": 20,
+        "regeneration": 22,
+        "poison": 15
+      },
+      "tags": {
+        "paper": 6,
+        "leather": 4,
+        "white": 4,
+        "sharp": 2,
+        "brown": 2,
+        "bone": 1,
+        "furry": 1,
+        "unholy": 1
+      }
+    },
+    {
+      "name": "G-grant-both (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "chest": "rag_tunic",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "cardboard_pants",
+        "head": "goat_hood"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 235,
+        "base_dps": 46.7,
+        "stamina": 8,
+        "strength": 75,
+        "critical_damage": 130,
+        "regeneration": 22,
+        "poison": 15
+      },
+      "tags": {
+        "leather": 15,
+        "paper": 6,
+        "sharp": 4,
+        "white": 4,
+        "brown": 2,
+        "metal": 1,
+        "bone": 1,
+        "furry": 1,
+        "unholy": 1
+      }
+    },
+    {
+      "name": "G-overlap (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "chest": "rag_tunic",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "cardboard_pants",
+        "head": "goat_hood",
+        "feet": "goat_hooves"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 668,
+        "base_dps": 46.7,
+        "stamina": 33,
+        "strength": 297,
+        "critical_damage": 130,
+        "regeneration": 22,
+        "poison": 15
+      },
+      "tags": {
+        "leather": 27,
+        "paper": 8,
+        "white": 6,
+        "sharp": 4,
+        "bone": 2,
+        "furry": 2,
+        "brown": 2,
+        "metal": 1,
+        "unholy": 1
+      }
+    },
+    {
+      "name": "G-four-grants (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "chest": "rag_tunic",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "cardboard_pants",
+        "head": "goat_hood",
+        "feet": "goat_hooves",
+        "waist": "battle_mage_belt"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 918,
+        "base_dps": 58.3,
+        "stamina": 37,
+        "strength": 330,
+        "critical_damage": 130,
+        "regeneration": 22,
+        "poison": 15
+      },
+      "tags": {
+        "leather": 30,
+        "paper": 10,
+        "white": 6,
+        "sharp": 4,
+        "bone": 3,
+        "furry": 2,
+        "brown": 2,
+        "metal": 1,
+        "unholy": 1,
+        "violet": 1,
+        "blue": 1
+      }
+    },
+    {
+      "name": "G-jester220 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "chest": "jesters_robe",
+        "head": "jesters_cap",
+        "legs": "jesters_leggings",
+        "shoulders": "jesters_mantle",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 600,
+        "base_dps": 791.7,
+        "stamina": 40,
+        "agility": 220,
+        "critical_chance": 196,
+        "critical_damage": 130,
+        "loot_gold": 5,
+        "item_luck": 40
+      },
+      "tags": {
+        "white": 40,
+        "red": 10,
+        "cringe": 5,
+        "leather": 3,
+        "metal": 1,
+        "sharp": 1
+      }
+    },
+    {
+      "name": "G-jester54 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "chest": "jesters_robe",
+        "head": "jesters_cap",
+        "legs": "jesters_leggings",
+        "shoulders": "jesters_mantle",
+        "feet": "crocs"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 300,
+        "base_dps": 208.3,
+        "stamina": 22,
+        "agility": 54,
+        "critical_chance": 54,
+        "critical_damage": 130,
+        "loot_gold": 5,
+        "item_luck": 35
+      },
+      "tags": {
+        "white": 16,
+        "red": 8,
+        "cringe": 4,
+        "leather": 3,
+        "metal": 1,
+        "sharp": 1,
+        "blue": 1
+      }
+    },
+    {
+      "name": "G-jester324 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "chest": "vampire_garments",
+        "head": "jesters_cap",
+        "legs": "jesters_leggings",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 970,
+        "base_dps": 883.3,
+        "stamina": 89,
+        "agility": 324,
+        "critical_chance": 279,
+        "critical_damage": 130,
+        "life_steal": 5,
+        "item_luck": 15
+      },
+      "tags": {
+        "white": 72,
+        "red": 6,
+        "sharp": 4,
+        "cringe": 4,
+        "leather": 3,
+        "metal": 1,
+        "bone": 1,
+        "unholy": 1,
+        "brown": 1,
+        "dark": 1,
+        "gothic": 1
+      }
+    },
+    {
+      "name": "G-jester432-mallet (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "mighty_mallet",
+        "chest": "vampire_garments",
+        "head": "jesters_cap",
+        "legs": "jesters_leggings",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 1150,
+        "base_dps": 53.3,
+        "stamina": 109,
+        "agility": 432,
+        "critical_chance": 366,
+        "life_steal": 5,
+        "stun_chance": 25,
+        "item_luck": 15
+      },
+      "tags": {
+        "white": 96,
+        "red": 8,
+        "cringe": 5,
+        "sharp": 2,
+        "bone": 1,
+        "unholy": 1,
+        "brown": 1,
+        "dark": 1,
+        "gothic": 1
+      }
+    },
+    {
+      "name": "G-hp-wood0 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "mighty_mallet",
+        "chest": "jesters_robe",
+        "head": "jesters_cap",
+        "legs": "jesters_leggings",
+        "shoulders": "vampire_mantle",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 600,
+        "base_dps": 66.7,
+        "stamina": 40,
+        "agility": 220,
+        "critical_chance": 196,
+        "life_steal": 5,
+        "stun_chance": 25,
+        "item_luck": 30
+      },
+      "tags": {
+        "white": 40,
+        "red": 10,
+        "cringe": 6,
+        "dark": 3,
+        "gothic": 3
+      }
+    },
+    {
+      "name": "G-hp-wood1 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "mighty_mallet",
+        "offHand": "staff_of_nature",
+        "chest": "jesters_robe",
+        "head": "jesters_cap",
+        "legs": "jesters_leggings",
+        "shoulders": "vampire_mantle",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 625,
+        "base_dps": 143.5,
+        "stamina": 45,
+        "agility": 220,
+        "intelligence": 7,
+        "critical_chance": 196,
+        "regeneration": 2,
+        "life_steal": 5,
+        "stun_chance": 25,
+        "item_luck": 30
+      },
+      "tags": {
+        "white": 40,
+        "red": 10,
+        "cringe": 6,
+        "dark": 3,
+        "gothic": 3,
+        "wooden": 1,
+        "enchanted": 1,
+        "brown": 1
+      }
+    },
+    {
+      "name": "G-strength528 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "chest": "vampire_garments",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "cardboard_pants",
+        "head": "goat_hood",
+        "feet": "goat_hooves",
+        "waist": "battle_mage_belt"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 1218,
+        "base_dps": 58.3,
+        "stamina": 46,
+        "strength": 528,
+        "critical_damage": 130,
+        "life_steal": 5
+      },
+      "tags": {
+        "leather": 48,
+        "white": 12,
+        "sharp": 4,
+        "bone": 3,
+        "paper": 2,
+        "furry": 2,
+        "brown": 2,
+        "metal": 1,
+        "unholy": 1,
+        "violet": 1,
+        "blue": 1,
+        "dark": 1,
+        "gothic": 1,
+        "cringe": 1
+      }
+    },
+    {
+      "name": "G-strength528-weapon (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "offHand": "goat_slayer",
+        "chest": "vampire_garments",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "cardboard_pants",
+        "head": "goat_hood",
+        "feet": "goat_hooves",
+        "waist": "battle_mage_belt"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 1268,
+        "base_dps": 1712.7,
+        "stamina": 50,
+        "strength": 528,
+        "critical_damage": 130,
+        "life_steal": 5,
+        "sneak_attack": 1
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-strength726 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "offHand": "goat_slayer",
+        "chest": "vampire_garments",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "jesters_leggings",
+        "head": "goat_hood",
+        "feet": "goat_hooves",
+        "waist": "battle_mage_belt"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 1391,
+        "base_dps": 2084.2,
+        "stamina": 50,
+        "strength": 726,
+        "critical_damage": 130,
+        "life_steal": 5,
+        "sneak_attack": 1,
+        "item_luck": 10
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-strength693-tie (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "offHand": "goat_slayer",
+        "chest": "vampire_garments",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "jesters_leggings",
+        "head": "goat_hood",
+        "feet": "goat_hooves"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 1320,
+        "base_dps": 2020.7,
+        "stamina": 46,
+        "strength": 693,
+        "critical_damage": 130,
+        "life_steal": 5,
+        "sneak_attack": 1,
+        "item_luck": 10
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-strength891-tie (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "offHand": "mighty_mallet",
+        "chest": "vampire_garments",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "jesters_leggings",
+        "head": "goat_hood",
+        "feet": "goat_hooves"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 1395,
+        "base_dps": 2435.1,
+        "stamina": 42,
+        "strength": 891,
+        "critical_damage": 130,
+        "life_steal": 5,
+        "stun_chance": 25,
+        "item_luck": 10
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-negative10 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "chest": "vampire_garments",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "jesters_leggings",
+        "head": "goat_hood",
+        "feet": "crocs"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 608,
+        "base_dps": 20.8,
+        "stamina": 23,
+        "strength": 195,
+        "agility": -10,
+        "critical_chance": -10,
+        "critical_damage": 130,
+        "life_steal": 5,
+        "item_luck": 10
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-mallet60 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "mighty_mallet",
+        "chest": "formal_jacket",
+        "head": "jesters_cap",
+        "legs": "jesters_leggings",
+        "shoulders": "jesters_mantle",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 425,
+        "base_dps": 291.5,
+        "stamina": 20,
+        "strength": 60,
+        "agility": 140,
+        "critical_chance": 132,
+        "stun_chance": 25,
+        "loot_gold": 5,
+        "item_luck": 35
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-agility100 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "mighty_mallet",
+        "chest": "formal_jacket",
+        "head": "jesters_cap",
+        "legs": "cardboard_pants",
+        "shoulders": "jesters_mantle",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 300,
+        "base_dps": 233.3,
+        "stamina": 16,
+        "strength": 60,
+        "agility": 100,
+        "critical_chance": 100,
+        "stun_chance": 25,
+        "loot_gold": 5,
+        "item_luck": 25
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-agility101 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "mighty_mallet",
+        "offHand": "beginners_dagger",
+        "chest": "formal_jacket",
+        "head": "jesters_cap",
+        "legs": "cardboard_pants",
+        "shoulders": "jesters_mantle",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 300,
+        "base_dps": 553.3,
+        "stamina": 16,
+        "strength": 60,
+        "agility": 101,
+        "critical_chance": 101,
+        "stun_chance": 25,
+        "loot_gold": 5,
+        "item_luck": 25
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-agility103 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "mighty_mallet",
+        "offHand": "beginners_dagger",
+        "chest": "formal_jacket",
+        "head": "jesters_cap",
+        "legs": "black_talon_leggings",
+        "shoulders": "jesters_mantle",
+        "feet": "jesters_shoes",
+        "waist": "obi"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 300,
+        "base_dps": 555.3,
+        "stamina": 16,
+        "strength": 60,
+        "agility": 103,
+        "intelligence": 7,
+        "critical_chance": 102,
+        "critical_damage": 112,
+        "regeneration": 2,
+        "stun_chance": 25,
+        "loot_gold": 5
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-agility102 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "mighty_mallet",
+        "chest": "formal_jacket",
+        "head": "jesters_cap",
+        "legs": "black_talon_leggings",
+        "shoulders": "jesters_mantle",
+        "feet": "jesters_shoes",
+        "waist": "obi"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 300,
+        "base_dps": 233.3,
+        "stamina": 16,
+        "strength": 60,
+        "agility": 102,
+        "intelligence": 7,
+        "critical_chance": 102,
+        "critical_damage": 112,
+        "regeneration": 2,
+        "stun_chance": 25,
+        "loot_gold": 5
+      },
+      "tags": {}
+    },
+    {
+      "name": "G-negative9 (hard, seed 63965)",
+      "source": "observation",
+      "slots": {
+        "mainHand": "forearm_blade",
+        "offHand": "beginners_dagger",
+        "chest": "vampire_garments",
+        "shoulders": "bone_shoulder_pads",
+        "legs": "jesters_leggings",
+        "head": "goat_hood",
+        "feet": "crocs"
+      },
+      "sockets": {},
+      "coins": 73,
+      "panel": {
+        "hp": 658,
+        "base_dps": 25,
+        "stamina": 27,
+        "strength": 195,
+        "agility": -9,
+        "critical_chance": -9,
+        "critical_damage": 130,
+        "life_steal": 5,
+        "item_luck": 10
+      },
+      "tags": {}
+    },
+    {
+      "name": "Cursed Fur Pants with Vampire Garments (item tooltip)",
+      "source": "screenshot",
+      "slots": {
+        "chest": "vampire_garments",
+        "legs": "fur_pants"
+      },
+      "cursed": ["legs"],
+      "sockets": {},
+      "coins": 0,
+      "tags": {
+        "white": 12,
+        "furry": 4,
+        "cursed": 1
+      }
+    },
+    {
+      "name": "run screenshot, attributes above 2000 (2026-11-02)",
+      "source": "screenshot",
+      "slots": {
+        "mainHand": "estoque",
+        "offHand": "jesters_guard",
+        "chest": "vampire_garments",
+        "head": "goatmares_legacy",
+        "legs": "goat_pants",
+        "waist": "red_sash_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "jesters_shoes"
+      },
+      "sockets": {
+        "red": 3,
+        "white": 3,
+        "sharp": 2
+      },
+      "coins": 0,
+      "panel": {
+        "hp": 12352,
+        "base_dps": 4227.8,
+        "stamina": 2369,
+        "strength": 0,
+        "agility": 3573,
+        "intelligence": 4,
+        "critical_chance": 1027,
+        "block": 65,
+        "regeneration": 1,
+        "life_steal": 5,
+        "extra_attacks": 2,
+        "loot_gold": 10,
+        "item_luck": 5
+      }
+    }
+  ]
+}
