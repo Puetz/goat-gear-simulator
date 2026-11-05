@@ -16,11 +16,7 @@ export interface Contribution extends ItemSource {
   readonly detail: ContributionDetail | null;
 }
 
-export type NotCalculatedReason =
-  | 'missingHealth'
-  | 'combatEffect'
-  | 'damageModifier'
-  | 'beforeBattle';
+export type NotCalculatedReason = 'missingHealth' | 'combatEffect' | 'beforeBattle';
 
 /** An effect that's shown on an item but left out of the numbers. */
 export interface NotCalculated extends ItemSource {
@@ -116,8 +112,6 @@ function notCalculatedReason(effect: Effect): NotCalculatedReason | null {
     case 'stat_bonus':
     case 'stat_per_property':
     case 'stat_per_currency':
-      // Shown as a stat total, but how it changes damage hasn't been calibrated.
-      return effect.stat === 'damage' || effect.stat === 'melee_damage' ? 'damageModifier' : null;
     case 'extra_attack_on_hit':
     case 'loot_on_hit':
     case 'property_count_multiplier':

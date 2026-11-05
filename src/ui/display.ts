@@ -208,6 +208,5 @@ export const CHROMATIC_TIER_NAMES: Readonly<Record<ChromaticTier, string>> = {
 export const NOT_CALCULATED_REASONS: Readonly<Record<NotCalculatedReason, string>> = {
   missingHealth: 'Depends on missing HP during combat',
   combatEffect: 'Combat effect without a calibrated value',
-  damageModifier: 'Shown as a stat, not applied to Base DPS',
   beforeBattle: 'Damage taken before each battle, not a change to max HP',
 };

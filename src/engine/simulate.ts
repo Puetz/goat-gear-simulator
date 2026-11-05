@@ -67,6 +67,11 @@ export function simulate(build: Build, catalog: CatalogIndex): SimulationResult 
 
   const attributes = attributesFrom(effects.totals);
   const chromatic = chromaticStatus(tags.final);
+  const damageBonuses = {
+    damage: total('damage'),
+    melee_damage: total('melee_damage'),
+    ranged_damage: total('ranged_damage'),
+  };
   const weapons = equipped.flatMap((entry) =>
     entry.item.slot === 'weapon'
       ? [
@@ -74,7 +79,7 @@ export function simulate(build: Build, catalog: CatalogIndex): SimulationResult 
             { ...entry, item: entry.item },
             attributes,
             chromatic.multiplier,
-            total('ranged_damage'),
+            damageBonuses,
           ),
         ]
       : [],

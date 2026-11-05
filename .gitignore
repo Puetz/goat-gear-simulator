@@ -12,3 +12,4 @@ Thumbs.db
 /gear_images/
 # Socket gem art, kept locally until the app uses it
 /public/gems/
+docs/measurements/

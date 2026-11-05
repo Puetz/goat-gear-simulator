@@ -5,6 +5,7 @@ import {
   BASE_CRITICAL_DAMAGE,
   isAttribute,
   regenerationFromIntelligence,
+  type WeaponResult,
 } from '../../engine/derived.ts';
 import type { Contribution } from '../../engine/effects.ts';
 import { ATTRIBUTE_TIERS, roundTo1 } from '../../engine/math.ts';
@@ -66,7 +67,7 @@ function HpReceipt({ result }: { result: SimulationResult }) {
       {hp.cursedItems > 0 && (
         <Line
           label={hp.cursedItems === 1 ? 'Cursed item' : `${hp.cursedItems} cursed items`}
-          detail={`${formatNumber(CURSED_HP_PERCENT)}% HP each, taken off the multiplier: ×${hp.multiplier}`}
+          detail={`${formatNumber(CURSED_HP_PERCENT)}% HP each, applied after chromatic: combined ×${hp.multiplier}`}
           value={`${formatNumber(hp.cursedItems * CURSED_HP_PERCENT)}%`}
         />
       )}
@@ -90,8 +91,7 @@ function DpsReceipt({ result }: { result: SimulationResult }) {
               <>
                 {weapon.hitMin}–{weapon.hitMax} per hit, every {weapon.speed.toFixed(1)} s.{' '}
                 <AttributeName attribute={weapon.scalingStat} /> adds {formatNumber(weapon.bonus)}
-                {weapon.rangedDamagePercent !== 0 &&
-                  `. Ranged damage ${formatSigned(weapon.rangedDamagePercent)}%`}
+                {damageBonusText(weapon)}
               </>
             }
             value={formatNumber(roundTo1(weapon.dps))}
@@ -108,6 +108,18 @@ function DpsReceipt({ result }: { result: SimulationResult }) {
       </p>
     </>
   );
+}
+
+/** ". Damage +3%, Ranged Damage +12%" with the bonuses a weapon's hits include, or nothing. */
+function damageBonusText(weapon: WeaponResult): string {
+  const parts = [
+    ['damage', weapon.damagePercent],
+    [weapon.reachStat, weapon.reachDamagePercent],
+  ] as const;
+  const shown = parts
+    .filter(([, percent]) => percent !== 0)
+    .map(([stat, percent]) => `${STAT_DISPLAY[stat].label} ${formatSigned(percent)}%`);
+  return shown.length > 0 ? `. ${shown.join(', ')}` : '';
 }
 
 function EffectReceipt({

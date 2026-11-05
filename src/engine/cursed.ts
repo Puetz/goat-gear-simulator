@@ -5,5 +5,5 @@
  */
 export const CURSED_TAG_FACTOR = 4;
 export const CURSED_TAGS_PER_ITEM = 1;
-/** In whole percent, added to the chromatic HP bonus for each cursed item. */
+/** In whole percent; penalties add together, then multiply chromatic HP. */
 export const CURSED_HP_PERCENT = -20;

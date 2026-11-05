@@ -59,30 +59,48 @@ export function chromaticStatus(tags: TagCounts): Chromatic {
   };
 }
 
+/** The panel's damage bonuses in percent. */
+export interface DamageBonuses {
+  readonly damage: number;
+  readonly melee_damage: number;
+  readonly ranged_damage: number;
+}
+
+const NO_DAMAGE_BONUSES: DamageBonuses = { damage: 0, melee_damage: 0, ranged_damage: 0 };
+
+type ReachStat = 'melee_damage' | 'ranged_damage';
+
 export interface WeaponResult extends ItemSource {
   readonly scalingStat: ScalingStat;
   readonly speed: number;
   /** Damage added to each hit by the scaling attribute. */
   readonly bonus: number;
-  /** Global ranged-damage bonus in percent; zero for melee weapons. */
-  readonly rangedDamagePercent: number;
+  /** Damage in percent, which applies to every weapon. */
+  readonly damagePercent: number;
+  /** Ranged Damage for weapons labeled ranged, Melee Damage for all others. */
+  readonly reachStat: ReachStat;
+  /** That stat's total in percent. */
+  readonly reachDamagePercent: number;
   readonly hitMin: number;
   readonly hitMax: number;
   /** Not rounded: the panel rounds the sum of both hands. */
   readonly dps: number;
 }
 
-/** RULES.md §6: chromatic and ranged bonuses precede endpoint rounding and the zero floor. */
+/** RULES.md §6: chromatic and damage bonuses precede endpoint rounding and the zero floor. */
 export function weaponResult(
   source: Equipped & { readonly item: WeaponItem },
   attributes: Attributes,
   chromaticMultiplier: number,
-  rangedDamagePercent = 0,
+  damageBonuses = NO_DAMAGE_BONUSES,
 ): WeaponResult {
-  const { damage, speed, scalingStat } = source.item.weapon;
+  const { damage, speed, scalingStat, ranged } = source.item.weapon;
   const bonus = weaponBonus(speed, attributes[scalingStat].effective);
-  const rangedDamage = source.item.weapon.ranged ? rangedDamagePercent : 0;
-  const multiplier = chromaticMultiplier * (1 + rangedDamage / 100);
+  const reachStat: ReachStat = ranged ? 'ranged_damage' : 'melee_damage';
+  const damagePercent = damageBonuses.damage;
+  const reachDamagePercent = damageBonuses[reachStat];
+  // Damage and Melee or Ranged Damage add up; their sum multiplies with C.
+  const multiplier = chromaticMultiplier * (1 + (damagePercent + reachDamagePercent) / 100);
   const hit = (base: number) => Math.max(0, roundEven((base + bonus) * multiplier));
   const hitMin = hit(damage.min);
   const hitMax = hit(damage.max);
@@ -91,7 +109,9 @@ export function weaponResult(
     scalingStat,
     speed,
     bonus,
-    rangedDamagePercent: rangedDamage,
+    damagePercent,
+    reachStat,
+    reachDamagePercent,
     hitMin,
     hitMax,
     // The catalog's decimal speed, not the binary32 one used for the bonus (RULES.md §6).
@@ -110,14 +130,14 @@ export interface HpBreakdown {
   /** Flat HP bonuses and penalties from items. */
   readonly flat: number;
   readonly cursedItems: number;
-  /** What the flat terms are multiplied by: C plus the cursed items' penalty. */
+  /** What the flat terms are multiplied by: C times the combined cursed HP factor. */
   readonly multiplier: number;
   readonly total: number;
 }
 
 /**
- * RULES.md §6: flat HP terms first, then the multiplier, then round half to even. Each cursed
- * item takes 20 points off the multiplier (RULES.md §3, "Cursed variants").
+ * RULES.md §6: flat HP terms first, then C times the combined cursed HP factor, then round half
+ * to even. Curses add their penalties together before multiplying C.
  */
 export function hpBreakdown(
   attributes: Attributes,
@@ -127,9 +147,9 @@ export function hpBreakdown(
 ): HpBreakdown {
   const fromStamina = 10 * attributes.stamina.effective;
   const fromStrength = attributes.strength.effective;
-  // Added in whole percent, so 1.35 and -20% give 1.15 rather than 1.1500000000000001.
-  const percent = Math.round(chromaticMultiplier * 100) + cursedItems * CURSED_HP_PERCENT;
-  const multiplier = percent / 100;
+  // Whole-percent factors avoid drift in combinations such as 1.25 × 0.6 = 0.75.
+  const cursedPercent = 100 + cursedItems * CURSED_HP_PERCENT;
+  const multiplier = (Math.round(chromaticMultiplier * 100) * cursedPercent) / 10_000;
   return {
     base: BASE_HP,
     fromStamina,

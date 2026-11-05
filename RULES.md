@@ -4,9 +4,10 @@ The game mechanics the simulator implements, measured in the live game (GOAT Ste
 demo 0.5.6) and read from item screenshots. Formulas are empirical unless stated
 otherwise; §7 lists what the measurements don't cover.
 
-The model reproduces **63 reference cases** measured in the game: 59 stat panels
+The model reproduces **91 reference cases** measured in the game: 59 stat panels
 from Normal and Hard runs, plus four screenshots (a cursed item in §3, a run with
-attributes above 2000 in §4, and two Poison Kunai runs in §6). They run as the test suite in
+attributes above 2000 in §4, and two Poison Kunai runs in §6), plus 28 live equipment
+measurements from 2026-11-05. They run as the test suite in
 `src/engine/reference-cases.test.ts`. Expected values there are always what the game
 showed, never what the engine computed. The cases don't establish every combat
 interaction or future game version.
@@ -134,9 +135,8 @@ three changes:
   multipliers. Example: Cursed Fur Pants (FURRY, WHITE) next to Vampire Garments
   (WHITE counts 3 times) gives WHITE 4 × 3 = 12 and FURRY 4.
 - It adds **one CURSED** tag.
-- It has a **−20% HP** penalty, the same on every cursed item. Each cursed item
-  takes 20 percentage points off the HP multiplier, next to the chromatic bonus
-  (§6).
+- It has a **−20% HP** penalty, the same on every cursed item. Curse penalties
+  add together, then multiply the chromatic HP factor (§6).
 
 Its other effects match the normal item. The simulator treats "cursed" as a
 property of the slot. Whether the same weapon may be equipped in both hands as a
@@ -230,10 +230,15 @@ Normal and Hard observations use the same base 80 and coefficients. No separate
 Hard constant is needed. Fixed HP additions/penalties apply before C: Vampire
 Mantle with Stamina 45 and one WOODEN tag produced `(80+450-30)*1.25 = 625`.
 
-With cursed items, C is replaced by `C - 0.20 * cursedItems` (see "Cursed
-variants" in §3). Example: one cursed item in a bichromatic build gives `×1.05`;
-two cursed items without a chromatic bonus give `×0.6`. HP has no floor in this
-model.
+With cursed items, C is replaced by `C * (1 - 0.20 * cursedItems)` (see "Cursed
+variants" in §3). One cursed item in a bichromatic build gives `×1.0`; two give
+`×0.75`. Without chromatic, two cursed items give `×0.6`, not `×0.64`.
+Live measurements on 2026-11-05 distinguish these rules: Stamina 32 with one
+curse and bichromatic gives 400 HP, not 420. Stamina 63 with two curses and
+bichromatic gives 532 HP (`710 × 1.25 × 0.6 = 532.5`, ties to even), not 604 or
+568. Stamina 34 with two curses and no chromatic gives 252 HP. A further
+one-curse bichromatic build at Stamina 85 gives 930 HP. More than two cursed
+items and cursed trichromatic HP remain unmeasured. HP has no floor in this model.
 HP half-ties include 4937.5 → 4938 and 5462.5 → 5462. Max-HP penalties are distinct
 from missing-health conditions.
 
@@ -243,9 +248,10 @@ For each equipped weapon, read its own `scalingStat`:
 
 ```text
 bonus = trunc(fround(weapon.speed) * (15 + 3*E(S[weapon.scalingStat])))
-R = weapon.ranged ? 1 + S.ranged_damage / 100 : 1
-hitMin = max(0, roundEven((weapon.damage.min + bonus) * C * R))
-hitMax = max(0, roundEven((weapon.damage.max + bonus) * C * R))
+reach = weapon.ranged ? S.ranged_damage : S.melee_damage
+D = 1 + (S.damage + reach) / 100
+hitMin = max(0, roundEven((weapon.damage.min + bonus) * C * D))
+hitMax = max(0, roundEven((weapon.damage.max + bonus) * C * D))
 weaponDps = (hitMin + hitMax) / (2 * weapon.speed)
 
 BaseDps = sum(weaponDps for both hands)
@@ -258,7 +264,7 @@ decimal speed in the divisor. This is an empirical precision model, not a readin
 of game internals. Speed is seconds between attacks.
 
 Do not round individual weapon DPS before summing. Apply chromatic multiplication
-and the ranged-damage multiplier before integer rounding each damage endpoint,
+and the damage multiplier D before integer rounding each damage endpoint,
 not to final DPS. The same coefficient
 3 applies to Strength, Agility, and Intelligence weapons, including the tested
 ranged Demonic Jewel. Devil's Fork scales with Intelligence despite its appearance.
@@ -287,11 +293,27 @@ percentages are derived from tags and the item tooltip, not separately displayed
 on those run panels. Apply the global bonus to weapons labeled `ranged`, in either
 hand; its interaction with a second weapon hasn't been measured independently.
 
+Damage (Neon Boots, Jacket, Leggings and Shoulder Armor) and Melee Damage (Dagger
+Belt, Leather Shoulder Pads) are unconditional tooltip bonuses. Live measurements
+on 2026-11-05 contain all four Neon pieces and Dagger Belt. They confirm Damage
+applies to both melee and ranged weapons, adds to Melee Damage, and multiplies C
+before endpoint rounding. At Agility 5, cursed Quick Dagger with all four Neon
+pieces and Dagger Belt gives 47.0 DPS; multiplying Damage and Melee Damage as
+separate factors would give 48.0. Crunchy Baguette plus Necromancer Wand at
+Intelligence 20 gives 237.7 DPS without Dagger Belt and 242.2 with it; the wand's
+126.9 DPS is unchanged by the belt. This confirms the unlabeled baguette counts
+as melee. GOAT Slayer, Poison Cleaver, Hand Scythe and Fiery Warglaive also fit
+the melee rule. A bichromatic Quick Dagger/Hand Scythe build with Damage 18% and
+Melee Damage 5% gives 237.6 DPS, confirming their interaction with C.
+
+How Damage combines with Ranged Damage is still an assumption: no live build
+contains both a Neon item and Poison Kunai. Applying Melee Damage to every other
+weapon without the ranged label, and applying Leather Shoulder Pads by the same
+rule as Dagger Belt, follows the tooltips rather than an independent measurement.
+
 Base DPS is the displayed base weapon rate, not expected combat damage. Do not
-fold crits, procs, poison, or uncalibrated `damage`/`melee_damage` effects into it
-as though their interactions were tested. Preserve applicable bonus totals
-separately. No weapon means zero weapon DPS in this model; unarmed combat is not
-modeled.
+fold crits, procs or poison into it. No weapon means zero weapon DPS in this
+model; unarmed combat is not modeled.
 
 ### Critical chance, critical damage, regeneration
 
@@ -332,13 +354,16 @@ are outside the stat model.
   but its order hasn't been independently isolated.
 - Binary32 speed is a fit to observed output. Damage endpoint half-ties, mixed-sign
   endpoints, and one-decimal DPS ties weren't isolated.
-- The cursed −20% HP is from the item tooltip. How it combines with the chromatic
-  bonus and with further cursed items (§6) hasn't been checked against an HP reading.
+- Cursed HP is measured with one and two curses, with and without bichromatic.
+  More than two curses and cursed trichromatic HP remain unmeasured (§6).
 - Negative attributes are tested, but extreme negatives and an HP floor are not.
   Whether item stars change stats wasn't tested.
 - Ranged damage is calibrated on two single-weapon Poison Kunai panels; applying
   it to other ranged weapons and mixed or dual-wield builds follows the tooltip
   classification, without an independent in-game measurement.
+- Damage plus Ranged Damage stacking remains unmeasured. Melee classification
+  is checked on the available daggers, axes and Crunchy Baguette; other unlabeled
+  weapons and Leather Shoulder Pads follow the tooltips (§6).
 - Not modeled: combat (proc timing, crits above 100%, block caps, projectile
-  damage, extra slow, other damage modifiers), missing-HP effects (§1), and damage
+  damage, extra slow), missing-HP effects (§1), and damage
   taken before battles (Dutch Clogs); the panel shows max HP.

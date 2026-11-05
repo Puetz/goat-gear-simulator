@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest';
 import { z } from 'zod';
 import { catalog } from '../catalog/items.ts';
 import { TAGS, Tag } from '../catalog/schema.ts';
+import liveFixtureJson from './__fixtures__/live-calibration-2026-11-05.json' with { type: 'json' };
 import fixtureJson from './__fixtures__/reference-cases.json' with { type: 'json' };
 import { type Build, EMPTY_SLOTS, SLOT_IDS, SOCKET_TAGS } from './build.ts';
 import { PANEL_STATS, simulate } from './simulate.ts';
@@ -30,7 +31,9 @@ const Fixture = z.strictObject({
 });
 
 type Case = z.infer<typeof Fixture>['cases'][number];
-const { cases } = Fixture.parse(fixtureJson);
+const { cases: earlierCases } = Fixture.parse(fixtureJson);
+const { cases: liveCases } = Fixture.parse(liveFixtureJson);
+const cases = [...earlierCases, ...liveCases];
 
 function toBuild({ slots, cursed = [], sockets, coins }: Case): Build {
   const filled = { ...EMPTY_SLOTS };
@@ -45,7 +48,7 @@ function toBuild({ slots, cursed = [], sockets, coins }: Case): Build {
 
 describe('reference cases', () => {
   test('covers the 59 calibration cases and the four screenshots', () => {
-    const bySource = Object.groupBy(cases, (c) => c.source);
+    const bySource = Object.groupBy(earlierCases, (c) => c.source);
     expect(bySource.inherited).toHaveLength(9);
     expect(bySource.observation).toHaveLength(50);
     expect(bySource.screenshot).toHaveLength(4);

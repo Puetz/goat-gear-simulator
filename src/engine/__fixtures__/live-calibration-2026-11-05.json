@@ -1,0 +1,740 @@
+{
+  "$comment": "28 panels observed through Windows Computer Use in GOAT on 2026-11-05, Normal seed 59113, Temple 9, 17 coins. See docs/measurements/2026-11-05 for raw observations, screenshots, owned inventory and test limitations. Expected numbers are transcribed from the game. Empty and cursed-Quick-Dagger-only panels were read before screenshot archiving began; screenshots 03 through 28 correspond to the remaining observations.",
+  "cases": [
+    {
+      "source": "observation",
+      "name": "empty Tab 1",
+      "slots": {},
+      "sockets": {},
+      "coins": 17,
+      "panel": {
+        "hp": 80
+      }
+    },
+    {
+      "source": "observation",
+      "name": "cursed Quick Dagger alone",
+      "slots": {
+        "mainHand": "quick_dagger"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {},
+      "coins": 17,
+      "panel": {
+        "hp": 64,
+        "base_dps": 21
+      },
+      "tags": {
+        "metal": 4,
+        "sharp": 4,
+        "cursed": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "cursed Quick Dagger + Neon Jacket",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "chest": "neon_jacket"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 104,
+        "base_dps": 23,
+        "stamina": 5
+      },
+      "tags": {
+        "metal": 4,
+        "sharp": 4,
+        "orange": 2,
+        "pink": 1,
+        "dark": 1,
+        "cursed": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "cursed Quick Dagger + Neon Jacket and Leggings + Pirate Hat",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 144,
+        "base_dps": 25,
+        "stamina": 10
+      }
+    },
+    {
+      "source": "observation",
+      "name": "cursed Quick Dagger + both Neon pieces + Dagger Belt",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 144,
+        "base_dps": 45,
+        "stamina": 10,
+        "agility": 5,
+        "critical_chance": 5
+      }
+    },
+    {
+      "source": "observation",
+      "name": "cursed Quick Dagger + Neon Jacket Leggings Shoulders + Dagger Belt",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 200,
+        "base_dps": 45,
+        "stamina": 17,
+        "agility": 5,
+        "critical_chance": 5
+      }
+    },
+    {
+      "source": "observation",
+      "name": "all four Neon pieces + Dagger Belt on cursed Quick Dagger",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "neon_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 296,
+        "base_dps": 47,
+        "stamina": 29,
+        "agility": 5,
+        "critical_chance": 5
+      }
+    },
+    {
+      "source": "observation",
+      "name": "mixed cursed Quick Dagger and Necromancer Wand with Neon and Dagger Belt",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "wand_of_the_necromancer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "neon_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 296,
+        "base_dps": 173.9,
+        "stamina": 29,
+        "agility": 5,
+        "intelligence": 20,
+        "critical_chance": 5,
+        "regeneration": 6
+      }
+    },
+    {
+      "source": "observation",
+      "name": "off-hand Necromancer Wand with Dagger Belt and all Neon pieces",
+      "slots": {
+        "offHand": "wand_of_the_necromancer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "neon_boots"
+      },
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 370,
+        "base_dps": 126.9,
+        "stamina": 29,
+        "agility": 5,
+        "intelligence": 20,
+        "critical_chance": 5,
+        "regeneration": 6
+      }
+    },
+    {
+      "source": "observation",
+      "name": "off-hand Necromancer Wand without Dagger Belt",
+      "slots": {
+        "offHand": "wand_of_the_necromancer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "neon_boots"
+      },
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 370,
+        "base_dps": 126.9,
+        "stamina": 29,
+        "intelligence": 20,
+        "regeneration": 6
+      }
+    },
+    {
+      "source": "observation",
+      "name": "Crunchy Baguette plus Necromancer Wand without Melee Damage",
+      "slots": {
+        "mainHand": "crunchy_baguette",
+        "offHand": "wand_of_the_necromancer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "neon_boots"
+      },
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 370,
+        "base_dps": 237.7,
+        "stamina": 29,
+        "intelligence": 20,
+        "critical_chance": 6,
+        "regeneration": 6
+      }
+    },
+    {
+      "source": "observation",
+      "name": "Crunchy Baguette plus Necromancer Wand with Dagger Belt",
+      "slots": {
+        "mainHand": "crunchy_baguette",
+        "offHand": "wand_of_the_necromancer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "neon_boots"
+      },
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 370,
+        "base_dps": 242.2,
+        "stamina": 29,
+        "agility": 5,
+        "intelligence": 20,
+        "critical_chance": 11,
+        "regeneration": 6
+      }
+    },
+    {
+      "source": "observation",
+      "name": "dual melee cursed Quick Dagger + Hand Scythe with all Neon and Dagger Belt",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "hand_scythe",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "neon_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 296,
+        "base_dps": 197.4,
+        "stamina": 29,
+        "agility": 17,
+        "critical_chance": 17
+      }
+    },
+    {
+      "source": "observation",
+      "name": "bichromatic dual melee with Neon Damage and Dagger Belt, one curse",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "hand_scythe",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 400,
+        "base_dps": 237.6,
+        "stamina": 32,
+        "agility": 17,
+        "critical_chance": 17
+      },
+      "tags": {
+        "sharp": 10,
+        "pink": 12,
+        "metal": 6,
+        "orange": 4
+      }
+    },
+    {
+      "source": "observation",
+      "name": "two curses, no chromatic, dual melee Neon build",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "hand_scythe",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "vagrants_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand", "head"],
+      "sockets": {
+        "orange": 2
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 252,
+        "base_dps": 190.6,
+        "stamina": 34,
+        "agility": 17,
+        "critical_chance": 17
+      }
+    },
+    {
+      "source": "observation",
+      "name": "two curses with Bone Shoulder Pads, below pink threshold",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "hand_scythe",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "vagrants_hat",
+        "waist": "dagger_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand", "head"],
+      "sockets": {
+        "orange": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 354,
+        "base_dps": 172.9,
+        "stamina": 51,
+        "agility": 15,
+        "critical_chance": 15
+      }
+    },
+    {
+      "source": "observation",
+      "name": "two curses with bichromatic, Neon Jacket Leggings Belt and Bone Shoulders",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "hand_scythe",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "vagrants_hat",
+        "waist": "neon_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand", "head"],
+      "sockets": {
+        "orange": 1,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 532,
+        "base_dps": 178.3,
+        "stamina": 63,
+        "agility": 12,
+        "critical_chance": 12
+      },
+      "tags": {
+        "sharp": 12,
+        "pink": 30,
+        "cursed": 2
+      }
+    },
+    {
+      "source": "observation",
+      "name": "one curse bichromatic with Neon Jacket Leggings Belt and Bone Shoulders",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "hand_scythe",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "neon_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 1,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 930,
+        "base_dps": 178.3,
+        "stamina": 85,
+        "agility": 12,
+        "critical_chance": 12
+      },
+      "tags": {
+        "sharp": 24,
+        "pink": 30,
+        "cursed": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "balanced candidate: cursed Quick Dagger + Poison Cleaver, bichromatic",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "poison_cleaver",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "neon_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 1,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 978,
+        "base_dps": 276.7,
+        "stamina": 85,
+        "strength": 48,
+        "poison": 1
+      },
+      "tags": {
+        "sharp": 24,
+        "pink": 30,
+        "cursed": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "bichromatic mixed cursed Quick Dagger and Necromancer Wand",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "wand_of_the_necromancer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "neon_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 1,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 850,
+        "base_dps": 156.2,
+        "stamina": 77,
+        "intelligence": 15,
+        "regeneration": 5
+      }
+    },
+    {
+      "source": "observation",
+      "name": "GOAT Slayer off-hand with cursed Quick Dagger, bichromatic Neon build",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "goat_slayer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "neon_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 1,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 930,
+        "base_dps": 61.2,
+        "stamina": 85,
+        "sneak_attack": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "GOAT Slayer with cursed Quick Dagger, +18% Damage and bichromatic",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "goat_slayer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "neon_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 600,
+        "base_dps": 63.1,
+        "stamina": 52,
+        "sneak_attack": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "GOAT Slayer and cursed Quick Dagger with Dagger Belt and +18% Damage, bichromatic",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "goat_slayer",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 400,
+        "base_dps": 90.5,
+        "stamina": 32,
+        "agility": 5,
+        "critical_chance": 5,
+        "sneak_attack": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "Fiery Warglaive and cursed Quick Dagger with +18% Damage and Dagger Belt",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "fiery_warglaive",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 3
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 448,
+        "base_dps": 184,
+        "stamina": 48,
+        "agility": 17,
+        "critical_chance": 17
+      }
+    },
+    {
+      "source": "observation",
+      "name": "Poison Cleaver and cursed Quick Dagger, Dagger Belt and +18% Damage, bichromatic",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "poison_cleaver",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "dagger_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 420,
+        "base_dps": 191.2,
+        "stamina": 32,
+        "strength": 20,
+        "agility": 5,
+        "critical_chance": 5,
+        "poison": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "Poison Cleaver and cursed Quick Dagger, Neon Belt and +18% Damage, bichromatic",
+      "slots": {
+        "mainHand": "quick_dagger",
+        "offHand": "poison_cleaver",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "pirate_hat",
+        "waist": "neon_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "cute_fur_boots"
+      },
+      "cursed": ["mainHand"],
+      "sockets": {
+        "orange": 2,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 620,
+        "base_dps": 159.6,
+        "stamina": 52,
+        "strength": 20,
+        "poison": 1
+      }
+    },
+    {
+      "source": "observation",
+      "name": "preserved original Tab 2: main-hand Necromancer Wand and shield with all Neon pieces",
+      "slots": {
+        "mainHand": "wand_of_the_necromancer",
+        "offHand": "violet_round_shield",
+        "chest": "neon_jacket",
+        "legs": "neon_leggings",
+        "head": "goathide_helmet",
+        "waist": "neon_belt",
+        "shoulders": "neon_shoulder_armor",
+        "feet": "neon_boots"
+      },
+      "sockets": {
+        "orange": 2,
+        "pink": 2
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 720,
+        "base_dps": 130.4,
+        "stamina": 64,
+        "intelligence": 21,
+        "block": 52,
+        "regeneration": 10
+      }
+    },
+    {
+      "source": "observation",
+      "name": "preserved original Tab 3: Fiery Warglaive shield and Goatmares Legacy",
+      "slots": {
+        "mainHand": "fiery_warglaive",
+        "offHand": "violet_round_shield",
+        "chest": "vampire_garments",
+        "legs": "neon_leggings",
+        "head": "goatmares_legacy",
+        "waist": "red_sash_belt",
+        "shoulders": "bone_shoulder_pads",
+        "feet": "neon_boots"
+      },
+      "sockets": {
+        "orange": 1,
+        "pink": 1
+      },
+      "coins": 17,
+      "panel": {
+        "hp": 430,
+        "base_dps": 72,
+        "stamina": 35,
+        "agility": 14,
+        "intelligence": 6,
+        "critical_chance": 14,
+        "block": 52,
+        "regeneration": 2,
+        "life_steal": 5,
+        "extra_attacks": 2,
+        "loot_gold": 10
+      }
+    }
+  ]
+}

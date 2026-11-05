@@ -132,7 +132,7 @@ describe('coin effects', () => {
 });
 
 describe('cursed HP penalty', () => {
-  // Each cursed item adds −20 points to the HP multiplier, next to the chromatic bonus.
+  // Curses add −20% HP each; the combined penalty multiplies the chromatic factor.
   // Fur Pants (FURRY, WHITE): +1 Stamina for each worn WHITE. Vampire Garments: +9 Stamina,
   // WHITE counts 3 times.
   test.each<[string, Build, number, number]>([
@@ -145,12 +145,12 @@ describe('cursed HP penalty', () => {
       0.6,
       174,
     ],
-    // WHITE 12 and FURRY 4 + 6 sockets are bichromatic. (80 + 210) × 1.05 = 304.5 goes to even.
+    // WHITE 12 and FURRY 4 + 6 sockets are bichromatic. (80 + 210) × 1.25 × 0.8 = 290.
     [
       'one cursed item with a chromatic bonus',
       build({ chest: 'vampire_garments', legs: ['fur_pants', 'cursed'] }, { furry: 6 }),
-      1.05,
-      304,
+      1,
+      290,
     ],
   ])('%s', (_, current, multiplier, hp) => {
     const result = simulate(current, catalog);
@@ -173,9 +173,6 @@ describe('ranged damage', () => {
     expect(withSharp.effects.contributions.ranged_damage).toMatchObject([
       { value: 9, detail: { kind: 'perTag', tag: 'sharp', tagCount: 3 } },
     ]);
-    expect(withSharp.effects.notCalculated).not.toContainEqual(
-      expect.objectContaining({ slot: 'mainHand', reason: 'damageModifier' }),
-    );
   });
 
   test.each([
@@ -194,16 +191,58 @@ describe('ranged damage', () => {
 
       expect(plain.panel.base_dps).toBe(plainDps);
       expect(withSharp.panel.base_dps).toBe(withSharpDps);
-      expect(mainWeapon.rangedDamagePercent).toBe(ranged ? 6 : 0);
-      expect(buffedWeapon.rangedDamagePercent).toBe(ranged ? 12 : 0);
+      expect(mainWeapon.reachDamagePercent).toBe(ranged ? 6 : 0);
+      expect(buffedWeapon.reachDamagePercent).toBe(ranged ? 12 : 0);
       if (ranged) expect(buffedWeapon.dps).toBeGreaterThan(mainWeapon.dps);
       else expect(buffedWeapon.dps).toBe(mainWeapon.dps);
     },
   );
 });
 
+describe('damage bonuses', () => {
+  test('Damage applies to every weapon, Melee Damage only to weapons not labeled ranged', () => {
+    const result = simulate(
+      build({
+        mainHand: 'adventurers_sword',
+        offHand: 'kunai',
+        chest: 'neon_jacket',
+        waist: 'dagger_belt',
+      }),
+      catalog,
+    );
+    const [sword, kunai] = result.weapons;
+
+    expect(sword).toMatchObject({
+      damagePercent: 10,
+      reachStat: 'melee_damage',
+      reachDamagePercent: 5,
+      hitMin: 25,
+      hitMax: 28,
+    });
+    expect(kunai).toMatchObject({
+      damagePercent: 10,
+      reachStat: 'ranged_damage',
+      reachDamagePercent: 0,
+      hitMin: 43,
+      hitMax: 44,
+    });
+    expect(result.panel.base_dps).toBe(74.8);
+    expect(result.effects.notCalculated).toEqual([]);
+  });
+
+  test('Damage and Ranged Damage add up instead of multiplying', () => {
+    const result = simulate(
+      build({ mainHand: 'poison_kunai', shoulders: 'neon_shoulder_armor' }, { sharp: 2 }),
+      catalog,
+    );
+    // ×1.12 gives 58–60 per hit; 1.03 × 1.09 would give 58–61 and 54.1.
+    expect(result.weapons[0]).toMatchObject({ hitMin: 58, hitMax: 60 });
+    expect(result.panel.base_dps).toBe(53.6);
+  });
+});
+
 describe('not calculated', () => {
-  test('lists missing-HP, combat, damage and before-battle effects, not the cursed penalty', () => {
+  test('lists missing-HP, combat and before-battle effects, not damage bonuses or the cursed penalty', () => {
     const { effects } = simulate(
       build({
         mainHand: 'goatmares_hand',
@@ -218,7 +257,6 @@ describe('not calculated', () => {
       ['mainHand', 'combatEffect'],
       ['offHand', 'combatEffect'],
       ['chest', 'missingHealth'],
-      ['legs', 'damageModifier'],
       ['feet', 'beforeBattle'],
     ]);
   });
