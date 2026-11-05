@@ -20,9 +20,8 @@ import {
   type SetIndex,
 } from './gear-sets.ts';
 import { migrateSaved, sanitizeSaved } from './sanitize.ts';
+import { SAVE_KEY } from './save-key.ts';
 import { createSaveStorage, type SyncStorage } from './save-storage.ts';
-
-const SAVE_KEY = 'goat-gear-simulator/build';
 
 /** Gear and socket actions change the active set only. Coins are shared by all sets. */
 interface BuildActions {

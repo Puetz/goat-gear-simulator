@@ -27,7 +27,7 @@ export function GearColumn({ current }: { current: SimulationResult }) {
             <span className="inline-grid h-[34px] place-items-center rounded-[11px] border-3 border-ink bg-linear-to-b from-orange-hi to-orange to-60% px-2 pb-0.5 text-lg shadow-ink max-xl:h-8">
               GOAT
             </span>
-            Gear simulator
+            Gear Simulator
           </h1>
           <CoinPill effects={current.effects} />
         </header>

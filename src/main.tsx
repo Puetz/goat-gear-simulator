@@ -5,6 +5,7 @@ import './styles/app.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { CatalogError } from './catalog/catalog.ts';
+import { CrashBoundary, CrashScreen } from './ui/CrashScreen.tsx';
 import { ErrorScreen } from './ui/ErrorScreen.tsx';
 
 const element = document.getElementById('root');
@@ -16,7 +17,9 @@ try {
   const { App } = await import('./ui/App.tsx');
   root.render(
     <StrictMode>
-      <App />
+      <CrashBoundary>
+        <App />
+      </CrashBoundary>
     </StrictMode>,
   );
 } catch (error) {
@@ -29,11 +32,7 @@ try {
         problems={error.problems}
       />
     ) : (
-      <ErrorScreen
-        title="The simulator couldn't start"
-        intro="Reload the page. If it keeps happening, this is the error:"
-        problems={[String(error)]}
-      />
+      <CrashScreen title="The simulator couldn't start" error={error} />
     ),
   );
 }

@@ -1,11 +1,15 @@
+import type { ReactNode } from 'react';
+
 interface ErrorScreenProps {
   title: string;
   intro: string;
   problems: readonly string[];
+  /** Buttons shown under the problems. */
+  children?: ReactNode;
 }
 
-/** Shown instead of the app when it can't start, so the problem is easy to find. */
-export function ErrorScreen({ title, intro, problems }: ErrorScreenProps) {
+/** Shown instead of the app when it can't start or has crashed, so the problem is easy to find. */
+export function ErrorScreen({ title, intro, problems, children }: ErrorScreenProps) {
   return (
     <main className="mx-auto grid h-full max-w-3xl content-center gap-4 p-8">
       <h1 className="font-display text-4xl text-outline">{title}</h1>
@@ -17,6 +21,7 @@ export function ErrorScreen({ title, intro, problems }: ErrorScreenProps) {
           ))}
         </ul>
       </div>
+      {children && <div className="flex gap-3">{children}</div>}
     </main>
   );
 }

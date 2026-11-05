@@ -17,7 +17,7 @@ const BUTTON_BASE =
 const BUTTON_VARIANTS = {
   plain: 'bg-well-2 text-ink hover:enabled:bg-white',
   orange:
-    'bg-linear-to-b from-orange-hi from-0% to-orange to-60% text-white text-outline-thin ' +
+    'bg-linear-to-b from-orange-hi from-0% to-orange to-60% text-ink ' +
     'hover:enabled:from-[#ffb283] hover:enabled:to-[#f88a4e]',
 } as const;
 

@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "Gear stat simulator for GOAT: pick items, see the exact stats, tags and chromatic bonuses.",
   "license": "MIT",
+  "homepage": "https://puetz.github.io/goat-gear-simulator/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Puetz/goat-gear-simulator.git"
@@ -11,7 +12,7 @@
   "type": "module",
   "packageManager": "pnpm@12.15.0",
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   },
   "scripts": {
     "dev": "vite",
@@ -36,18 +37,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
-    "@biomejs/biome": "^2.6.3",
-    "@rolldown/plugin-babel": "^0.2.4",
-    "@tailwindcss/vite": "^4.3.3",
+    "@biomejs/biome": "^2.6.5",
+    "@rolldown/plugin-babel": "^0.3.0",
+    "@tailwindcss/vite": "^4.3.4",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^24.19.2",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.2",
+    "@vitejs/plugin-react": "^6.2.1",
     "babel-plugin-react-compiler": "^1.0.0",
-    "tailwindcss": "^4.3.3",
+    "tailwindcss": "^4.3.4",
     "typescript": "^7.0.2",
     "vite": "^8.3.5",
-    "vitest": "^5.0.5"
+    "vitest": "^5.1.0"
   }
 }

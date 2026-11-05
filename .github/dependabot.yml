@@ -1,0 +1,30 @@
+# Weekly update pull requests for the npm packages and the pinned GitHub Actions. GitHub can't
+# read the pnpm 12 lockfile, so there are no Dependabot security alerts for npm packages: the
+# audit workflow covers those.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # A new release gets a week to be found out if it's broken or malicious.
+    cooldown:
+      default-days: 7
+    groups:
+      npm-minor-and-patch:
+        patterns: ["*"]
+        update-types: [minor, patch]
+    ignore:
+      # babel-plugin-react-compiler 1.0 doesn't support Babel 8 yet: the build fails.
+      - dependency-name: "@babel/core"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      github-actions:
+        patterns: ["*"]

@@ -1,4 +1,4 @@
-# GOAT gear simulator rules
+# GOAT Gear Simulator rules
 
 The game mechanics the simulator implements, measured in the live game (GOAT Steam
 demo 0.5.6) and read from item screenshots. Formulas are empirical unless stated
@@ -274,10 +274,10 @@ Two Poison Kunai run panels supplied 2026-11-04 calibrate ranged damage. The
 catalog matches its tooltip: 36–38 ranged damage, 1.1 speed, Agility scaling,
 +22 Poison, and +3% Ranged Dmg. per SHARP. Both runs are trichromatic (C=1.35):
 
-- Reigngames, seed 85266, run 92, Scarlet Vest: SHARP 10 gives +30% ranged
+- Player A, seed 85266, run 92, Scarlet Vest: SHARP 10 gives +30% ranged
   damage. Agility 1243 gives E=719 and bonus 2389. Damage endpoints become
   4256 and 4259, giving **3870.5 Base DPS**, as shown.
-- Tammo, seed 87395, run 36, Vampire Garments: SHARP 16 gives +48% ranged
+- Player B, seed 87395, run 36, Vampire Garments: SHARP 16 gives +48% ranged
   damage. Agility 2420 gives E=912 and bonus 3026. Damage endpoints become
   6118 and 6122, giving **5563.6 Base DPS**, as shown. Multiplying DPS after
   endpoint rounding would instead give 5563.5.

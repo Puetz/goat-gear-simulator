@@ -75,7 +75,7 @@ export function PickerControls({
             }}
             placeholder={`Search ${slotLabel.toLowerCase()} items`}
             autoComplete="off"
-            className="h-9 min-w-0 flex-1 rounded-[11px] border-3 border-ink bg-white pr-2.5 pl-[34px] text-control font-semibold placeholder:font-medium placeholder:text-[#7e77a3]"
+            className="h-9 min-w-0 flex-1 rounded-[11px] border-3 border-ink bg-white pr-2.5 pl-[34px] text-control font-semibold placeholder:font-medium placeholder:text-[#716a99]"
           />
         </label>
         <SelectField<Tag | null>

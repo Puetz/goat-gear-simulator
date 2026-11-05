@@ -1726,7 +1726,7 @@
       }
     },
     {
-      "name": "Poison Kunai with Scarlet Vest (Reigngames, hard, seed 85266, run 92)",
+      "name": "Poison Kunai with Scarlet Vest (Player A, hard, seed 85266, run 92)",
       "source": "screenshot",
       "slots": {
         "mainHand": "poison_kunai",
@@ -1759,7 +1759,7 @@
       }
     },
     {
-      "name": "Poison Kunai with Vampire Garments (Tammo, hard, seed 87395, run 36)",
+      "name": "Poison Kunai with Vampire Garments (Player B, hard, seed 87395, run 36)",
       "source": "screenshot",
       "slots": {
         "mainHand": "poison_kunai",

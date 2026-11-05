@@ -1,38 +1,42 @@
 # GOAT Gear Simulator
 
-A local gear stat simulator for
-[GOAT: Gear Optimization AutoBattle Tactics](https://store.steampowered.com/app/3601690/GOAT_Gear_Optimization_AutoBattle_Tactics/)
-(GOAT for short). Pick up to eight items, mark slots as cursed, enter
-coins and socket tags, and see the exact stats, tags and chromatic bonus, with where every
-number comes from. Pointing at an item in the picker previews how the stats would change.
+A gear stat simulator for
+[GOAT - Gear Optimization Auto-Battle Tactics](https://store.steampowered.com/app/3601690/GOAT_Gear_Optimization_AutoBattle_Tactics/)
+(GOAT for short). Pick up to eight items, mark slots as cursed, enter coins and socket tags,
+and see the exact stats, tags and chromatic bonus, with where every number comes from. Pointing
+at an item in the picker previews how the stats would change. The items and rules are from the
+game's demo 0.5.6.
+
+**Try it at <https://puetz.github.io/goat-gear-simulator/>.**
 
 **The game math is in [RULES.md](RULES.md):** the formulas, calculation order, catalog
 conventions and known limitations.
 
-This is an unofficial fan project, not affiliated with the makers of GOAT.
+This is an unofficial fan project, not made or endorsed by Tobi & Mick, the makers of GOAT.
 
 ![The simulator with a sample build](docs/screenshot.png)
 
 ## Limitations
 
-- The layout needs a window at least 1024 px wide; it isn't made for phones.
+- The layout needs a window at least 1024 px wide and 800 px high; smaller windows scroll.
+  Phones show it zoomed out.
 - It's a stat simulator, not a battle simulator: combat effects such as procs, block and
   missing-HP bonuses aren't calculated (see RULES.md §7).
 
 ## Getting started
 
-Prerequisites: Node 24 and pnpm 12 (`npm install -g pnpm@12`, or `corepack enable`).
+Prerequisites: Node 26 and pnpm 12 (`npm install -g pnpm@12`).
 
 ```sh
 pnpm install
 pnpm dev        # http://localhost:5173
 ```
 
-The app runs locally only. Your three gear sets (switch with the Set 1/2/3 buttons) are saved in
-the browser's localStorage. Each set has its own gear and sockets; coins are shared. With the app
-open in several tabs, a change in one tab shows up in the others, and each tab stays on its own
-set. If the browser can't save, or a save can't be loaded, the app shows a notice with a way to
-try again.
+The app runs entirely in the browser, with no server. Your three gear sets (switch with the Set
+1/2/3 buttons) are saved in the browser's localStorage. Each set has its own gear and sockets;
+coins are shared. With the app open in several tabs, a change in one tab shows up in the others,
+and each tab stays on its own set. If the browser can't save, or a save can't be loaded, the app
+shows a notice with a way to try again.
 
 | Script | What it does |
 |---|---|
@@ -44,6 +48,21 @@ try again.
 | `pnpm typecheck` | Type checks the app (browser) and the scripts and tests (Node) |
 | `pnpm catalog:check` | Validates `items.json`, the item icons and the generated schema |
 | `pnpm schema` | Regenerates `items.schema.json` from the zod schema |
+
+## Deployment
+
+Pushes to `main` run `pnpm verify` and publish the build to GitHub Pages
+([deploy.yml](.github/workflows/deploy.yml)). After a quick series of pushes, only the latest is
+published. Pull requests run the same checks ([verify.yml](.github/workflows/verify.yml)). The
+deploy workflow builds with `BASE_PATH` set to the Pages path (`/goat-gear-simulator/`);
+locally the app is served from `/`.
+
+To publish a fork, set Settings → Pages → Source to "GitHub Actions" once, then push to `main`.
+
+Dependabot opens weekly update pull requests ([dependabot.yml](.github/dependabot.yml)). GitHub
+can't read the pnpm 12 lockfile, so it sends no security alerts for npm packages; instead
+[audit.yml](.github/workflows/audit.yml) runs `pnpm audit` every week and whenever the lockfile
+changes.
 
 ## Project structure
 
@@ -66,4 +85,5 @@ Zustand, Vitest and Biome.
 
 The source code is under the [MIT License](LICENSE). GOAT, its item names and texts and the
 item icons in `public/icons/` belong to their respective rights holders and aren't covered by
-the license.
+the license. The build lists the licenses of the bundled libraries and fonts in `licenses.txt`,
+linked in the site's footer.

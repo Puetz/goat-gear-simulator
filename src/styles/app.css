@@ -26,7 +26,7 @@
   --color-orange-hi: #ffa067;
   --color-gold: #f8c53a;
   --color-gold-hi: #ffe184;
-  --color-gain: #0f7a35;
+  --color-gain: #0d7030;
   --color-gain-bg: #cdefd6;
   --color-loss: #bf1e34;
   --color-loss-bg: #fadce1;
@@ -104,7 +104,7 @@
     0 3px 0 var(--color-ink);
 }
 
-/* Thin outline for white text on the orange buttons and the cursed slot label. */
+/* Thin outline for the white text on the cursed slot label. */
 @utility text-outline-thin {
   text-shadow:
     -1px 0 0 rgb(31 21 53 / 0.75),
