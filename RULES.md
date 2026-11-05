@@ -33,8 +33,7 @@ interaction or future game version.
 ## 2. Catalog contract
 
 `items.json` and `items.schema.json` define the format: schemaVersion 1, JSON Schema
-draft 2020-12. The catalog contains 221 unlocked items, not every game item. Keep it
-extensible.
+draft 2020-12. The catalog contains all 228 items in the game.
 
 - Items are sorted by `id`. IDs use lowercase words separated by underscores,
   with apostrophes removed, and must be unique. Each item's icon is
@@ -46,15 +45,18 @@ extensible.
   ranged label. Choose the scaling attribute from `scalingStat`, not appearance.
 - Weapon damage, speed, and `displayedDps` are transcribed tooltip values. Speed is
   seconds between attacks. `displayedDps` matches average base damage / speed
-  rounded to one decimal for all 51 catalog weapons; it is not the character's
+  rounded to one decimal for every catalog weapon; it is not the character's
   Base DPS.
+- The one speed that isn't transcribed is Moon Wand's: its tooltip shows 1.3, but
+  its 24–30 damage at 21.6 dps only fits 1.25 (27 / 1.3 would be 20.8). The catalog
+  stores 1.25; the app shows speeds to one decimal, so it reads 1.3 as in the game.
 - Effects have a strict `kind` discriminator. Percentages use whole points:
   15 means 15%, not 0.15. Preserve signs, caps, and conditional structure.
   `text` retains wording without loadout-specific `(now +X)` annotations.
   Empty effects mean no displayed bonuses. Do not invent a magnitude for text
   such as "Extra slow." Duplicate flavor texts can be legitimate.
 - Eleven screenshot spot checks and the tooltips seen while measuring found no
-  transcription errors. Not every one of the 221 items was checked in the game.
+  transcription errors. Not every one of the 228 items was checked in the game.
 
 The zod schema in `src/catalog/schema.ts` is the source of truth and generates
 `items.schema.json`; it rejects unknown fields and invalid enums. Checks across

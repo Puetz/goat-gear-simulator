@@ -1557,6 +1557,51 @@
       "flavorText": null
     },
     {
+      "id": "briefcase",
+      "name": "Briefcase",
+      "slot": "shield",
+      "rarity": "epic",
+      "properties": [
+        "leather",
+        "dark",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 44,
+          "unit": "percent",
+          "text": "+44% Block"
+        },
+        {
+          "kind": "stat_per_currency",
+          "stat": "strength",
+          "value": 5,
+          "unit": "flat",
+          "currency": "coin",
+          "currencyStep": 5,
+          "maxBonus": 50,
+          "text": "+5 Strength per 5 coins owned (max. 50)."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "elegant",
+          "multiplier": 2,
+          "text": "Each ELEGANT on items counts 2 times."
+        },
+        {
+          "kind": "loot_on_hit",
+          "chancePercent": 10,
+          "amount": 1,
+          "currency": "coin",
+          "text": "+10% chance to loot 1 Coin on hit."
+        }
+      ],
+      "flavorText": null
+    },
+    {
       "id": "buckler",
       "name": "Buckler",
       "slot": "shield",
@@ -1985,6 +2030,45 @@
           "grantedProperty": "mail",
           "count": 1,
           "text": "Each METAL also adds 1 MAIL."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "crimson_staff",
+      "name": "Crimson Staff",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "red",
+        "dark",
+        "gothic"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 45,
+          "max": 60
+        },
+        "ranged": true,
+        "speed": 1.7,
+        "displayedDps": 30.9,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 5,
+          "unit": "flat",
+          "property": "red",
+          "text": "+5 Int. for each worn RED."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "gothic",
+          "multiplier": 3,
+          "text": "Each GOTHIC on items counts 3 times."
         }
       ],
       "flavorText": null
@@ -2808,6 +2892,41 @@
           "unit": "flat",
           "property": "cloth",
           "text": "+5 Agility for each worn CLOTH."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "fedora",
+      "name": "Fedora",
+      "slot": "head",
+      "rarity": "rare",
+      "properties": [
+        "blue",
+        "white",
+        "elegant"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "strength",
+          "value": 12,
+          "unit": "flat",
+          "text": "+12 Strength"
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "item_luck",
+          "value": 12,
+          "unit": "percent",
+          "text": "+12% Item Luck"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "elegant",
+          "multiplier": 2,
+          "text": "Each ELEGANT on items counts 2 times."
         }
       ],
       "flavorText": null
@@ -4633,6 +4752,84 @@
       "flavorText": null
     },
     {
+      "id": "moldy_baguette",
+      "name": "Moldy Baguette",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "blunt",
+        "green",
+        "french"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 58,
+          "max": 80
+        },
+        "ranged": false,
+        "speed": 2,
+        "displayedDps": 34.5,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "poison",
+          "value": 1,
+          "unit": "flat",
+          "property": "french",
+          "text": "+1 Poison for each worn FRENCH."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "french",
+          "multiplier": 2,
+          "text": "Each FRENCH on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "moon_wand",
+      "name": "Moon Wand",
+      "slot": "weapon",
+      "rarity": "rare",
+      "properties": [
+        "enchanted",
+        "blue",
+        "elegant"
+      ],
+      "weapon": {
+        "type": "wand",
+        "damage": {
+          "min": 24,
+          "max": 30
+        },
+        "ranged": true,
+        "speed": 1.25,
+        "displayedDps": 21.6,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "intelligence",
+          "value": 3,
+          "unit": "flat",
+          "property": "elegant",
+          "text": "+3 Int. for each worn ELEGANT."
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "blue",
+          "multiplier": 2,
+          "text": "Each BLUE on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
       "id": "neon_belt",
       "name": "Neon Belt",
       "slot": "waist",
@@ -6022,6 +6219,41 @@
       "flavorText": null
     },
     {
+      "id": "stormspirit_guard",
+      "name": "Stormspirit Guard",
+      "slot": "shield",
+      "rarity": "rare",
+      "properties": [
+        "metal",
+        "enchanted",
+        "blue"
+      ],
+      "weapon": null,
+      "effects": [
+        {
+          "kind": "stat_bonus",
+          "stat": "block",
+          "value": 65,
+          "unit": "percent",
+          "text": "+65% Block"
+        },
+        {
+          "kind": "property_count_multiplier",
+          "property": "blue",
+          "multiplier": 2,
+          "text": "Each BLUE on items counts 2 times."
+        },
+        {
+          "kind": "stat_bonus",
+          "stat": "sneak_attack",
+          "value": 1,
+          "unit": "flat",
+          "text": "+1 Sneak Attack"
+        }
+      ],
+      "flavorText": null
+    },
+    {
       "id": "striped_jersey",
       "name": "Striped Jersey",
       "slot": "chest",
@@ -6299,6 +6531,39 @@
           "property": "holy",
           "multiplier": 2,
           "text": "Each HOLY on items counts 2 times."
+        }
+      ],
+      "flavorText": null
+    },
+    {
+      "id": "umbrella",
+      "name": "Umbrella",
+      "slot": "weapon",
+      "rarity": "epic",
+      "properties": [
+        "metal",
+        "dark",
+        "elegant"
+      ],
+      "weapon": {
+        "type": null,
+        "damage": {
+          "min": 95,
+          "max": 110
+        },
+        "ranged": false,
+        "speed": 3,
+        "displayedDps": 34.2,
+        "scalingStat": "intelligence"
+      },
+      "effects": [
+        {
+          "kind": "stat_per_property",
+          "stat": "stamina",
+          "value": 3,
+          "unit": "flat",
+          "property": "metal",
+          "text": "+3 Stamina for each worn METAL."
         }
       ],
       "flavorText": null
