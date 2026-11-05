@@ -2,7 +2,7 @@
   "name": "goat-gear-simulator",
   "private": true,
   "version": "0.1.0",
-  "description": "Gear stat simulator for GOAT: pick items, see the exact stats, tags and chromatic bonuses.",
+  "description": "Gear stat simulator for GOAT: pick items and see the stats, tags and chromatic bonuses they give.",
   "license": "MIT",
   "homepage": "https://puetz.github.io/goat-gear-simulator/",
   "repository": {

@@ -11,8 +11,8 @@ on:
 permissions: {}
 
 # One deployment at a time. A newer push waits for the running one instead of cancelling it, so
-# a deployment is never cut off halfway. Only one push waits: a newer one replaces it, so after a
-# quick series of pushes only the latest commit is published.
+# a deployment is never cut off halfway. Only one push waits: a newer one replaces it, so of the
+# pushes made while a deployment runs, only the latest is published after it.
 concurrency:
   group: pages
   cancel-in-progress: false

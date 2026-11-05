@@ -3,14 +3,15 @@
 A gear stat simulator for
 [GOAT - Gear Optimization Auto-Battle Tactics](https://store.steampowered.com/app/3601690/GOAT_Gear_Optimization_AutoBattle_Tactics/)
 (GOAT for short). Pick up to eight items, mark slots as cursed, enter coins and socket tags,
-and see the exact stats, tags and chromatic bonus, with where every number comes from. Pointing
-at an item in the picker previews how the stats would change. The items and rules are from the
-game's demo 0.5.6.
+and see the stats, tags and chromatic bonus they give, with where every number comes from.
+Pointing at an item in the picker previews how the stats would change. The items and rules are
+from the game's demo 0.5.6.
 
 **Try it at <https://puetz.github.io/goat-gear-simulator/>.**
 
 **The game math is in [RULES.md](RULES.md):** the formulas, calculation order, catalog
-conventions and known limitations.
+conventions and known limitations. The formulas reproduce 63 stat panels and screenshots
+measured in the game.
 
 This is an unofficial fan project, not made or endorsed by Tobi & Mick, the makers of GOAT.
 
@@ -22,6 +23,12 @@ This is an unofficial fan project, not made or endorsed by Tobi & Mick, the make
   Phones show it zoomed out.
 - It's a stat simulator, not a battle simulator: combat effects such as procs, block and
   missing-HP bonuses aren't calculated (see RULES.md §7).
+
+## Found a number that doesn't match the game?
+
+Please [report it](https://github.com/Puetz/goat-gear-simulator/issues/new?template=wrong-number.yml)
+with the build, a screenshot of the game's stats and the game version. RULES.md §7 lists what
+hasn't been measured yet.
 
 ## Getting started
 
@@ -42,7 +49,7 @@ shows a notice with a way to try again.
 |---|---|
 | `pnpm dev` | Starts the dev server |
 | `pnpm build` / `pnpm preview` | Builds the app into `dist/` and serves the build |
-| `pnpm verify` | Lint, type check, catalog check, tests and a production build: everything CI runs |
+| `pnpm verify` | Lint, type check, catalog check, tests and a production build: what CI checks before every deployment and on pull requests |
 | `pnpm test` | Runs the tests |
 | `pnpm lint` / `pnpm format` | Checks or fixes formatting and lint findings (Biome) |
 | `pnpm typecheck` | Type checks the app (browser) and the scripts and tests (Node) |
@@ -52,12 +59,18 @@ shows a notice with a way to try again.
 ## Deployment
 
 Pushes to `main` run `pnpm verify` and publish the build to GitHub Pages
-([deploy.yml](.github/workflows/deploy.yml)). After a quick series of pushes, only the latest is
-published. Pull requests run the same checks ([verify.yml](.github/workflows/verify.yml)). The
-deploy workflow builds with `BASE_PATH` set to the Pages path (`/goat-gear-simulator/`);
-locally the app is served from `/`.
+([deploy.yml](.github/workflows/deploy.yml)). A running deployment always finishes; of the
+pushes made in the meantime, only the latest is published after it. Pull requests run the same
+checks ([verify.yml](.github/workflows/verify.yml)). The deploy workflow builds with `BASE_PATH`
+set to the Pages path (`/goat-gear-simulator/`); locally the app is served from `/`.
 
-To publish a fork, set Settings → Pages → Source to "GitHub Actions" once, then push to `main`.
+To publish a fork:
+
+1. Enable the fork's workflows in its Actions tab. GitHub turns them off in new forks.
+2. Set Settings → Pages → Source to "GitHub Actions".
+3. Point the site and repository URLs at the fork: `og:url` and `og:image` in
+   [index.html](index.html), and `REPOSITORY_URL` in [Footer.tsx](src/ui/Footer.tsx).
+4. Push to `main`.
 
 Dependabot opens weekly update pull requests ([dependabot.yml](.github/dependabot.yml)). GitHub
 can't read the pnpm 12 lockfile, so it sends no security alerts for npm packages; instead

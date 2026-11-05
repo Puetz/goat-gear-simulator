@@ -6,6 +6,12 @@ import { CHROMATIC_TIER_NAMES, TAG_STYLES } from '../display.ts';
 
 const HEX_CAPTIONS = ['Tag 1', 'Tag 2: +25%', 'Tag 3: +10%'] as const;
 
+// The hexes step down in size with the width of their row (a container): three columns and two
+// connectors need 280 px at full size (3 × 84 + 2 × 14) and 238 px at the middle size
+// (3 × 70 + 2 × 14). Narrower rows get the small size, which needs 200 px (3 × 60 + 2 × 10).
+const HEX_SHAPE =
+  'relative grid h-12 w-14 place-items-center bg-ink clip-hex before:absolute before:inset-x-[5px] before:inset-y-1 before:clip-hex @min-[238px]:h-[58px] @min-[238px]:w-[66px] @min-[280px]:h-[68px] @min-[280px]:w-20';
+
 const percentBonus = ({ multiplier }: Chromatic) => `+${Math.round((multiplier - 1) * 100)}%`;
 
 interface ChromaMeterProps {
@@ -47,13 +53,13 @@ export function ChromaMeter({ current, shown }: ChromaMeterProps) {
         </span>
       </div>
 
-      <div className="mt-3 mb-1.5 flex items-start">
+      <div className="@container mt-3 mb-1.5 flex items-start">
         {HEX_CAPTIONS.map((caption, index) => {
           const entry = qualifying[index];
           const progress = !entry && index === qualifying.length ? closest : null;
           return (
             <div key={caption} className="contents">
-              <div className="flex w-[84px] flex-none flex-col items-center gap-1.5 max-xl:w-[70px]">
+              <div className="flex w-[60px] flex-none flex-col items-center gap-1.5 @min-[238px]:w-[70px] @min-[280px]:w-[84px]">
                 <div className="drop-shadow-[0_3px_0_var(--color-ink)]">
                   <Hex
                     entry={entry ?? progress}
@@ -71,9 +77,10 @@ export function ChromaMeter({ current, shown }: ChromaMeterProps) {
                 </span>
               </div>
               {index < HEX_CAPTIONS.length - 1 && (
+                // Centered on the hexes: half the hex height minus half its own 12 px.
                 <span
                   className={cx(
-                    'mt-7 h-3 min-w-3.5 flex-1 rounded-md border-3 border-ink',
+                    'mt-[18px] h-3 min-w-2.5 flex-1 rounded-md border-3 border-ink @min-[238px]:mt-[23px] @min-[238px]:min-w-3.5 @min-[280px]:mt-7',
                     qualifying[index + 1] ? 'bg-gold' : 'bg-empty',
                   )}
                 />
@@ -81,11 +88,6 @@ export function ChromaMeter({ current, shown }: ChromaMeterProps) {
             </div>
           );
         })}
-        {qualifying.length > 3 && (
-          <span className="mt-6 ml-1.5 text-xs font-bold text-ink-2">
-            +{qualifying.length - 3} more at {CHROMATIC_THRESHOLD}
-          </span>
-        )}
       </div>
 
       <p className="mt-2 text-row leading-[1.35] text-ink-2">
@@ -106,7 +108,7 @@ interface HexProps {
 function Hex({ entry, progress, fresh }: HexProps) {
   if (!entry) {
     return (
-      <div className="relative grid h-[68px] w-20 place-items-center bg-ink clip-hex before:absolute before:inset-x-[5px] before:inset-y-1 before:bg-empty before:clip-hex max-xl:h-[58px] max-xl:w-[66px]">
+      <div className={cx(HEX_SHAPE, 'before:bg-empty')}>
         <span className="relative font-display text-[21px] text-ink-3">?</span>
       </div>
     );
@@ -119,10 +121,7 @@ function Hex({ entry, progress, fresh }: HexProps) {
 
   return (
     <div
-      className={cx(
-        'relative grid h-[68px] w-20 place-items-center bg-ink clip-hex before:absolute before:inset-x-[5px] before:inset-y-1 before:[background:var(--fill)] before:clip-hex max-xl:h-[58px] max-xl:w-[66px]',
-        fresh && 'animate-pop',
-      )}
+      className={cx(HEX_SHAPE, 'before:[background:var(--fill)]', fresh && 'animate-pop')}
       style={cssVars({ '--fill': fill })}
     >
       <span
@@ -132,10 +131,10 @@ function Hex({ entry, progress, fresh }: HexProps) {
         )}
         style={progress ? undefined : { color: style.color }}
       >
-        <span className="text-micro font-bold tracking-[0.03em] uppercase font-stretch-85%">
+        <span className="text-[10px] font-bold tracking-[0.03em] uppercase font-stretch-85% @min-[238px]:text-micro">
           {tag}
         </span>
-        <span className="mt-0.5 font-display text-[21px] max-xl:text-lg">
+        <span className="mt-0.5 font-display text-base @min-[238px]:text-lg @min-[280px]:text-[21px]">
           {progress ? `${count}/${CHROMATIC_THRESHOLD}` : count}
         </span>
       </span>
@@ -153,14 +152,21 @@ function NextTierHint({ shown }: { shown: Chromatic }) {
     </>
   );
   if (count >= 3) {
-    return <>Top bonus reached. More tags at {CHROMATIC_THRESHOLD} add nothing extra.</>;
+    const extra = count - 3;
+    const more = extra === 0 ? 'More tags' : `${extra} more ${extra === 1 ? 'tag' : 'tags'}`;
+    return (
+      <>
+        Top bonus reached. {more} at {CHROMATIC_THRESHOLD} {extra === 1 ? 'adds' : 'add'} nothing
+        extra.
+      </>
+    );
   }
-  const next = count === 2 ? 'Trichromatic' : 'Bichromatic';
+  const next = <b className="font-bold text-ink">{count === 2 ? 'Trichromatic' : 'Bichromatic'}</b>;
   const gain = count === 2 ? '+10% more' : '+25% damage and HP';
-  const need = count === 0 ? 'Get two tags' : 'One more tag';
+  const [need, unlock] = count === 0 ? ['Two tags', 'unlock'] : ['One more tag', 'unlocks'];
   return (
     <>
-      {need} at {CHROMATIC_THRESHOLD} unlocks <b className="font-bold text-ink">{next}</b> ({gain}).
+      {need} at {CHROMATIC_THRESHOLD} {unlock} {next} ({gain}).
       {closest}
     </>
   );

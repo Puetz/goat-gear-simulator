@@ -15,6 +15,10 @@ export function Footer() {
         . Game data from demo 0.5.6.
       </p>
       <nav aria-label="About this site" className="flex gap-4">
+        {/* GitHub's issue chooser: the wrong-number form or a blank issue for anything else. */}
+        <a href={`${REPOSITORY_URL}/issues/new/choose`} className={LINK}>
+          Report a bug or wrong number
+        </a>
         <a href={REPOSITORY_URL} className={LINK}>
           Source code
         </a>

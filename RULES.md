@@ -332,6 +332,8 @@ are outside the stat model.
   but its order hasn't been independently isolated.
 - Binary32 speed is a fit to observed output. Damage endpoint half-ties, mixed-sign
   endpoints, and one-decimal DPS ties weren't isolated.
+- The cursed −20% HP is from the item tooltip. How it combines with the chromatic
+  bonus and with further cursed items (§6) hasn't been checked against an HP reading.
 - Negative attributes are tested, but extreme negatives and an HP floor are not.
   Whether item stars change stats wasn't tested.
 - Ranged damage is calibrated on two single-weapon Poison Kunai panels; applying

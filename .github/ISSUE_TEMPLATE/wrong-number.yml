@@ -1,0 +1,27 @@
+name: Wrong number
+description: A stat in the simulator doesn't match what the game shows.
+title: "Wrong number: "
+body:
+  - type: textarea
+    id: build
+    attributes:
+      label: Build
+      description: The items in each slot (say which are cursed), the socket tags and the coins.
+    validations:
+      required: true
+  - type: textarea
+    id: stats
+    attributes:
+      label: Stats
+      description: >-
+        A screenshot of the game's stats, and which stat differs from the simulator. A screenshot
+        of the simulator helps too.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Game version
+      placeholder: demo 0.5.6
+    validations:
+      required: true

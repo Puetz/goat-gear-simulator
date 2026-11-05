@@ -119,14 +119,14 @@ function SocketCounter({ tag, count, max }: SocketCounterProps) {
       >
         <span
           aria-hidden="true"
-          className="block min-w-0 flex-1 truncate pr-[3px] pl-[5px] leading-[23px] uppercase"
+          className="block min-w-0 flex-1 truncate pr-0.5 pl-1 leading-[23px] uppercase"
         >
           {tag}
         </span>
         <NumberField.Input
           aria-label={`${tag.toUpperCase()} sockets`}
           className={cx(
-            'w-[22px] border-l-2 border-ink p-0 text-center text-note font-bold outline-none focus-visible:bg-gold-hi focus-visible:text-ink',
+            'w-5 border-l-2 border-ink p-0 text-center text-note font-bold outline-none focus-visible:bg-gold-hi focus-visible:text-ink',
             on ? 'bg-ink text-count' : 'bg-[#f3f1fc] text-ink-3',
           )}
         />

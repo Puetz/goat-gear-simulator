@@ -189,6 +189,14 @@ function ContributionLine({ entry, unit }: { entry: Contribution; unit: string }
   );
 }
 
+/** What each attribute's effective value feeds (RULES.md §6). */
+const ATTRIBUTE_USES: Record<Attribute, string> = {
+  stamina: 'HP',
+  strength: 'HP and damage with Strength weapons',
+  agility: 'Critical Chance and damage with Agility weapons',
+  intelligence: 'Regeneration and damage with Intelligence weapons',
+};
+
 /** A bar showing how much of a high attribute each diminishing-returns tier keeps. */
 function DiminishingReturns({
   attribute,
@@ -211,7 +219,8 @@ function DiminishingReturns({
     <div className="mt-2 rounded-xl bg-well px-3 py-2.5">
       <p className="mb-[7px] text-sm font-semibold">
         {label} <b className="font-display text-[17px] font-normal">{raw}</b>, counts as{' '}
-        <b className="font-display text-[17px] font-normal">{effective}</b> for HP and damage
+        <b className="font-display text-[17px] font-normal">{effective}</b> for{' '}
+        {ATTRIBUTE_USES[attribute]}
       </p>
       <div
         role="img"
