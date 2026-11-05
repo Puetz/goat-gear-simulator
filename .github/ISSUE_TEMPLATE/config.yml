@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Known limitations
+    url: https://github.com/Puetz/goat-gear-simulator/blob/main/RULES.md#7-known-limitations
+    about: What the simulator doesn't calculate or hasn't measured yet. Worth a look before reporting a number.

@@ -17,6 +17,13 @@ export function checkIntegrity(items: readonly Item[]): string[] {
       problems.push(`${item.id}: items must be sorted by id (comes after ${previous.id})`);
     }
 
+    // The UI keys an item's effects by their text and finds their "(now +X)" values by it.
+    const texts = new Set<string>();
+    for (const { text } of item.effects) {
+      if (texts.has(text)) problems.push(`${item.id}: duplicate effect text "${text}"`);
+      texts.add(text);
+    }
+
     if (item.slot === 'weapon') {
       const { damage, speed, displayedDps } = item.weapon;
       if (damage.min > damage.max) {

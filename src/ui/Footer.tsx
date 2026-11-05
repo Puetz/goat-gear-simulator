@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="flex flex-wrap justify-between gap-x-6 gap-y-1 px-1 pt-3.5 text-caption text-sheet">
       <p>
-        Unofficial fan project, not made or endorsed by Tobi & Mick, the makers of{' '}
+        Unofficial fan project, made with the permission of Tobi & Mick, the makers of{' '}
         <a href={STEAM_URL} className={LINK}>
           GOAT
         </a>

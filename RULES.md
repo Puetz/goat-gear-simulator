@@ -61,9 +61,9 @@ draft 2020-12. The catalog contains all 228 items in the game.
 The zod schema in `src/catalog/schema.ts` is the source of truth and generates
 `items.schema.json`; it rejects unknown fields and invalid enums. Checks across
 fields and items live in `src/catalog/integrity.ts` and run when the app loads the
-catalog: unique and sorted IDs, damage.min <= damage.max, and the tooltip-DPS
-cross-check. `pnpm catalog:check` additionally checks that every item has an icon and
-that `items.schema.json` is current. TypeScript types alone do not validate JSON.
+catalog: unique and sorted IDs, unique effect texts within an item, damage.min <=
+damage.max, and the tooltip-DPS cross-check. `pnpm catalog:check` additionally checks
+that every item has an icon and that `items.schema.json` is current. TypeScript types alone do not validate JSON.
 
 Display metadata (tag colors, stat labels and units) lives in typed tables in
 `src/ui/display.ts`. Extra-attack and coin-loot effects become the display stats

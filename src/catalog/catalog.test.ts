@@ -84,6 +84,11 @@ describe('catalog', () => {
     ['a duplicate id', (items) => items.splice(1, 0, items[0]), /: duplicate id$/m],
     ['unsorted ids', (items) => items.reverse(), /: items must be sorted by id/m],
     [
+      'a repeated effect text',
+      set('poison_kunai', ['effects', 1, 'text'], '+22 Poison'),
+      /^poison_kunai: duplicate effect text "\+22 Poison"$/m,
+    ],
+    [
       'damage.min above damage.max',
       set('estoque', ['weapon', 'damage', 'min'], 999),
       /^estoque: damage\.min 999 is above/m,

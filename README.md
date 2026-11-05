@@ -13,7 +13,7 @@ from the game's demo 0.5.6.
 conventions and known limitations. The formulas reproduce 63 stat panels and screenshots
 measured in the game.
 
-This is an unofficial fan project, not made or endorsed by Tobi & Mick, the makers of GOAT.
+This is an unofficial fan project, made with the permission of Tobi & Mick, the makers of GOAT.
 
 ![The simulator with a sample build](docs/screenshot.png)
 
@@ -98,5 +98,5 @@ Zustand, Vitest and Biome.
 
 The source code is under the [MIT License](LICENSE). GOAT, its item names and texts and the
 item icons in `public/icons/` belong to their respective rights holders and aren't covered by
-the license. The build lists the licenses of the bundled libraries and fonts in `licenses.txt`,
+the license; they're used with Tobi & Mick's permission. The build lists the licenses of the bundled libraries and fonts in `licenses.txt`,
 linked in the site's footer.
