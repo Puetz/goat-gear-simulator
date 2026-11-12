@@ -36,7 +36,7 @@
     "zustand": "^5.0.16"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.7",
+    "@babel/core": "^7.29.13",
     "@biomejs/biome": "^2.6.5",
     "@rolldown/plugin-babel": "^0.3.0",
     "@tailwindcss/vite": "^4.3.4",
@@ -48,7 +48,7 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "tailwindcss": "^4.3.4",
     "typescript": "^7.0.2",
-    "vite": "^8.3.5",
+    "vite": "^8.3.6",
     "vitest": "^5.1.0"
   }
 }
